@@ -6,10 +6,10 @@ import { Menu, X, Gem } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/property", label: "The Property" },
-  { href: "/explore", label: "Things To Do" },
+  { href: "/properties", label: "Properties" },
+  { href: "/destinations", label: "Destinations" },
   { href: "/about", label: "About" },
-  { href: "/book", label: "Book Now" },
+  { href: "/book-direct", label: "Book Direct" },
 ];
 
 export default function Navbar() {
@@ -62,7 +62,7 @@ export default function Navbar() {
           ))}
           <li>
             <Link
-              href="/book"
+              href="/book-direct"
               className="ml-3 px-5 py-2 rounded-full text-sm font-semibold transition-all hover:opacity-90 hover:shadow-md"
               style={{
                 backgroundColor: "#6B8E23",
@@ -70,7 +70,7 @@ export default function Navbar() {
                 fontFamily: "var(--font-inter), sans-serif",
               }}
             >
-              Book Now
+              Book Direct
             </Link>
           </li>
         </ul>

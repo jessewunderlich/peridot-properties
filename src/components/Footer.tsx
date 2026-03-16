@@ -20,8 +20,8 @@ export default function Footer() {
             </span>
           </div>
           <p className="text-sm leading-relaxed" style={{ color: "#FAF8F580" }}>
-            A boutique lakeside retreat on Pickerel Lake in Richville, Minnesota.
-            Book direct and save — hosted personally by Charlotte Wunderlich.
+            Boutique vacation rentals managed personally by Charlotte Wunderlich.
+            Handpicked lakeside stays in Minnesota&apos;s lake country.
           </p>
           <div className="flex gap-3 mt-5">
             <a
@@ -58,10 +58,10 @@ export default function Footer() {
           <ul className="space-y-2" role="list">
             {[
               { href: "/", label: "Home" },
-              { href: "/property", label: "The Property" },
-              { href: "/explore", label: "Things To Do" },
+              { href: "/properties", label: "Properties" },
+              { href: "/destinations", label: "Destinations" },
               { href: "/about", label: "About Us" },
-              { href: "/book", label: "Book Now" },
+              { href: "/book-direct", label: "Book Direct" },
             ].map((link) => (
               <li key={link.href}>
                 <Link
@@ -121,7 +121,7 @@ export default function Footer() {
         style={{ borderColor: "#6B8E2340", color: "#FAF8F540" }}
       >
         <p>&copy; {new Date().getFullYear()} Peridot Properties. All rights reserved.</p>
-        <p>Richville, Minnesota &bull; Pickerel Lake</p>
+        <p>Minnesota&apos;s Lake Country &bull; Book Direct &amp; Save</p>
       </div>
     </footer>
   );

@@ -48,7 +48,7 @@ const values = [
     icon: Gem,
     title: "Quality Over Quantity",
     description:
-      "We have one property, and we pour everything into it. One great experience beats five mediocre ones every time.",
+      "We are selective about every property we offer. One exceptional experience beats five mediocre ones every time.",
   },
 ];
 
@@ -70,7 +70,7 @@ export default function AboutPage() {
           About Us
         </h1>
         <p className="text-base max-w-xl mx-auto" style={{ color: "#FAF8F5CC" }}>
-          A family who fell in love with a lake and wanted to share it with the world.
+          A family who fell in love with Minnesota&apos;s lakes and wanted to share that with the world.
         </p>
       </section>
 
@@ -97,7 +97,8 @@ export default function AboutPage() {
                 When my family found Pickerel Lake, we knew immediately it was something special.
                 The water is deep and clear, the fish are plentiful, and the sunsets over the western
                 shoreline are genuinely jaw-dropping. We built the house we always dreamed of staying in —
-                and then decided to share it.
+                and then decided to share it. Starting with Pickerel Lake, we&apos;re expanding across
+                Minnesota&apos;s lake country — one carefully chosen property at a time.
               </p>
               <p>
                 I handle every booking personally. When you reach out, you&apos;re talking to me — not a
@@ -295,11 +296,11 @@ export default function AboutPage() {
       {/* ── CTA ── */}
       <CTABanner
         heading="Come be our guest"
-        subheading="We'd love to share Pickerel Lake with you. Reach out anytime — Charlotte is always happy to chat about the property, the lake, or help you plan your trip."
-        buttonLabel="Book Your Stay"
-        buttonHref="/book"
+        subheading="We'd love to share Minnesota's lakes with you. Reach out anytime — Charlotte is always happy to chat about our properties, the area, or help you plan your trip."
+        buttonLabel="Browse Our Properties"
+        buttonHref="/properties"
         secondaryLabel="Contact Charlotte"
-        secondaryHref="/book#contact"
+        secondaryHref="/book-direct#contact"
       />
     </>
   );

@@ -1,0 +1,617 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import {
+  BedDouble,
+  ShowerHead,
+  Layers,
+  Waves,
+  Sailboat,
+  Car,
+  Wifi,
+  Coffee,
+  Flame,
+  Fish,
+  TreePine,
+  Wind,
+  MapPin,
+  Sun,
+} from "lucide-react";
+import CTABanner from "@/components/CTABanner";
+import SeasonCard from "@/components/SeasonCard";
+import TestimonialCard from "@/components/TestimonialCard";
+import BookingWidget from "@/components/BookingWidget";
+import ContactForm from "@/components/ContactForm";
+import { properties, getProperty } from "@/data/properties";
+
+interface Props {
+  params: Promise<{ slug: string }>;
+}
+
+export async function generateStaticParams() {
+  return properties.map((p) => ({ slug: p.slug }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const property = getProperty(slug);
+  if (!property) return {};
+
+  return {
+    title: `${property.name} | Peridot Properties`,
+    description: `${property.tagline}. ${property.description[0]}`,
+    openGraph: {
+      title: `${property.name} | Peridot Properties`,
+      description: property.tagline,
+    },
+  };
+}
+
+export default async function PropertyPage({ params }: Props) {
+  const { slug } = await params;
+  const property = getProperty(slug);
+
+  if (!property) {
+    notFound();
+  }
+
+  return (
+    <>
+      {/* JSON-LD structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(property.jsonLd) }}
+      />
+
+      {/* ── Page Header ── */}
+      <section
+        className="py-16 px-4 text-center"
+        style={{ background: "linear-gradient(160deg, #2D5016 0%, #4A7C8C 100%)" }}
+      >
+        <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#C8A951" }}>
+          {property.location.address} &middot; {property.location.city}, {property.location.state} {property.location.zip}
+        </p>
+        <h1
+          className="text-5xl sm:text-6xl font-semibold mb-4"
+          style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#FAF8F5" }}
+        >
+          {property.name}
+        </h1>
+        <p className="text-base max-w-xl mx-auto" style={{ color: "#FAF8F5CC" }}>
+          {property.tagline} &mdash; a brand-new lakefront retreat designed for making memories,
+          whether that&apos;s catching walleye at sunrise or watching the northern lights from the fire pit at midnight.
+        </p>
+      </section>
+
+      {/* ── Photo Gallery ── */}
+      <section className="py-14 px-4 max-w-6xl mx-auto" aria-label="Photo gallery">
+        <h2
+          className="text-3xl font-semibold mb-8 text-center"
+          style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+        >
+          Take a look around
+        </h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          {property.gallery.map((img, idx) => (
+            <div
+              key={img.id}
+              className={`rounded-xl overflow-hidden ${idx === 0 ? "col-span-2 row-span-2" : ""} relative`}
+              style={{ aspectRatio: idx === 0 ? "auto" : "4/3" }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`https://picsum.photos/800/600?random=${img.id}`}
+                alt={img.alt}
+                className="w-full h-full object-cover transition-transform hover:scale-105"
+                style={{ minHeight: idx === 0 ? "320px" : "160px" }}
+                loading={idx === 0 ? "eager" : "lazy"}
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── Description + Specs Sidebar ── */}
+      <section className="py-14 px-4" style={{ backgroundColor: "#2D501608" }}>
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="md:col-span-2">
+            <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#4A7C8C" }}>
+              About the Home
+            </p>
+            <h2
+              className="text-3xl font-semibold mb-5"
+              style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+            >
+              Modern comfort meets<br />lakeside living
+            </h2>
+            <div className="space-y-4 text-sm leading-relaxed" style={{ color: "#2C2C2C" }}>
+              {property.description.map((para, i) => (
+                <p key={i}>{para}</p>
+              ))}
+            </div>
+          </div>
+
+          {/* Specs sidebar */}
+          <div
+            className="rounded-2xl p-6 h-fit"
+            style={{ backgroundColor: "#FAF8F5", border: "1px solid #6B8E2320", boxShadow: "0 2px 14px rgba(45,80,22,0.07)" }}
+          >
+            <h3
+              className="text-xl font-semibold mb-4"
+              style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+            >
+              At a Glance
+            </h3>
+            <ul className="space-y-3">
+              {[
+                { icon: BedDouble, label: `${property.specs.bedrooms} bedrooms (king, queen, queen, bunks)` },
+                { icon: ShowerHead, label: `${property.specs.bathrooms} full bathrooms` },
+                { icon: Layers, label: `Sleeps up to ${property.specs.sleeps} guests` },
+                { icon: Waves, label: `${property.specs.frontage} private lake frontage` },
+                { icon: Sailboat, label: "Dock, kayaks & canoe" },
+                { icon: Car, label: "2-car garage + driveway" },
+                { icon: Wifi, label: "High-speed WiFi" },
+                { icon: Coffee, label: "Full kitchen" },
+                { icon: Flame, label: "Propane fireplace" },
+                { icon: Fish, label: "Fish cleaning station" },
+                { icon: Wind, label: "Central A/C & heat" },
+                { icon: TreePine, label: "Fire pit with firewood" },
+              ].map(({ icon: Icon, label }) => (
+                <li key={label} className="flex items-center gap-2 text-sm" style={{ color: "#2C2C2C" }}>
+                  <Icon size={14} style={{ color: "#6B8E23" }} className="shrink-0" aria-hidden="true" />
+                  {label}
+                </li>
+              ))}
+            </ul>
+            <Link
+              href="#booking"
+              className="mt-6 block w-full text-center py-3 rounded-full text-sm font-semibold transition-all hover:opacity-90"
+              style={{ backgroundColor: "#6B8E23", color: "#FAF8F5" }}
+            >
+              Check Availability
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Full Amenities ── */}
+      <section className="py-14 px-4 max-w-5xl mx-auto" aria-label="Full amenities list">
+        <div className="text-center mb-10">
+          <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#4A7C8C" }}>
+            Everything Included
+          </p>
+          <h2
+            className="text-3xl font-semibold"
+            style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+          >
+            Full Amenities
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {property.amenities.map((cat) => (
+            <div
+              key={cat.category}
+              className="rounded-xl p-5"
+              style={{ backgroundColor: "#FAF8F5", border: "1px solid #6B8E2318" }}
+            >
+              <div className="flex items-center gap-2 mb-4">
+                <cat.icon size={18} style={{ color: "#6B8E23" }} aria-hidden="true" />
+                <h3
+                  className="text-base font-semibold"
+                  style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+                >
+                  {cat.category}
+                </h3>
+              </div>
+              <ul className="space-y-2">
+                {cat.items.map((item) => (
+                  <li key={item} className="flex items-start gap-2 text-xs leading-relaxed" style={{ color: "#2C2C2C" }}>
+                    <span className="w-1 h-1 rounded-full mt-1.5 shrink-0" style={{ backgroundColor: "#6B8E23" }} aria-hidden="true" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── House Rules ── */}
+      <section className="py-14 px-4" style={{ backgroundColor: "#2D501608" }}>
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-8">
+            <h2
+              className="text-3xl font-semibold"
+              style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+            >
+              House Rules
+            </h2>
+            <p className="text-sm mt-2" style={{ color: "#2C2C2C80" }}>
+              A few guidelines to keep things great for everyone
+            </p>
+          </div>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {property.houseRules.map((rule) => (
+              <li
+                key={rule}
+                className="flex items-start gap-3 px-4 py-3 rounded-xl text-sm"
+                style={{ backgroundColor: "#FAF8F5", border: "1px solid #6B8E2315", color: "#2C2C2C" }}
+              >
+                <span className="w-1.5 h-1.5 rounded-full mt-1.5 shrink-0" style={{ backgroundColor: "#C8A951" }} aria-hidden="true" />
+                {rule}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* ── Seasonal Activities ── */}
+      <section className="py-16 px-4 max-w-6xl mx-auto" aria-label="Seasonal activities">
+        <div className="text-center mb-10">
+          <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#4A7C8C" }}>
+            Every Season Has Its Magic
+          </p>
+          <h2
+            className="text-4xl font-semibold"
+            style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+          >
+            A lake for all seasons
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {property.seasons.map((season) => (
+            <SeasonCard key={season.season} {...season} />
+          ))}
+        </div>
+      </section>
+
+      {/* ── Lake Info ── */}
+      <section className="py-16 px-4" style={{ backgroundColor: "#2D501608" }} aria-label={`About ${property.lake.name}`}>
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-10">
+            <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#4A7C8C" }}>
+              The Lake
+            </p>
+            <h2
+              className="text-4xl font-semibold"
+              style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+            >
+              {property.lake.name} at a Glance
+            </h2>
+            <p className="text-sm mt-3 max-w-2xl mx-auto" style={{ color: "#2C2C2C80" }}>
+              {property.lake.acres.toLocaleString()} acres &bull; Maximum depth {property.lake.maxDepth} feet &bull; Crystal-clear water &bull; {property.location.county}, MN
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {property.lake.info.map((info) => (
+              <div
+                key={info.title}
+                className="flex gap-4 p-5 rounded-2xl"
+                style={{ backgroundColor: "#FAF8F5", border: "1px solid #6B8E2318" }}
+              >
+                <div
+                  className="w-11 h-11 rounded-full flex items-center justify-center shrink-0"
+                  style={{ backgroundColor: "#6B8E2318" }}
+                >
+                  <info.icon size={20} style={{ color: "#6B8E23" }} aria-hidden="true" />
+                </div>
+                <div>
+                  <h3
+                    className="text-base font-semibold mb-1"
+                    style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+                  >
+                    {info.title}
+                  </h3>
+                  <p className="text-sm leading-relaxed" style={{ color: "#2C2C2C80" }}>
+                    {info.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Fishing tips callout */}
+          <div
+            className="mt-8 p-6 rounded-2xl"
+            style={{ background: "linear-gradient(135deg, #2D5016 0%, #4A7C8C 100%)" }}
+          >
+            <div className="flex items-start gap-4">
+              <Fish size={28} style={{ color: "#C8A951" }} className="shrink-0 mt-1" aria-hidden="true" />
+              <div>
+                <h3
+                  className="text-xl font-semibold mb-2"
+                  style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#FAF8F5" }}
+                >
+                  Charlotte&apos;s Fishing Tips
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: "#FAF8F5CC" }}>
+                  {property.lake.fishingTips}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Nearby Attractions ── */}
+      <section className="py-16 px-4 max-w-6xl mx-auto" aria-label="Nearby towns and attractions">
+        <div className="text-center mb-10">
+          <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#4A7C8C" }}>
+            Beyond the Lake
+          </p>
+          <h2
+            className="text-4xl font-semibold"
+            style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+          >
+            Explore the area
+          </h2>
+          <p className="text-sm mt-3 max-w-xl mx-auto" style={{ color: "#2C2C2C80" }}>
+            When you want to venture off the dock, the surrounding towns have plenty to offer.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {property.nearbyAttractions.map((attraction) => (
+            <div
+              key={attraction.place}
+              className="rounded-2xl overflow-hidden"
+              style={{ backgroundColor: "#FAF8F5", border: "1px solid #6B8E2318" }}
+            >
+              <div
+                className="px-5 py-4 flex items-center gap-3"
+                style={{ backgroundColor: "#6B8E2310" }}
+              >
+                <attraction.icon size={18} style={{ color: "#6B8E23" }} aria-hidden="true" />
+                <div>
+                  <h3
+                    className="text-base font-semibold"
+                    style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+                  >
+                    {attraction.place}
+                  </h3>
+                  <p className="text-xs" style={{ color: "#2C2C2C60" }}>{attraction.distance} away</p>
+                </div>
+              </div>
+              <ul className="px-5 py-4 space-y-2">
+                {attraction.highlights.map((highlight) => (
+                  <li key={highlight} className="flex items-start gap-2 text-sm" style={{ color: "#2C2C2C" }}>
+                    <span
+                      className="w-1.5 h-1.5 rounded-full mt-1.5 shrink-0"
+                      style={{ backgroundColor: "#C8A951" }}
+                      aria-hidden="true"
+                    />
+                    {highlight}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── Outdoor Highlights ── */}
+      <section className="py-16 px-4" style={{ backgroundColor: "#2D501608" }}>
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {property.outdoorHighlights.map((item) => (
+            <div
+              key={item.title}
+              className="p-6 rounded-2xl flex flex-col gap-3"
+              style={{ backgroundColor: "#FAF8F5", border: "1px solid #6B8E2318" }}
+            >
+              <item.icon size={22} style={{ color: "#6B8E23" }} aria-hidden="true" />
+              <h3
+                className="text-lg font-semibold"
+                style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+              >
+                {item.title}
+              </h3>
+              <p className="text-sm leading-relaxed" style={{ color: "#2C2C2C80" }}>
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── Location / Map ── */}
+      <section className="py-14 px-4 max-w-5xl mx-auto" aria-label="Property location">
+        <div className="text-center mb-8">
+          <h2
+            className="text-3xl font-semibold"
+            style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+          >
+            Location
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          {/* Map placeholder */}
+          <div
+            className="rounded-2xl overflow-hidden flex flex-col items-center justify-center p-10 text-center"
+            style={{
+              background: "linear-gradient(135deg, #4A7C8C18, #6B8E2318)",
+              border: "2px dashed #4A7C8C50",
+              minHeight: "280px",
+            }}
+            aria-label="Map placeholder showing property location"
+          >
+            <MapPin size={40} style={{ color: "#4A7C8C" }} className="mb-4" aria-hidden="true" />
+            <p
+              className="text-lg font-semibold mb-1"
+              style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+            >
+              {property.location.address}
+            </p>
+            <p className="text-sm" style={{ color: "#2C2C2C80" }}>
+              {property.location.city}, {property.location.state} {property.location.zip}
+            </p>
+            <p className="text-xs mt-4 px-4 leading-relaxed" style={{ color: "#2C2C2C60" }}>
+              Interactive map will appear here.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <h3
+              className="text-xl font-semibold"
+              style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+            >
+              Getting Here
+            </h3>
+            <div className="space-y-3">
+              {property.distances.map(({ place, distance, note }) => (
+                <div key={place} className="flex items-start justify-between gap-4 py-2 border-b text-sm"
+                  style={{ borderColor: "#6B8E2315" }}>
+                  <div>
+                    <span className="font-medium" style={{ color: "#2C2C2C" }}>{place}</span>
+                    <span className="block text-xs" style={{ color: "#2C2C2C60" }}>{note}</span>
+                  </div>
+                  <span className="shrink-0 font-semibold" style={{ color: "#6B8E23" }}>{distance}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Pricing ── */}
+      <section className="py-14 px-4" style={{ backgroundColor: "#2D501608" }} aria-label="Pricing">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-8">
+            <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#4A7C8C" }}>
+              Seasonal Rates
+            </p>
+            <h2
+              className="text-3xl font-semibold"
+              style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+            >
+              Pricing Overview
+            </h2>
+          </div>
+          <div className="space-y-3">
+            {property.pricing.map((ps) => (
+              <div
+                key={ps.season}
+                className="flex items-center gap-4 p-4 rounded-xl"
+                style={{ backgroundColor: "#FAF8F5", border: "1px solid #6B8E2318" }}
+              >
+                <div
+                  className="w-10 h-10 rounded-full flex items-center justify-center shrink-0"
+                  style={{ backgroundColor: `${ps.color}20` }}
+                >
+                  <ps.icon size={18} style={{ color: ps.color }} aria-hidden="true" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-baseline justify-between gap-2">
+                    <span className="text-sm font-semibold" style={{ color: "#2D5016" }}>{ps.season}</span>
+                    <span className="text-base font-bold" style={{ color: ps.color }}>{ps.rate}</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs" style={{ color: "#2C2C2C60" }}>{ps.dates}</span>
+                    <span className="text-xs" style={{ color: "#2C2C2C60" }}>{ps.unit}</span>
+                  </div>
+                  <p className="text-xs mt-0.5 italic" style={{ color: "#2C2C2C50" }}>{ps.note}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs mt-4 leading-relaxed" style={{ color: "#2C2C2C60" }}>
+            Rates are per night, not including applicable taxes. A cleaning fee applies.
+            Exact pricing confirmed at booking. Holiday weekends may carry a premium.
+          </p>
+        </div>
+      </section>
+
+      {/* ── Booking Widget ── */}
+      <section id="booking" className="py-14 px-4" aria-label="Check availability and book">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
+          <BookingWidget />
+          <div className="flex flex-col justify-center gap-6">
+            <div>
+              <p className="text-xs font-semibold tracking-widest uppercase mb-2" style={{ color: "#4A7C8C" }}>
+                Book Direct &amp; Save
+              </p>
+              <h2
+                className="text-3xl font-semibold mb-3"
+                style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+              >
+                Skip the platform fees
+              </h2>
+              <p className="text-sm leading-relaxed" style={{ color: "#2C2C2C80" }}>
+                Booking direct with Charlotte saves you 10–15% compared to Airbnb or VRBO.
+                You also get flexible cancellation terms, early access to dates, and a host who
+                answers her own messages.
+              </p>
+            </div>
+            <div className="space-y-2">
+              {[
+                { icon: Sun, text: "Save 10–15% vs. Airbnb & VRBO" },
+                { icon: Sun, text: "Flexible cancellation for direct guests" },
+                { icon: Sun, text: "Personal service — talk to Charlotte directly" },
+                { icon: Sun, text: "Early access to new dates & return guest perks" },
+              ].map(({ text }, i) => (
+                <div key={i} className="flex items-center gap-2 text-sm" style={{ color: "#2C2C2C" }}>
+                  <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: "#6B8E23" }} aria-hidden="true" />
+                  {text}
+                </div>
+              ))}
+            </div>
+            <Link
+              href="/book-direct"
+              className="inline-block text-sm font-medium underline underline-offset-4 transition-colors hover:opacity-70"
+              style={{ color: "#6B8E23" }}
+            >
+              Learn more about booking direct &rarr;
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Contact Form ── */}
+      <section id="contact" className="py-14 px-4 max-w-3xl mx-auto" aria-label="Send a booking inquiry">
+        <div className="text-center mb-8">
+          <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#4A7C8C" }}>
+            Get In Touch
+          </p>
+          <h2
+            className="text-3xl font-semibold"
+            style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+          >
+            Send Charlotte a message
+          </h2>
+          <p className="text-sm mt-3" style={{ color: "#2C2C2C80" }}>
+            Questions, custom requests, or just want to check availability for specific dates?
+            Fill out the form and Charlotte will be in touch within 24 hours.
+          </p>
+        </div>
+        <ContactForm />
+      </section>
+
+      {/* ── Testimonials ── */}
+      <section className="py-16 px-4" style={{ backgroundColor: "#2D501608" }} aria-label="Guest reviews">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-10">
+            <h2
+              className="text-4xl font-semibold"
+              style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+            >
+              What guests are saying
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {property.testimonials.map((t) => (
+              <TestimonialCard key={t.author} {...t} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA ── */}
+      <CTABanner
+        heading="This is your lake house."
+        subheading="Dates fill up quickly in summer and during ice fishing season. Reserve your spot today."
+        buttonLabel="Check Availability"
+        buttonHref="#booking"
+        secondaryLabel="Browse All Properties"
+        secondaryHref="/properties"
+      />
+    </>
+  );
+}

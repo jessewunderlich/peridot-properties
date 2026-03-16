@@ -19,27 +19,28 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Peridot Properties | Pickerel Lake Vacation Rental",
+    default: "Peridot Properties | Handpicked Lakeside Stays in Minnesota",
     template: "%s | Peridot Properties",
   },
   description:
-    "Book your lakeside escape on beautiful Pickerel Lake in Richville, MN. New-build 4-bedroom vacation home with 150ft of lake frontage, perfect for fishing, water sports, and year-round getaways.",
+    "Boutique vacation rentals managed personally by Charlotte Wunderlich. Handpicked lakeside stays in Minnesota's lake country — book direct and save.",
   keywords: [
+    "Minnesota lake vacation rental",
     "Pickerel Lake rental",
-    "Minnesota lake house",
-    "Richville MN vacation",
-    "Perham cabin rental",
+    "lake house Minnesota",
+    "Otter Tail County cabin",
     "walleye fishing Minnesota",
-    "lake vacation rental",
+    "book direct vacation rental",
+    "Minnesota lake country",
   ],
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://peridotproperties.com",
     siteName: "Peridot Properties",
-    title: "Peridot Properties | Pickerel Lake Vacation Rental",
+    title: "Peridot Properties | Handpicked Lakeside Stays in Minnesota",
     description:
-      "Your lakeside escape on beautiful Pickerel Lake in Richville, MN. New-build 4-bedroom home with 150ft of lake frontage.",
+      "Boutique vacation rentals managed personally by Charlotte Wunderlich. Book direct and save on your Minnesota lake getaway.",
   },
 };
 

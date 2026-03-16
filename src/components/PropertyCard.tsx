@@ -12,6 +12,7 @@ interface PropertyCardProps {
   lakeFrontage: string;
   imageUrl: string;
   href: string;
+  priceRange?: string;
 }
 
 export default function PropertyCard({
@@ -24,6 +25,7 @@ export default function PropertyCard({
   lakeFrontage,
   imageUrl,
   href,
+  priceRange,
 }: PropertyCardProps) {
   return (
     <article
@@ -69,6 +71,11 @@ export default function PropertyCard({
             <Waves size={13} aria-hidden="true" /> {lakeFrontage} frontage
           </span>
         </div>
+        {priceRange && (
+          <p className="text-xs font-semibold" style={{ color: "#6B8E23" }}>
+            {priceRange}
+          </p>
+        )}
         <Link
           href={href}
           className="mt-2 text-center py-2.5 rounded-full text-sm font-semibold transition-all hover:opacity-90"
