@@ -95,22 +95,18 @@ export default function Footer() {
             <li className="flex items-center gap-2">
               <Mail size={16} className="shrink-0" style={{ color: "#C8A951" }} aria-hidden="true" />
               <a
-                href="mailto:hello@peridotproperties.com"
+                href="mailto:charlotte@peridot.properties"
                 className="text-sm transition-colors hover:text-gold"
                 style={{ color: "#FAF8F580" }}
               >
-                hello@peridotproperties.com
+                charlotte@peridot.properties
               </a>
             </li>
             <li className="flex items-center gap-2">
               <Phone size={16} className="shrink-0" style={{ color: "#C8A951" }} aria-hidden="true" />
-              <a
-                href="tel:+12185550100"
-                className="text-sm transition-colors hover:text-gold"
-                style={{ color: "#FAF8F580" }}
-              >
-                (218) 555-0100
-              </a>
+              <span className="text-sm" style={{ color: "#FAF8F580" }}>
+                Phone number coming soon
+              </span>
             </li>
           </ul>
         </div>

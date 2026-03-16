@@ -18,7 +18,7 @@ const values = [
     icon: Heart,
     title: "Genuine Hospitality",
     description:
-      "We treat every guest the way we&apos;d want to be treated — with thoughtful communication, a spotless home, and a genuine desire for your trip to be perfect.",
+      "We treat every guest the way we'd want to be treated — with thoughtful communication, a spotless home, and a genuine desire for your trip to be perfect.",
   },
   {
     icon: Leaf,
@@ -30,7 +30,7 @@ const values = [
     icon: Users,
     title: "Family First",
     description:
-      "This home was designed with families in mind — kids, grandparents, the whole crew. We&apos;ve thought about every detail from the bunk room to the life jackets.",
+      "This home was designed with families in mind — kids, grandparents, the whole crew. We've thought about every detail from the bunk room to the life jackets.",
   },
   {
     icon: Star,
@@ -42,7 +42,7 @@ const values = [
     icon: MapPin,
     title: "Know Your Neighborhood",
     description:
-      "We live and breathe this area. Ask Charlotte where to eat, what bait is working, or whether the fall colors have peaked — she&apos;ll always have a real answer.",
+      "We live and breathe this area. Ask Charlotte where to eat, what bait is working, or whether the fall colors have peaked — she'll always have a real answer.",
   },
   {
     icon: Gem,
@@ -70,7 +70,7 @@ export default function AboutPage() {
           About Us
         </h1>
         <p className="text-base max-w-xl mx-auto" style={{ color: "#FAF8F5CC" }}>
-          A family who fell in love with Minnesota&apos;s lakes and wanted to share that with the world.
+          A family who fell in love with Minnesota's lakes and wanted to share that with the world.
         </p>
       </section>
 
@@ -85,7 +85,7 @@ export default function AboutPage() {
               className="text-4xl font-semibold leading-tight mb-5"
               style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
             >
-              Hi, I&apos;m Charlotte
+              Hi, I'm Charlotte
             </h2>
             <div className="space-y-4 text-sm leading-relaxed" style={{ color: "#2C2C2C" }}>
               <p>
@@ -97,14 +97,14 @@ export default function AboutPage() {
                 When my family found Pickerel Lake, we knew immediately it was something special.
                 The water is deep and clear, the fish are plentiful, and the sunsets over the western
                 shoreline are genuinely jaw-dropping. We built the house we always dreamed of staying in —
-                and then decided to share it. Starting with Pickerel Lake, we&apos;re expanding across
-                Minnesota&apos;s lake country — one carefully chosen property at a time.
+                and then decided to share it. Starting with Pickerel Lake, we're expanding across
+                Minnesota's lake country — one carefully chosen property at a time.
               </p>
               <p>
-                I handle every booking personally. When you reach out, you&apos;re talking to me — not a
+                I handle every booking personally. When you reach out, you're talking to me — not a
                 property manager, not a virtual assistant. I can tell you what the walleye have been doing,
                 which restaurant in Perham has the best Friday fish fry, and exactly how to get the
-                outdoor shower to stop squeaking (there&apos;s a trick).
+                outdoor shower to stop squeaking (there's a trick).
               </p>
               <p>
                 I hope Pickerel Lake becomes your place the way it became ours.
@@ -120,7 +120,7 @@ export default function AboutPage() {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://picsum.photos/600/800?random=20"
+              src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=600&h=800&fit=crop"
               alt="Charlotte Wunderlich, owner of Peridot Properties, on the dock at Pickerel Lake"
               className="w-full h-full object-cover"
             />
@@ -181,11 +181,11 @@ export default function AboutPage() {
               </p>
               <p>
                 The gemstone itself is found deep in the earth, formed under pressure and heat, and sometimes
-                delivered to the surface by volcanic activity. It&apos;s ancient, warm, and a little bit magical.
+                delivered to the surface by volcanic activity. It's ancient, warm, and a little bit magical.
                 We think that describes northern Minnesota pretty well.
               </p>
               <p>
-                Peridot is also August&apos;s birthstone &mdash; peak lake season. No coincidence there.
+                Peridot is also August's birthstone &mdash; peak lake season. No coincidence there.
               </p>
               <p>
                 When we were thinking about a name, we wanted something that felt like the lake: warm, natural,
@@ -213,7 +213,7 @@ export default function AboutPage() {
           <div className="space-y-4 text-sm leading-relaxed" style={{ color: "#2C2C2C" }}>
             <p>
               Minnesota has over 11,000 lakes. We visited a lot of them before we chose Pickerel.
-              Here&apos;s what won us over:
+              Here's what won us over:
             </p>
             <p>
               The fishing is exceptional. Walleye, smallmouth bass, northern pike &mdash; the lake has real
@@ -221,8 +221,8 @@ export default function AboutPage() {
               Our guests consistently report catching fish, not just trying to.
             </p>
             <p>
-              The lake isn&apos;t overcrowded. Pickerel doesn&apos;t have the jet-ski-and-noise-complaints atmosphere
-              of some of the more famous resort lakes. It&apos;s a local lake, beloved by the community,
+              The lake isn't overcrowded. Pickerel doesn't have the jet-ski-and-noise-complaints atmosphere
+              of some of the more famous resort lakes. It's a local lake, beloved by the community,
               and it has a quiet dignity we really respect.
             </p>
             <p>
@@ -241,7 +241,7 @@ export default function AboutPage() {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://picsum.photos/700/500?random=21"
+              src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&h=500&fit=crop"
               alt="Sunset over Pickerel Lake with fall foliage reflecting in the calm water"
               className="w-full h-full object-cover"
             />
@@ -285,8 +285,9 @@ export default function AboutPage() {
                 <p
                   className="text-sm leading-relaxed"
                   style={{ color: "#2C2C2C80" }}
-                  dangerouslySetInnerHTML={{ __html: value.description }}
-                />
+                >
+                  {value.description}
+                </p>
               </div>
             ))}
           </div>

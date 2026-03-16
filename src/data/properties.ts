@@ -34,6 +34,7 @@ export interface AmenityCategory {
 }
 
 export interface GalleryImage {
+  url: string;
   id: number;
   alt: string;
 }
@@ -136,7 +137,7 @@ export const properties: Property[] = [
     slug: "pickerel-lake-retreat",
     name: "Pickerel Lake Retreat",
     tagline: "Your lakeside escape on Pickerel Lake",
-    heroImage: "https://picsum.photos/1200/800?random=1",
+    heroImage: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=1200&h=800&fit=crop",
     location: {
       address: "33746 N Pickerel Dr",
       city: "Richville",
@@ -274,14 +275,14 @@ export const properties: Property[] = [
     ],
     priceRange: "From $150/night",
     gallery: [
-      { id: 1, alt: "Living room with lake views and stone fireplace" },
-      { id: 2, alt: "Kitchen with quartz countertops and stainless appliances" },
-      { id: 3, alt: "Primary bedroom with king bed and lake views" },
-      { id: 4, alt: "Private dock and sandy beach on Pickerel Lake" },
-      { id: 5, alt: "Fire pit area with Adirondack chairs at sunset" },
-      { id: 6, alt: "Deck overlooking the lake with dining table" },
-      { id: 7, alt: "Bunk room with four bunks for kids" },
-      { id: 8, alt: "Bathroom with walk-in shower and modern fixtures" },
+      { id: 1, alt: "Living room with lake views and stone fireplace", url: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop" },
+      { id: 2, alt: "Kitchen with quartz countertops and stainless appliances", url: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop" },
+      { id: 3, alt: "Primary bedroom with king bed and lake views", url: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&h=600&fit=crop" },
+      { id: 4, alt: "Private dock and sandy beach on Pickerel Lake", url: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=600&fit=crop" },
+      { id: 5, alt: "Fire pit area with Adirondack chairs at sunset", url: "https://images.unsplash.com/photo-1517824806704-9040b037703b?w=800&h=600&fit=crop" },
+      { id: 6, alt: "Deck overlooking the lake with dining table", url: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop" },
+      { id: 7, alt: "Bunk room with four bunks for kids", url: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=600&fit=crop" },
+      { id: 8, alt: "Bathroom with walk-in shower and modern fixtures", url: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&h=600&fit=crop" },
     ],
     lake: {
       name: "Pickerel Lake",
@@ -487,7 +488,7 @@ export const properties: Property[] = [
       name: "Peridot Properties — Pickerel Lake Retreat",
       description:
         "New-build 4-bedroom vacation home on Pickerel Lake with 150ft of private lake frontage. Sleeps 10. Located at 33746 N Pickerel Dr, Richville, MN 56576.",
-      url: "https://peridotproperties.com/properties/pickerel-lake-retreat",
+      url: "https://peridot.properties/properties/pickerel-lake-retreat",
       address: {
         "@type": "PostalAddress",
         streetAddress: "33746 N Pickerel Dr",
@@ -510,7 +511,7 @@ export const properties: Property[] = [
         { "@type": "LocationFeatureSpecification", name: "Private dock", value: true },
       ],
       telephone: "+12185550100",
-      email: "hello@peridotproperties.com",
+      email: "charlotte@peridot.properties",
     },
   },
 ];

@@ -100,7 +100,7 @@ export default async function PropertyPage({ params }: Props) {
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={`https://picsum.photos/800/600?random=${img.id}`}
+                src={img.url}
                 alt={img.alt}
                 className="w-full h-full object-cover transition-transform hover:scale-105"
                 style={{ minHeight: idx === 0 ? "320px" : "160px" }}

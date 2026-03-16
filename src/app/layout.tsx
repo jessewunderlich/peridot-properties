@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import StickyBookButton from "@/components/StickyBookButton";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -36,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://peridotproperties.com",
+    url: "https://peridot.properties",
     siteName: "Peridot Properties",
     title: "Peridot Properties | Handpicked Lakeside Stays in Minnesota",
     description:
@@ -55,6 +57,8 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <StickyBookButton />
+        <Analytics />
       </body>
     </html>
   );

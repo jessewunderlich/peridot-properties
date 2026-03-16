@@ -71,14 +71,14 @@ export default function BookingWidget() {
         </div>
 
         <Link
-          href="mailto:hello@peridotproperties.com?subject=Booking%20Inquiry%20-%20Pickerel%20Lake"
+          href="mailto:charlotte@peridot.properties?subject=Booking%20Inquiry%20-%20Pickerel%20Lake"
           className="block w-full text-center py-3 rounded-full text-sm font-semibold transition-all hover:opacity-90"
           style={{ backgroundColor: "#6B8E23", color: "#FAF8F5" }}
         >
           Send a Booking Inquiry
         </Link>
         <p className="text-center text-xs mt-3" style={{ color: "#2C2C2C50" }}>
-          Or call / text (218) 555-0100
+          Or call / text Contact via email
         </p>
       </div>
     </div>

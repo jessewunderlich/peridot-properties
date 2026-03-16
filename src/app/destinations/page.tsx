@@ -29,9 +29,9 @@ const regions = [
     ],
     icon: Fish,
     propertyCount: properties.filter(
-      (p) => p.location.county === "Otter Tail"
+      (p) => p.location.county.startsWith("Otter Tail")
     ).length,
-    image: "https://picsum.photos/800/400?random=30",
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=400&fit=crop",
   },
 ];
 

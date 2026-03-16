@@ -73,7 +73,7 @@ export default function PropertiesPage() {
               bathrooms={property.specs.bathrooms}
               sleeps={property.specs.sleeps}
               lakeFrontage={property.specs.frontage}
-              imageUrl={`https://picsum.photos/800/600?random=${property.gallery[0].id}`}
+              imageUrl={`https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=800&h=600&fit=crop`}
               href={`/properties/${property.slug}`}
               priceRange={property.priceRange}
             />
