@@ -510,7 +510,8 @@ export const properties: Property[] = [
         { "@type": "LocationFeatureSpecification", name: "WiFi", value: true },
         { "@type": "LocationFeatureSpecification", name: "Private dock", value: true },
       ],
-      telephone: "+12185550100",
+      // TODO: Update with real phone number when Google Voice is set up
+      // telephone: "+1XXXXXXXXXX",
       email: "charlotte@peridot.properties",
     },
   },

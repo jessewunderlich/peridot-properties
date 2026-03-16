@@ -161,7 +161,7 @@ export default function ContactForm() {
             name="phone"
             value={form.phone}
             onChange={handleChange}
-            placeholder="(612) 555-0100"
+            placeholder="(612) 123-4567"
             style={inputStyle}
             autoComplete="tel"
           />
