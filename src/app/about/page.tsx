@@ -1,0 +1,306 @@
+import type { Metadata } from "next";
+import { Heart, Gem, MapPin, Users, Star, Leaf } from "lucide-react";
+import CTABanner from "@/components/CTABanner";
+
+export const metadata: Metadata = {
+  title: "About | Peridot Properties — Charlotte Wunderlich, Pickerel Lake",
+  description:
+    "Meet Charlotte Wunderlich, owner of Peridot Properties. Learn why we fell in love with Pickerel Lake and why we named our vacation rental after a gemstone.",
+  openGraph: {
+    title: "About Peridot Properties | Charlotte Wunderlich",
+    description:
+      "A family-run lakefront vacation rental on Pickerel Lake, MN. Meet Charlotte and learn the story behind Peridot Properties.",
+  },
+};
+
+const values = [
+  {
+    icon: Heart,
+    title: "Genuine Hospitality",
+    description:
+      "We treat every guest the way we&apos;d want to be treated — with thoughtful communication, a spotless home, and a genuine desire for your trip to be perfect.",
+  },
+  {
+    icon: Leaf,
+    title: "Respect for the Lake",
+    description:
+      "Pickerel Lake is a treasure, and we take that seriously. We ask guests to practice catch-and-release selectively, keep the shoreline clean, and leave no trace.",
+  },
+  {
+    icon: Users,
+    title: "Family First",
+    description:
+      "This home was designed with families in mind — kids, grandparents, the whole crew. We&apos;ve thought about every detail from the bunk room to the life jackets.",
+  },
+  {
+    icon: Star,
+    title: "Honest, Fair Pricing",
+    description:
+      "We believe in transparent pricing with no surprise fees. What you see is what you pay. Booking direct means the savings pass directly to you.",
+  },
+  {
+    icon: MapPin,
+    title: "Know Your Neighborhood",
+    description:
+      "We live and breathe this area. Ask Charlotte where to eat, what bait is working, or whether the fall colors have peaked — she&apos;ll always have a real answer.",
+  },
+  {
+    icon: Gem,
+    title: "Quality Over Quantity",
+    description:
+      "We have one property, and we pour everything into it. One great experience beats five mediocre ones every time.",
+  },
+];
+
+export default function AboutPage() {
+  return (
+    <>
+      {/* ── Page Header ── */}
+      <section
+        className="py-16 px-4 text-center"
+        style={{ background: "linear-gradient(160deg, #2D5016 0%, #4A7C8C 100%)" }}
+      >
+        <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#C8A951" }}>
+          The People Behind the Property
+        </p>
+        <h1
+          className="text-5xl sm:text-6xl font-semibold mb-4"
+          style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#FAF8F5" }}
+        >
+          About Us
+        </h1>
+        <p className="text-base max-w-xl mx-auto" style={{ color: "#FAF8F5CC" }}>
+          A family who fell in love with a lake and wanted to share it with the world.
+        </p>
+      </section>
+
+      {/* ── Charlotte's Story ── */}
+      <section className="py-16 px-4 max-w-5xl mx-auto" aria-label="About Charlotte">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#4A7C8C" }}>
+              Meet Your Host
+            </p>
+            <h2
+              className="text-4xl font-semibold leading-tight mb-5"
+              style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+            >
+              Hi, I&apos;m Charlotte
+            </h2>
+            <div className="space-y-4 text-sm leading-relaxed" style={{ color: "#2C2C2C" }}>
+              <p>
+                I grew up spending summers at a small cabin in northern Minnesota, and those memories
+                shaped everything about how I think a lake vacation should feel — unhurried, warm,
+                a little bit wild, and fully disconnected from the everyday.
+              </p>
+              <p>
+                When my family found Pickerel Lake, we knew immediately it was something special.
+                The water is deep and clear, the fish are plentiful, and the sunsets over the western
+                shoreline are genuinely jaw-dropping. We built the house we always dreamed of staying in —
+                and then decided to share it.
+              </p>
+              <p>
+                I handle every booking personally. When you reach out, you&apos;re talking to me — not a
+                property manager, not a virtual assistant. I can tell you what the walleye have been doing,
+                which restaurant in Perham has the best Friday fish fry, and exactly how to get the
+                outdoor shower to stop squeaking (there&apos;s a trick).
+              </p>
+              <p>
+                I hope Pickerel Lake becomes your place the way it became ours.
+              </p>
+              <p className="font-medium" style={{ color: "#2D5016" }}>
+                &mdash; Charlotte Wunderlich
+              </p>
+            </div>
+          </div>
+          <div
+            className="relative h-80 md:h-[420px] rounded-2xl overflow-hidden"
+            style={{ border: "1px solid #6B8E2315" }}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://picsum.photos/600/800?random=20"
+              alt="Charlotte Wunderlich, owner of Peridot Properties, on the dock at Pickerel Lake"
+              className="w-full h-full object-cover"
+            />
+            <div
+              className="absolute bottom-4 left-4 right-4 rounded-xl px-4 py-3"
+              style={{ backgroundColor: "rgba(45,80,22,0.88)", backdropFilter: "blur(4px)" }}
+            >
+              <p className="text-xs font-medium" style={{ color: "#FAF8F5" }}>
+                Charlotte Wunderlich &middot; Host &amp; Owner
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── The Peridot Name ── */}
+      <section className="py-16 px-4" style={{ backgroundColor: "#2D501608" }}>
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div
+            className="p-8 rounded-2xl flex flex-col items-center text-center"
+            style={{ background: "linear-gradient(135deg, #6B8E2315, #C8A95115)", border: "1px solid #6B8E2320" }}
+          >
+            <Gem size={56} style={{ color: "#6B8E23" }} className="mb-4" aria-hidden="true" />
+            <p
+              className="text-5xl font-semibold mb-2"
+              style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+            >
+              Peridot
+            </p>
+            <p className="text-sm italic mb-4" style={{ color: "#2C2C2C60" }}>
+              /ˈpɛr.ɪ.dɒt/ &middot; noun
+            </p>
+            <p className="text-sm leading-relaxed" style={{ color: "#2C2C2C" }}>
+              A yellow-green gemstone, variety of olivine. One of the oldest known gemstones, associated with
+              the sun, warmth, and new beginnings. Sometimes called the &ldquo;gem of the sun.&rdquo;
+            </p>
+            <div
+              className="mt-5 w-16 h-16 rounded-full"
+              style={{ background: "radial-gradient(circle at 35% 35%, #a8c45a, #6B8E23, #4a6318)" }}
+              aria-label="Peridot gemstone color swatch"
+            />
+          </div>
+
+          <div>
+            <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#4A7C8C" }}>
+              The Name
+            </p>
+            <h2
+              className="text-4xl font-semibold leading-tight mb-5"
+              style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+            >
+              Why Peridot?
+            </h2>
+            <div className="space-y-4 text-sm leading-relaxed" style={{ color: "#2C2C2C" }}>
+              <p>
+                Peridot is the color of Pickerel Lake on a July afternoon &mdash; that specific shade of
+                yellow-green where the shallow water meets the sky and everything glows.
+              </p>
+              <p>
+                The gemstone itself is found deep in the earth, formed under pressure and heat, and sometimes
+                delivered to the surface by volcanic activity. It&apos;s ancient, warm, and a little bit magical.
+                We think that describes northern Minnesota pretty well.
+              </p>
+              <p>
+                Peridot is also August&apos;s birthstone &mdash; peak lake season. No coincidence there.
+              </p>
+              <p>
+                When we were thinking about a name, we wanted something that felt like the lake: warm, natural,
+                a little earthy, and quietly beautiful. Peridot felt exactly right.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Why Pickerel Lake ── */}
+      <section className="py-16 px-4 max-w-5xl mx-auto" aria-label="Why Pickerel Lake">
+        <div className="text-center mb-10">
+          <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#4A7C8C" }}>
+            Our Lake
+          </p>
+          <h2
+            className="text-4xl font-semibold"
+            style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+          >
+            Why Pickerel Lake?
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+          <div className="space-y-4 text-sm leading-relaxed" style={{ color: "#2C2C2C" }}>
+            <p>
+              Minnesota has over 11,000 lakes. We visited a lot of them before we chose Pickerel.
+              Here&apos;s what won us over:
+            </p>
+            <p>
+              The fishing is exceptional. Walleye, smallmouth bass, northern pike &mdash; the lake has real
+              depth (78 feet at max) and structure, which creates the habitat serious anglers look for.
+              Our guests consistently report catching fish, not just trying to.
+            </p>
+            <p>
+              The lake isn&apos;t overcrowded. Pickerel doesn&apos;t have the jet-ski-and-noise-complaints atmosphere
+              of some of the more famous resort lakes. It&apos;s a local lake, beloved by the community,
+              and it has a quiet dignity we really respect.
+            </p>
+            <p>
+              Richville and Perham are genuine small-town Minnesota. The neighbors wave. The bait shop
+              owner will actually tell you where the fish are. The Friday night fish fry at the VFW
+              is not to be missed.
+            </p>
+            <p>
+              And the views. Facing west across Pickerel Lake at sunset, in late September when the
+              maples have gone red and gold &mdash; that view is worth everything.
+            </p>
+          </div>
+          <div
+            className="rounded-2xl overflow-hidden h-72 md:h-auto"
+            style={{ border: "1px solid #6B8E2315" }}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://picsum.photos/700/500?random=21"
+              alt="Sunset over Pickerel Lake with fall foliage reflecting in the calm water"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* ── Values ── */}
+      <section className="py-16 px-4" style={{ backgroundColor: "#2D501608" }} aria-label="Our values">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-10">
+            <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#4A7C8C" }}>
+              How We Operate
+            </p>
+            <h2
+              className="text-4xl font-semibold"
+              style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+            >
+              Our Values
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {values.map((value) => (
+              <div
+                key={value.title}
+                className="p-5 rounded-2xl"
+                style={{ backgroundColor: "#FAF8F5", border: "1px solid #6B8E2318" }}
+              >
+                <div
+                  className="w-10 h-10 rounded-full flex items-center justify-center mb-3"
+                  style={{ backgroundColor: "#6B8E2318" }}
+                >
+                  <value.icon size={18} style={{ color: "#6B8E23" }} aria-hidden="true" />
+                </div>
+                <h3
+                  className="text-base font-semibold mb-2"
+                  style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+                >
+                  {value.title}
+                </h3>
+                <p
+                  className="text-sm leading-relaxed"
+                  style={{ color: "#2C2C2C80" }}
+                  dangerouslySetInnerHTML={{ __html: value.description }}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA ── */}
+      <CTABanner
+        heading="Come be our guest"
+        subheading="We'd love to share Pickerel Lake with you. Reach out anytime — Charlotte is always happy to chat about the property, the lake, or help you plan your trip."
+        buttonLabel="Book Your Stay"
+        buttonHref="/book"
+        secondaryLabel="Contact Charlotte"
+        secondaryHref="/book#contact"
+      />
+    </>
+  );
+}
