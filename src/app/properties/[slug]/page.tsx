@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import {
   BedDouble,
   ShowerHead,
@@ -96,15 +97,15 @@ export default async function PropertyPage({ params }: Props) {
             <div
               key={img.id}
               className={`rounded-xl overflow-hidden ${idx === 0 ? "col-span-2 row-span-2" : ""} relative`}
-              style={{ aspectRatio: idx === 0 ? "auto" : "4/3" }}
+              style={{ aspectRatio: idx === 0 ? "4/3" : "4/3", minHeight: idx === 0 ? "320px" : "160px" }}
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src={img.url}
                 alt={img.alt}
-                className="w-full h-full object-cover transition-transform hover:scale-105"
-                style={{ minHeight: idx === 0 ? "320px" : "160px" }}
-                loading={idx === 0 ? "eager" : "lazy"}
+                fill
+                className="object-cover transition-transform hover:scale-105"
+                sizes={idx === 0 ? "(max-width: 768px) 100vw, 50vw" : "(max-width: 768px) 50vw, 25vw"}
+                priority={idx === 0}
               />
             </div>
           ))}
@@ -423,29 +424,21 @@ export default async function PropertyPage({ params }: Props) {
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          {/* Map placeholder */}
+          {/* Google Maps Embed */}
           <div
-            className="rounded-2xl overflow-hidden flex flex-col items-center justify-center p-10 text-center"
-            style={{
-              background: "linear-gradient(135deg, #4A7C8C18, #6B8E2318)",
-              border: "2px dashed #4A7C8C50",
-              minHeight: "280px",
-            }}
-            aria-label="Map placeholder showing property location"
+            className="rounded-2xl overflow-hidden"
+            style={{ border: "1px solid #6B8E2320", minHeight: "280px" }}
           >
-            <MapPin size={40} style={{ color: "#4A7C8C" }} className="mb-4" aria-hidden="true" />
-            <p
-              className="text-lg font-semibold mb-1"
-              style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
-            >
-              {property.location.address}
-            </p>
-            <p className="text-sm" style={{ color: "#2C2C2C80" }}>
-              {property.location.city}, {property.location.state} {property.location.zip}
-            </p>
-            <p className="text-xs mt-4 px-4 leading-relaxed" style={{ color: "#2C2C2C60" }}>
-              Interactive map will appear here.
-            </p>
+            <iframe
+              src={`https://www.google.com/maps?q=${encodeURIComponent(property.location.address + ", " + property.location.city + ", " + property.location.state + " " + property.location.zip)}&z=13&output=embed`}
+              width="100%"
+              height="100%"
+              style={{ border: 0, minHeight: "280px" }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title={`Map showing ${property.name} location`}
+            />
           </div>
 
           <div className="space-y-4">

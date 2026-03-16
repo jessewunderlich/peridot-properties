@@ -37,10 +37,33 @@ export default function ContactForm() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setSubmitting(true);
-    // Simulate async submission
-    await new Promise((r) => setTimeout(r, 900));
+    try {
+      // TODO: Replace with your Formspree form ID at https://formspree.io
+      // Create a free account, make a form, and paste the endpoint here
+      const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone || "Not provided",
+          guests: form.guests,
+          checkIn: form.checkIn,
+          checkOut: form.checkOut,
+          message: form.message || "No additional message",
+          _subject: `New inquiry from ${form.name} — ${form.checkIn} to ${form.checkOut}`,
+        }),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        alert("Something went wrong. Please email charlotte@peridot.properties directly.");
+      }
+    } catch {
+      alert("Something went wrong. Please email charlotte@peridot.properties directly.");
+    }
     setSubmitting(false);
-    setSubmitted(true);
   }
 
   const inputStyle = {

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Heart, Gem, MapPin, Users, Star, Leaf } from "lucide-react";
 import CTABanner from "@/components/CTABanner";
 
@@ -118,11 +119,12 @@ export default function AboutPage() {
             className="relative h-80 md:h-[420px] rounded-2xl overflow-hidden"
             style={{ border: "1px solid #6B8E2315" }}
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=600&h=800&fit=crop"
               alt="Charlotte Wunderlich, owner of Peridot Properties, on the dock at Pickerel Lake"
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
             <div
               className="absolute bottom-4 left-4 right-4 rounded-xl px-4 py-3"
@@ -239,11 +241,12 @@ export default function AboutPage() {
             className="rounded-2xl overflow-hidden h-72 md:h-auto"
             style={{ border: "1px solid #6B8E2315" }}
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&h=500&fit=crop"
               alt="Sunset over Pickerel Lake with fall foliage reflecting in the calm water"
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
         </div>

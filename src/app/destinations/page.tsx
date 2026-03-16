@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Fish, TreePine, Waves } from "lucide-react";
 import { properties } from "@/data/properties";
 import CTABanner from "@/components/CTABanner";
@@ -94,11 +95,13 @@ export default function DestinationsPage() {
           >
             {/* Region image */}
             <div className="relative h-56 sm:h-72">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src={region.image}
                 alt={`${region.name} landscape`}
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 960px"
+                priority
               />
               <div
                 className="absolute inset-0"

@@ -23,28 +23,16 @@ export default function Footer() {
             Boutique vacation rentals managed personally by Charlotte Wunderlich.
             Handpicked lakeside stays in Minnesota&apos;s lake country.
           </p>
+          {/* Social links — uncomment when accounts are created
           <div className="flex gap-3 mt-5">
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Peridot Properties on Facebook"
-              className="p-2 rounded-full transition-colors hover:opacity-80"
-              style={{ backgroundColor: "#6B8E2340" }}
-            >
+            <a href="https://facebook.com/peridotproperties" target="_blank" rel="noopener noreferrer" aria-label="Peridot Properties on Facebook" className="p-2 rounded-full transition-colors hover:opacity-80" style={{ backgroundColor: "#6B8E2340" }}>
               <Facebook size={16} style={{ color: "#FAF8F5" }} aria-hidden="true" />
             </a>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Peridot Properties on Instagram"
-              className="p-2 rounded-full transition-colors hover:opacity-80"
-              style={{ backgroundColor: "#6B8E2340" }}
-            >
+            <a href="https://instagram.com/peridotproperties" target="_blank" rel="noopener noreferrer" aria-label="Peridot Properties on Instagram" className="p-2 rounded-full transition-colors hover:opacity-80" style={{ backgroundColor: "#6B8E2340" }}>
               <Instagram size={16} style={{ color: "#FAF8F5" }} aria-hidden="true" />
             </a>
           </div>
+          */}
         </div>
 
         {/* Navigation */}
@@ -117,7 +105,7 @@ export default function Footer() {
         style={{ borderColor: "#6B8E2340", color: "#FAF8F540" }}
       >
         <p>&copy; {new Date().getFullYear()} Peridot Properties. All rights reserved.</p>
-        <p>Minnesota&apos;s Lake Country &bull; Book Direct &amp; Save</p>
+        <p><Link href="/privacy" className="hover:underline">Privacy Policy</Link> &bull; Minnesota&apos;s Lake Country</p>
       </div>
     </footer>
   );
