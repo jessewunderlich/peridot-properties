@@ -20,6 +20,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://peridot.properties"),
   title: {
     default: "Peridot Properties | Handpicked Lakeside Stays in Minnesota",
     template: "%s | Peridot Properties",
@@ -34,6 +35,9 @@ export const metadata: Metadata = {
     "walleye fishing Minnesota",
     "book direct vacation rental",
     "Minnesota lake country",
+    "Richville MN cabin",
+    "Detroit Lakes area rental",
+    "Perham MN lake house",
   ],
   openGraph: {
     type: "website",
@@ -43,6 +47,15 @@ export const metadata: Metadata = {
     title: "Peridot Properties | Handpicked Lakeside Stays in Minnesota",
     description:
       "Boutique vacation rentals managed personally by Charlotte Wunderlich. Book direct and save on your Minnesota lake getaway.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Peridot Properties | Handpicked Lakeside Stays in Minnesota",
+    description:
+      "Boutique vacation rentals in Minnesota's lake country. Book direct and save 10-15%.",
+  },
+  alternates: {
+    canonical: "https://peridot.properties",
   },
 };
 

@@ -141,7 +141,7 @@ export default function HomePage() {
                 bathrooms={property.specs.bathrooms}
                 sleeps={property.specs.sleeps}
                 lakeFrontage={property.specs.frontage}
-                imageUrl={`https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=800&h=600&fit=crop`}
+                imageUrl={property.heroImage}
                 href={`/properties/${property.slug}`}
                 priceRange={property.priceRange}
               />

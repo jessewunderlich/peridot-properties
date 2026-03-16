@@ -120,7 +120,7 @@ export default function AboutPage() {
             style={{ border: "1px solid #6B8E2315" }}
           >
             <Image
-              src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=600&h=800&fit=crop"
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=800&fit=crop"
               alt="Charlotte Wunderlich, owner of Peridot Properties, on the dock at Pickerel Lake"
               fill
               className="object-cover"
@@ -242,7 +242,7 @@ export default function AboutPage() {
             style={{ border: "1px solid #6B8E2315" }}
           >
             <Image
-              src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&h=500&fit=crop"
+              src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=700&h=500&fit=crop"
               alt="Sunset over Pickerel Lake with fall foliage reflecting in the calm water"
               fill
               className="object-cover"

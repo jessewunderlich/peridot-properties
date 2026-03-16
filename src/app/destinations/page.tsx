@@ -32,7 +32,7 @@ const regions = [
     propertyCount: properties.filter(
       (p) => p.location.county.startsWith("Otter Tail")
     ).length,
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&h=400&fit=crop",
   },
 ];
 
