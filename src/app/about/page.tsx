@@ -32,7 +32,7 @@ const values = [
     icon: Users,
     title: "Family First",
     description:
-      "This home was designed with families in mind — kids, grandparents, the whole crew. We've thought about every detail from the bunk room to the life jackets.",
+      "This home was designed with families in mind — kids, grandparents, the whole crew. We've thought about every detail from the twin bedroom to the life jackets.",
   },
   {
     icon: Star,

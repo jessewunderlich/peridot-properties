@@ -13,7 +13,7 @@ const faqSections = [
       },
       {
         q: "What is the cancellation policy?",
-        a: "Direct bookings receive more generous cancellation terms than OTAs. Contact Charlotte for details before you book and she\u2019ll walk you through everything.",
+        a: "Cancel for any reason up to 24 hours before check-in for a full refund. Cancel within 24 hours of check-in for a 50% refund. After check-in time, the reservation is non-refundable.",
       },
       {
         q: "How do I book?",
@@ -34,7 +34,7 @@ const faqSections = [
     faqs: [
       {
         q: "How many guests can Lakeside Luxe accommodate?",
-        a: "Up to 10 guests overnight. The property has 4 bedrooms and 2 bathrooms.",
+        a: "The property has 5 bedrooms and 4 bathrooms across three floors. The third floor has the master suite (king bed, 3/4 en-suite), two queen bedrooms, and a full shared bath. The second floor has a twin bedroom with a half bath. The ground-floor guest suite has a king bed and its own 3/4 bath. Contact Charlotte for the current maximum guest count.",
       },
       {
         q: "Is there WiFi?",

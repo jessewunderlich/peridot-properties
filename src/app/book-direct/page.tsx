@@ -58,10 +58,10 @@ const benefits = [
 const comparisonRows = [
   { item: "Nightly rate (5 nights at $300)", direct: "$1,500", platform: "$1,500" },
   { item: "Guest service fee", direct: "$0", platform: "$210–300" },
-  { item: "Cleaning fee", direct: "Included", platform: "$150–200" },
+  { item: "Cleaning fee", direct: "$395", platform: "$395" },
   { item: "Processing fee", direct: "$44", platform: "Hidden in service fee" },
-  { item: "Total", direct: "$1,544", platform: "$1,860–2,000", highlight: true },
-  { item: "Your savings", direct: "$316–456", platform: "—", highlight: true },
+  { item: "Total", direct: "$1,939", platform: "$2,105–2,395", highlight: true },
+  { item: "Your savings", direct: "$166–456", platform: "—", highlight: true },
 ];
 
 export default function BookDirectPage() {
