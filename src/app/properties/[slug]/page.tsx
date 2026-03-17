@@ -91,7 +91,27 @@ export default async function PropertyPage({ params }: Props) {
         >
           Take a look around
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        {/* Mobile: horizontal scroll carousel */}
+        <div className="flex gap-3 overflow-x-auto snap-x snap-mandatory pb-4 sm:hidden -mx-4 px-4">
+          {property.gallery.map((img, idx) => (
+            <div
+              key={img.id}
+              className="relative rounded-xl overflow-hidden snap-center shrink-0"
+              style={{ width: "85vw", aspectRatio: "4/3" }}
+            >
+              <Image
+                src={img.url}
+                alt={img.alt}
+                fill
+                className="object-cover"
+                sizes="85vw"
+                priority={idx === 0}
+              />
+            </div>
+          ))}
+        </div>
+        {/* Tablet+: grid layout */}
+        <div className="hidden sm:grid grid-cols-2 md:grid-cols-4 gap-3">
           {property.gallery.map((img, idx) => (
             <div
               key={img.id}
@@ -258,7 +278,7 @@ export default async function PropertyPage({ params }: Props) {
             A lake for all seasons
           </h2>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
           {property.seasons.map((season) => (
             <SeasonCard key={season.season} {...season} />
           ))}

@@ -239,7 +239,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div
-            className="relative rounded-2xl overflow-hidden h-72 md:h-auto md:min-h-[360px]"
+            className="relative rounded-2xl overflow-hidden aspect-[4/3] md:aspect-auto md:min-h-[360px]"
             style={{ border: "1px solid #6B8E2315" }}
           >
             <Image

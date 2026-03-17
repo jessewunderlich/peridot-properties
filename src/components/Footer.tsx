@@ -25,11 +25,11 @@ export default function Footer() {
             Handpicked lakeside stays in Minnesota&apos;s lake country.
           </p>
           <div className="flex gap-3 mt-5">
-            <a href="https://facebook.com/peridotproperties" target="_blank" rel="noopener noreferrer" aria-label="Peridot Properties on Facebook" className="p-2 rounded-full transition-colors hover:opacity-80" style={{ backgroundColor: "#6B8E2340" }}>
-              <Facebook size={16} style={{ color: "#FAF8F5" }} aria-hidden="true" />
+            <a href="https://facebook.com/peridotproperties" target="_blank" rel="noopener noreferrer" aria-label="Peridot Properties on Facebook" className="p-3 rounded-full transition-colors hover:opacity-80" style={{ backgroundColor: "#6B8E2340" }}>
+              <Facebook size={18} style={{ color: "#FAF8F5" }} aria-hidden="true" />
             </a>
-            <a href="https://instagram.com/peridotproperties" target="_blank" rel="noopener noreferrer" aria-label="Peridot Properties on Instagram" className="p-2 rounded-full transition-colors hover:opacity-80" style={{ backgroundColor: "#6B8E2340" }}>
-              <Instagram size={16} style={{ color: "#FAF8F5" }} aria-hidden="true" />
+            <a href="https://instagram.com/peridotproperties" target="_blank" rel="noopener noreferrer" aria-label="Peridot Properties on Instagram" className="p-3 rounded-full transition-colors hover:opacity-80" style={{ backgroundColor: "#6B8E2340" }}>
+              <Instagram size={18} style={{ color: "#FAF8F5" }} aria-hidden="true" />
             </a>
           </div>
         </div>

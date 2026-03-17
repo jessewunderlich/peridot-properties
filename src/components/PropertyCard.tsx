@@ -54,7 +54,7 @@ export default function PropertyCard({
             {location}
           </p>
         </div>
-        <p className="text-sm leading-relaxed flex-1" style={{ color: "#2C2C2C" }}>
+        <p className="text-sm leading-relaxed flex-1 line-clamp-3 sm:line-clamp-4" style={{ color: "#2C2C2C" }}>
           {description}
         </p>
         <div className="flex flex-wrap gap-4 pt-2 border-t text-xs" style={{ borderColor: "#6B8E2315" }}>

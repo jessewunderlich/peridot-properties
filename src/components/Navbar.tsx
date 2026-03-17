@@ -89,27 +89,34 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile menu */}
+      {/* Mobile menu + backdrop */}
       {mobileOpen && (
-        <div
-          className="md:hidden border-t px-4 pb-4 pt-2"
-          style={{ backgroundColor: "#FAF8F5", borderColor: "#6B8E2330" }}
-        >
-          <ul className="flex flex-col gap-1" role="list">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="block px-3 py-2 rounded text-sm font-medium transition-colors hover:bg-peridot/10"
-                  style={{ color: "#2C2C2C", fontFamily: "var(--font-inter), sans-serif" }}
-                  onClick={() => setMobileOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <>
+          <div
+            className="fixed inset-0 z-40 bg-black/20 md:hidden"
+            onClick={() => setMobileOpen(false)}
+            aria-hidden="true"
+          />
+          <div
+            className="md:hidden border-t px-4 pb-4 pt-2 relative z-50"
+            style={{ backgroundColor: "#FAF8F5", borderColor: "#6B8E2330" }}
+          >
+            <ul className="flex flex-col gap-1" role="list">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="block px-3 py-2 rounded text-sm font-medium transition-colors hover:bg-peridot/10"
+                    style={{ color: "#2C2C2C", fontFamily: "var(--font-inter), sans-serif" }}
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </>
       )}
     </header>
   );

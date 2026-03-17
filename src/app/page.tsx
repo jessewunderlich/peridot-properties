@@ -55,14 +55,14 @@ export default function HomePage() {
         }}
         aria-label="Hero section"
       >
-        {/* decorative circles */}
+        {/* decorative circles — hidden on small screens for performance */}
         <div
-          className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full opacity-10 pointer-events-none"
+          className="hidden sm:block absolute top-0 right-0 w-[600px] h-[600px] rounded-full opacity-10 pointer-events-none"
           style={{ background: "radial-gradient(circle, #C8A951 0%, transparent 70%)", transform: "translate(30%, -30%)" }}
           aria-hidden="true"
         />
         <div
-          className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full opacity-10 pointer-events-none"
+          className="hidden sm:block absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full opacity-10 pointer-events-none"
           style={{ background: "radial-gradient(circle, #6B8E23 0%, transparent 70%)", transform: "translate(-30%, 30%)" }}
           aria-hidden="true"
         />
@@ -108,7 +108,7 @@ export default function HomePage() {
 
         {/* scroll hint */}
         <div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 opacity-50"
+          className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 opacity-50"
           aria-hidden="true"
         >
           <span className="text-xs tracking-widest uppercase" style={{ color: "#FAF8F5" }}>Scroll</span>
