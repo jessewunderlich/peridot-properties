@@ -26,12 +26,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...propertyPages,
     {
-      url: `${baseUrl}/destinations`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
       url: `${baseUrl}/book-direct`,
       lastModified: new Date(),
       changeFrequency: "monthly",

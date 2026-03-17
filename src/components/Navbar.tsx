@@ -8,7 +8,6 @@ import PeridotGem from "@/components/PeridotGem";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/properties", label: "Properties" },
-  { href: "/destinations", label: "Destinations" },
   { href: "/local-guide", label: "Local Guide" },
   { href: "/faq", label: "FAQ" },
   { href: "/about", label: "About" },

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Utensils, Music, Sailboat, Fish, ShoppingBag, Sparkles, TreePine, Bike, Map } from "lucide-react";
+import Image from "next/image";
+import { Utensils, Music, Sailboat, Fish, ShoppingBag, Sparkles, TreePine, Bike, Map, MapPin } from "lucide-react";
 import CTABanner from "@/components/CTABanner";
 
 export const metadata: Metadata = {
@@ -161,6 +162,71 @@ export default function LocalGuidePage() {
         <p className="text-base max-w-xl mx-auto" style={{ color: "#FAF8F5CC" }}>
           Everything you need to know about dining, fishing, activities, and local secrets near our properties in Otter Tail County.
         </p>
+      </section>
+
+      {/* ── The Region ── */}
+      <section className="py-14 px-4 max-w-5xl mx-auto" aria-label="About the region">
+        <div
+          className="rounded-2xl overflow-hidden"
+          style={{ border: "1px solid #6B8E2320" }}
+        >
+          <div className="relative h-56 sm:h-72">
+            <Image
+              src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&h=400&fit=crop"
+              alt="Otter Tail County lake landscape with forest and calm water"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 960px"
+              priority
+            />
+            <div
+              className="absolute inset-0"
+              style={{ background: "linear-gradient(to top, rgba(45,80,22,0.8), transparent 60%)" }}
+            />
+            <div className="absolute bottom-6 left-6 right-6">
+              <div className="flex items-center gap-2 mb-2">
+                <MapPin size={16} style={{ color: "#C8A951" }} aria-hidden="true" />
+                <span
+                  className="text-xs font-semibold tracking-widest uppercase"
+                  style={{ color: "#C8A951" }}
+                >
+                  Otter Tail County, Minnesota
+                </span>
+              </div>
+              <h2
+                className="text-3xl sm:text-4xl font-semibold"
+                style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#FAF8F5" }}
+              >
+                The Heart of Lake Country
+              </h2>
+            </div>
+          </div>
+          <div className="p-6 sm:p-8" style={{ backgroundColor: "#FAF8F5" }}>
+            <p className="text-sm leading-relaxed mb-6" style={{ color: "#2C2C2C" }}>
+              Home to over 1,000 lakes, Otter Tail County is the heart of Minnesota&apos;s lake country.
+              World-class walleye fishing, pristine shorelines, and small-town charm define this region.
+              Towns like Perham, Richville, and Pelican Rapids offer everything you need while keeping
+              the pace slow and the water close.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {[
+                "1,000+ lakes in one county",
+                "World-class walleye & bass fishing",
+                "Near Perham, Detroit Lakes & Fergus Falls",
+                "Year-round activities: fishing, hunting, skiing, snowmobiling",
+              ].map((h) => (
+                <span
+                  key={h}
+                  className="flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full"
+                  style={{ backgroundColor: "#6B8E2315", color: "#2D5016" }}
+                >
+                  <Fish size={12} aria-hidden="true" />
+                  {h}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* \u2500\u2500 Guide Content \u2500\u2500 */}

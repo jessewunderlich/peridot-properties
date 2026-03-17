@@ -49,7 +49,6 @@ export default function Footer() {
             {[
               { href: "/", label: "Home" },
               { href: "/properties", label: "Properties" },
-              { href: "/destinations", label: "Destinations" },
               { href: "/local-guide", label: "Local Guide" },
               { href: "/about", label: "About Us" },
               { href: "/book-direct", label: "Book Direct" },
