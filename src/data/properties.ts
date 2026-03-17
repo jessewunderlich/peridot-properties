@@ -164,7 +164,7 @@ export const properties: Property[] = [
     description: [
       "Built new in 2023, this home was designed from the ground up with lake life in mind. The open-concept main floor captures lake views from every angle, with floor-to-ceiling windows in the living and dining areas that fill the space with natural light from morning through golden hour.",
       "The kitchen is a cook's dream — plenty of counter space, quality appliances, and a fish-cleaning station just outside the back door for those who are serious about their catch. A propane fireplace anchors the living room, and the wide wraparound deck runs the full width of the lake-facing side.",
-      "Five bedrooms across three floors sleep up to 12: the master suite and guest suite each feature a king bed, two bedrooms have a queen, and the fifth has two twin beds — perfect for kids. Four bathrooms mean no morning bottlenecks: a full shared bath and a 3/4 tile shower en-suite on the third floor, a half bath on the second floor, and a 3/4 bath in the ground-floor guest suite.",
+      "Five bedrooms across three floors sleep up to 12: the third floor hosts the master suite with a king bed, two queen bedrooms, and both a full shared bath and a 3/4 tile shower en-suite. The second floor has a twin bedroom — perfect for kids — with a half bath. The ground-floor guest suite rounds it out with a king bed and its own 3/4 bath.",
       "Step outside to 150 feet of pristine Pickerel Lake frontage — a private dock, sandy swim area, fire pit, and two kayaks plus a canoe that are yours to use all week.",
     ],
     amenities: [

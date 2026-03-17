@@ -164,8 +164,8 @@ export default async function PropertyPage({ params }: Props) {
             </h3>
             <ul className="space-y-3">
               {[
-                { icon: BedDouble, label: `${property.specs.bedrooms} bedrooms (2 king suites, 2 queen, 1 twin)` },
-                { icon: ShowerHead, label: `${property.specs.bathrooms} bathrooms (full, 2× three-quarter, half)` },
+                { icon: BedDouble, label: `${property.specs.bedrooms} bedrooms (2 king, 2 queen, 1 twin across 3 floors)` },
+                { icon: ShowerHead, label: `${property.specs.bathrooms} bathrooms (full + 3/4 en-suite, half, 3/4 suite)` },
                 { icon: Layers, label: `Sleeps up to ${property.specs.sleeps} guests` },
                 { icon: Waves, label: `${property.specs.frontage} private lake frontage` },
                 { icon: Sailboat, label: "Dock, kayaks & canoe" },
