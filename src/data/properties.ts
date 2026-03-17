@@ -135,7 +135,7 @@ export interface Property {
 export const properties: Property[] = [
   {
     slug: "pickerel-lake-retreat",
-    name: "Pickerel Lake Retreat",
+    name: "Lakeside Luxe",
     tagline: "Your lakeside escape on Pickerel Lake",
     heroImage: "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop",
     location: {
@@ -228,7 +228,7 @@ export const properties: Property[] = [
     houseRules: [
       "Check-in: 4:00 PM | Check-out: 10:00 AM",
       "No smoking anywhere on the property",
-      "Pets considered on request — please ask before booking",
+      "No pets allowed — we appreciate your understanding",
       "Maximum 10 guests overnight",
       "Quiet hours 10 PM – 8 AM (neighbor-friendly lake)",
       "No parties or events beyond registered guests",
@@ -485,7 +485,7 @@ export const properties: Property[] = [
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "VacationRental",
-      name: "Peridot Properties — Pickerel Lake Retreat",
+      name: "Peridot Properties — Lakeside Luxe",
       description:
         "New-build 4-bedroom vacation home on Pickerel Lake with 150ft of private lake frontage. Sleeps 10. Located at 33746 N Pickerel Dr, Richville, MN 56576.",
       url: "https://peridot.properties/properties/pickerel-lake-retreat",
@@ -510,7 +510,6 @@ export const properties: Property[] = [
         { "@type": "LocationFeatureSpecification", name: "WiFi", value: true },
         { "@type": "LocationFeatureSpecification", name: "Private dock", value: true },
       ],
-      // TODO: Update with real phone number when Google Voice is set up
       // telephone: "+1XXXXXXXXXX",
       email: "charlotte@peridot.properties",
     },

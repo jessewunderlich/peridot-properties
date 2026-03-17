@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, Phone, Facebook, Instagram } from "lucide-react";
+import { Mail, Facebook, Instagram } from "lucide-react";
 import PeridotGem from "@/components/PeridotGem";
 
 export default function Footer() {
@@ -21,8 +21,8 @@ export default function Footer() {
             </span>
           </div>
           <p className="text-sm leading-relaxed" style={{ color: "#FAF8F580" }}>
-            Boutique vacation rentals managed personally by Charlotte Wunderlich.
-            Handpicked lakeside stays in Minnesota&apos;s lake country.
+            Lakeside vacation rentals run by Charlotte Wunderlich and her family.
+            Book direct and save.
           </p>
           <div className="flex gap-3 mt-5">
             <a href="https://facebook.com/peridotproperties" target="_blank" rel="noopener noreferrer" aria-label="Peridot Properties on Facebook" className="p-3 rounded-full transition-colors hover:opacity-80" style={{ backgroundColor: "#6B8E2340" }}>
@@ -47,6 +47,7 @@ export default function Footer() {
               { href: "/", label: "Home" },
               { href: "/properties", label: "Properties" },
               { href: "/destinations", label: "Destinations" },
+              { href: "/local-guide", label: "Local Guide" },
               { href: "/about", label: "About Us" },
               { href: "/book-direct", label: "Book Direct" },
             ].map((link) => (
@@ -81,12 +82,6 @@ export default function Footer() {
               >
                 charlotte@peridot.properties
               </a>
-            </li>
-            <li className="flex items-center gap-2">
-              <Phone size={16} className="shrink-0" style={{ color: "#C8A951" }} aria-hidden="true" />
-              <span className="text-sm" style={{ color: "#FAF8F580" }}>
-                Phone number coming soon
-              </span>
             </li>
           </ul>
         </div>

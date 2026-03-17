@@ -37,32 +37,9 @@ export default function PropertiesPage() {
         </p>
       </section>
 
-      {/* ── Search / Filter (future) ── */}
-      <section className="py-6 px-4" style={{ backgroundColor: "#2D501608" }}>
-        <div className="max-w-5xl mx-auto flex flex-wrap items-center gap-3">
-          <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: "#4A7C8C" }}>
-            Filter by:
-          </span>
-          {["Region", "Bedrooms", "Season", "Pet Friendly"].map((filter) => (
-            <button
-              key={filter}
-              disabled
-              className="px-4 py-2 rounded-full text-xs font-medium border cursor-not-allowed opacity-50"
-              style={{ borderColor: "#6B8E2330", color: "#2C2C2C" }}
-              title="Coming soon"
-            >
-              {filter}
-            </button>
-          ))}
-          <span className="text-xs ml-auto" style={{ color: "#2C2C2C40" }}>
-            Search &amp; filter coming soon
-          </span>
-        </div>
-      </section>
-
-      {/* ── Property Grid ── */}
-      <section className="py-14 px-4 max-w-6xl mx-auto" aria-label="Available properties">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* ── Property Spotlight ── */}
+      <section className="py-14 px-4 max-w-5xl mx-auto" aria-label="Available properties">
+        <div className="flex flex-col gap-6">
           {properties.map((property) => (
             <PropertyCard
               key={property.slug}

@@ -14,11 +14,11 @@ import { properties } from "@/data/properties";
 export const metadata: Metadata = {
   title: "Peridot Properties | Handpicked Lakeside Stays in Minnesota",
   description:
-    "Boutique vacation rentals managed personally by Charlotte Wunderlich. Book direct and save on your Minnesota lake getaway.",
+    "Lakeside vacation rentals run by Charlotte Wunderlich and her family. Book direct and save.",
   openGraph: {
     title: "Peridot Properties | Handpicked Lakeside Stays in Minnesota",
     description:
-      "Handpicked lakeside stays in Minnesota's lake country. Book direct with Charlotte and save 10–15% on every reservation.",
+      "Lakeside vacation rentals run by Charlotte Wunderlich and her family. Book direct and save.",
     url: "https://peridot.properties",
   },
 };
@@ -85,8 +85,7 @@ export default function HomePage() {
             className="text-base sm:text-lg leading-relaxed mb-10 max-w-2xl mx-auto"
             style={{ color: "#FAF8F5CC" }}
           >
-            Boutique vacation rentals managed personally by Charlotte Wunderlich.
-            No call centers, no surprises &mdash; just unforgettable lake escapes and someone who genuinely cares about your stay.
+            Vacation rentals run by our family, for yours. No call centers, no surprises &mdash; just unforgettable lake escapes and someone who genuinely cares about your stay.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
@@ -250,7 +249,7 @@ export default function HomePage() {
             Properties built with love,<br />managed with care
           </h2>
           <p className="text-sm leading-relaxed mb-4" style={{ color: "#2C2C2C" }}>
-            Peridot Properties is a small, family-run vacation rental company on the shores of Minnesota&apos;s finest lakes.
+            Peridot Properties is a family-run vacation rental on the shores of Minnesota&apos;s finest lakes.
             Our name comes from peridot &mdash; a yellow-green gemstone sometimes called the &ldquo;gem of the sun,&rdquo;
             and the color of a Minnesota lake in early summer light. We think it fits perfectly.
           </p>

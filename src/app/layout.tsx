@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s | Peridot Properties",
   },
   description:
-    "Boutique vacation rentals managed personally by Charlotte Wunderlich. Handpicked lakeside stays in Minnesota's lake country — book direct and save.",
+    "Lakeside vacation rentals run by Charlotte Wunderlich and her family. Book direct and save.",
   keywords: [
     "Minnesota lake vacation rental",
     "lakefront cabin rental",
@@ -46,13 +46,13 @@ export const metadata: Metadata = {
     siteName: "Peridot Properties",
     title: "Peridot Properties | Handpicked Lakeside Stays in Minnesota",
     description:
-      "Boutique vacation rentals managed personally by Charlotte Wunderlich. Book direct and save on your Minnesota lake getaway.",
+      "Lakeside vacation rentals run by Charlotte Wunderlich and her family. Book direct and save.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Peridot Properties | Handpicked Lakeside Stays in Minnesota",
     description:
-      "Boutique vacation rentals in Minnesota's lake country. Book direct and save 10-15%.",
+      "Lakeside vacation rentals run by Charlotte Wunderlich and her family. Book direct and save.",
   },
   alternates: {
     canonical: "https://peridot.properties",

@@ -9,6 +9,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/properties", label: "Properties" },
   { href: "/destinations", label: "Destinations" },
+  { href: "/local-guide", label: "Local Guide" },
   { href: "/about", label: "About" },
   { href: "/book-direct", label: "Book Direct" },
 ];

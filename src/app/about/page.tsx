@@ -91,27 +91,22 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-4 text-sm leading-relaxed" style={{ color: "#2C2C2C" }}>
               <p>
-                I grew up spending summers at a small cabin in northern Minnesota, and those memories
-                shaped everything about how I think a lake vacation should feel &mdash; unhurried, warm,
-                a little bit wild, and fully disconnected from the everyday.
+                Hi from Frazee, MN!
               </p>
               <p>
-                When my family found our first lakefront property, we knew immediately it was something special.
-                The water was deep and clear, the fish were plentiful, and the sunsets were genuinely
-                jaw-dropping. We built the house we always dreamed of staying in &mdash;
-                and then decided to share it. Now we&apos;re expanding across
-                Minnesota&apos;s lake country, one carefully chosen property at a time.
+                I&apos;m Charlotte, a licensed Funeral Director (ND/MN since 2017) who&apos;s also a 5-star Airbnb Superhost. Married to my USMC veteran husband, we&apos;re chasing joy with our energetic toddler, our baby girl due in June 2026, and our three rescued Cane Corsos who think they&apos;re lap dogs.
               </p>
               <p>
-                I handle every booking personally. When you reach out, you&apos;re talking to me &mdash; not a
-                property manager, not a virtual assistant. I know our properties inside and out &mdash;
-                from the best fishing spots to the nearest Friday fish fry.
+                Born in the 90s and a University of Minnesota &mdash; Twin Cities grad, I spend my days helping families through life&apos;s hardest moments with compassion. But when the sun dips over the lake? That&apos;s my reset &mdash; I&apos;m obsessed with those golden-hour views.
               </p>
               <p>
-                I hope our lakes become your place the way they became ours.
+                Right now, I&apos;m pouring my heart into a memoir about finding light after final farewells &mdash; because life after loss deserves celebration.
               </p>
-              <p className="font-medium" style={{ color: "#2D5016" }}>
-                &mdash; Charlotte Wunderlich
+              <p>
+                <strong>What Guests Get From Me:</strong> I always go the extra mile with thoughtful details for your family&apos;s perfect getaway. Got ideas to make it even better? I love constructive feedback!
+              </p>
+              <p>
+                <strong>Why Lakeside Luxe?</strong> By day, I guide goodbyes. Here, I craft beginnings &mdash; clean, cozy escapes where your family makes memories. Can&apos;t wait to host you!
               </p>
             </div>
           </div>
@@ -120,8 +115,8 @@ export default function AboutPage() {
             style={{ border: "1px solid #6B8E2315" }}
           >
             <Image
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=800&fit=crop"
-              alt="Charlotte Wunderlich, owner and host at Peridot Properties"
+              src="/charlotte-family.jpg"
+              alt="The Wunderlich family — Jesse, Dewey, and Charlotte"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"

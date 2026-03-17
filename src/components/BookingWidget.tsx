@@ -78,7 +78,7 @@ export default function BookingWidget() {
           Send a Booking Inquiry
         </Link>
         <p className="text-center text-xs mt-3" style={{ color: "#2C2C2C50" }}>
-          Or call / text Contact via email
+          Prefer email? charlotte@peridot.properties
         </p>
       </div>
     </div>
