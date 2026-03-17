@@ -21,6 +21,7 @@ import CTABanner from "@/components/CTABanner";
 import SeasonCard from "@/components/SeasonCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import BookingWidget from "@/components/BookingWidget";
+import RatesWidget from "@/components/RatesWidget";
 import ContactForm from "@/components/ContactForm";
 import { properties, getProperty } from "@/data/properties";
 
@@ -497,14 +498,7 @@ export default async function PropertyPage({ params }: Props) {
               Pricing Overview
             </h2>
           </div>
-          <div className="p-6 rounded-2xl" style={{ backgroundColor: "#FAF8F5", border: "1px solid #6B8E2318" }}>
-            <div 
-              className="ownerrez-widget" 
-              data-propertyid="7793e94b1f944ec0844bf19d1afd63aa" 
-              data-widget-type="Peridot Properties Rates Widget - Rates" 
-              data-widgetid="46d17202101a446382ebdffa390b5cdb"
-            ></div>
-          </div>
+          <RatesWidget />
           <p className="text-xs mt-4 leading-relaxed" style={{ color: "#2C2C2C60" }}>
             Rates are per night, not including applicable taxes. A $395 cleaning fee applies.
             Exact pricing confirmed at booking. Holiday weekends may carry a premium.
