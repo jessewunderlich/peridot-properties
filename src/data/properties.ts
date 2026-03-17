@@ -248,7 +248,7 @@ export const properties: Property[] = [
       {
         season: "Shoulder Season",
         icon: Leaf,
-        dates: "May, September & October",
+        dates: "September & October",
         rate: "$200 – $275",
         unit: "per night",
         note: "2-night minimum most weekends",
@@ -281,7 +281,7 @@ export const properties: Property[] = [
       { id: 4, alt: "Private dock and sandy beach on Pickerel Lake", url: "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=800&h=600&fit=crop" },
       { id: 5, alt: "Fire pit area with Adirondack chairs at sunset", url: "https://images.unsplash.com/photo-1504851149312-7a075b496cc7?w=800&h=600&fit=crop" },
       { id: 6, alt: "Deck overlooking the lake with dining table", url: "https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=800&h=600&fit=crop" },
-      { id: 7, alt: "Bunk room with four bunks for kids", url: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=600&fit=crop" },
+      { id: 7, alt: "Twin bedroom with two beds — perfect for kids", url: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=600&fit=crop" },
       { id: 8, alt: "Bathroom with walk-in shower and modern fixtures", url: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&h=600&fit=crop" },
     ],
     lake: {
@@ -468,7 +468,7 @@ export const properties: Property[] = [
       "@type": "VacationRental",
       name: "Peridot Properties — Lakeside Luxe",
       description:
-        "New-build 4-bedroom vacation home on Pickerel Lake with 150ft of private lake frontage. Sleeps 10. Located at 33746 N Pickerel Dr, Richville, MN 56576.",
+        "New-build 5-bedroom vacation home on Pickerel Lake with 150ft of private lake frontage. Sleeps 12. Located at 33746 N Pickerel Dr, Richville, MN 56576.",
       url: "https://peridot.properties/properties/pickerel-lake-retreat",
       address: {
         "@type": "PostalAddress",

@@ -1,5 +1,7 @@
-import Link from "next/link";
-import { Calendar, Shield, DollarSign, Mail } from "lucide-react";
+"use client";
+
+import { Calendar } from "lucide-react";
+import Script from "next/script";
 
 export default function BookingWidget() {
   return (
@@ -35,7 +37,10 @@ export default function BookingWidget() {
           data-widget-type="Peridot Properties Booking Widget - Booking/Inquiry" 
           data-widgetid="071cf3a2907547cc8291b6b0aadbd058"
         ></div>
-        <script src="https://app.ownerrez.com/widget.js" async></script>
+        <Script
+          src="https://app.ownerrez.com/widget.js"
+          strategy="lazyOnload"
+        />
       </div>
     </div>
   );

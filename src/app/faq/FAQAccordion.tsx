@@ -13,7 +13,7 @@ const faqSections = [
       },
       {
         q: "What is the cancellation policy?",
-        a: "Cancel for any reason up to 24 hours before check-in for a full refund. Cancel within 24 hours of check-in for a 50% refund. After check-in time, the reservation is non-refundable.",
+        a: "Cancel for any reason at least 2 days before check-in for a full refund. Cancel within 1–2 days of check-in for a 50% refund. After check-in time, the reservation is non-refundable.",
       },
       {
         q: "How do I book?",

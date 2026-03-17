@@ -66,6 +66,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://peridot.properties",
   },
+  other: {
+    "geo.region": "US-MN",
+    "geo.placename": "Richville, Minnesota",
+    "geo.position": "46.5;-95.1",
+    ICBM: "46.5, -95.1",
+  },
 };
 
 export default function RootLayout({
