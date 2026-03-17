@@ -162,7 +162,7 @@ export default function ContactForm() {
             style={inputStyle}
           >
             <option value="">Select guests</option>
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].map((n) => (
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((n) => (
               <option key={n} value={n}>{n} {n === 1 ? "guest" : "guests"}</option>
             ))}
           </select>

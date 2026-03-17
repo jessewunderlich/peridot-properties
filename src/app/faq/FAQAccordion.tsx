@@ -34,7 +34,7 @@ const faqSections = [
     faqs: [
       {
         q: "How many guests can Lakeside Luxe accommodate?",
-        a: "The property has 5 bedrooms and 4 bathrooms across three floors. The third floor has the master suite (king bed, 3/4 en-suite), two queen bedrooms, and a full shared bath. The second floor has a twin bedroom with a half bath. The ground-floor guest suite has a king bed and its own 3/4 bath. Contact Charlotte for the current maximum guest count.",
+        a: "The property has 5 bedrooms and 4 bathrooms across three floors. The third floor has the master suite (king bed, 3/4 en-suite), two queen bedrooms, and a full shared bath. The second floor has a twin bedroom with a half bath. The ground-floor guest suite has a king bed and its own 3/4 bath. The house sleeps up to 12 guests.",
       },
       {
         q: "Is there WiFi?",

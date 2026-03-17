@@ -229,7 +229,7 @@ export const properties: Property[] = [
       "Check-in: 4:00 PM | Check-out: 10:00 AM",
       "No smoking anywhere on the property",
       "No pets allowed — we appreciate your understanding",
-      "Maximum 10 guests overnight",
+      "Maximum 12 guests overnight",
       "Quiet hours 10 PM – 8 AM (neighbor-friendly lake)",
       "No parties or events beyond registered guests",
       "Leave firewood stacked neatly — we provide the first bundle",
