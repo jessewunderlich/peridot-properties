@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, Mail, Phone, Facebook, Instagram } from "lucide-react";
+import { Mail, Phone, Facebook, Instagram } from "lucide-react";
 import PeridotGem from "@/components/PeridotGem";
 
 export default function Footer() {
@@ -72,13 +72,6 @@ export default function Footer() {
             Get In Touch
           </h3>
           <ul className="space-y-3" role="list">
-            <li className="flex items-start gap-2">
-              <MapPin size={16} className="mt-0.5 shrink-0" style={{ color: "#C8A951" }} aria-hidden="true" />
-              <span className="text-sm" style={{ color: "#FAF8F580" }}>
-                33746 N Pickerel Dr<br />
-                Richville, MN 56576
-              </span>
-            </li>
             <li className="flex items-center gap-2">
               <Mail size={16} className="shrink-0" style={{ color: "#C8A951" }} aria-hidden="true" />
               <a
