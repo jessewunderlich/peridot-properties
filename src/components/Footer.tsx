@@ -1,6 +1,4 @@
 import Link from "next/link";
-// Facebook & Instagram used in social links section (uncomment when accounts are created)
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Gem, MapPin, Mail, Phone, Facebook, Instagram } from "lucide-react";
 
 export default function Footer() {
@@ -25,7 +23,6 @@ export default function Footer() {
             Boutique vacation rentals managed personally by Charlotte Wunderlich.
             Handpicked lakeside stays in Minnesota&apos;s lake country.
           </p>
-          {/* Social links — uncomment when accounts are created
           <div className="flex gap-3 mt-5">
             <a href="https://facebook.com/peridotproperties" target="_blank" rel="noopener noreferrer" aria-label="Peridot Properties on Facebook" className="p-2 rounded-full transition-colors hover:opacity-80" style={{ backgroundColor: "#6B8E2340" }}>
               <Facebook size={16} style={{ color: "#FAF8F5" }} aria-hidden="true" />
@@ -34,7 +31,6 @@ export default function Footer() {
               <Instagram size={16} style={{ color: "#FAF8F5" }} aria-hidden="true" />
             </a>
           </div>
-          */}
         </div>
 
         {/* Navigation */}
