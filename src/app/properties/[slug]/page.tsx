@@ -497,32 +497,13 @@ export default async function PropertyPage({ params }: Props) {
               Pricing Overview
             </h2>
           </div>
-          <div className="space-y-3">
-            {property.pricing.map((ps) => (
-              <div
-                key={ps.season}
-                className="flex items-center gap-4 p-4 rounded-xl"
-                style={{ backgroundColor: "#FAF8F5", border: "1px solid #6B8E2318" }}
-              >
-                <div
-                  className="w-10 h-10 rounded-full flex items-center justify-center shrink-0"
-                  style={{ backgroundColor: `${ps.color}20` }}
-                >
-                  <ps.icon size={18} style={{ color: ps.color }} aria-hidden="true" />
-                </div>
-                <div className="flex-1">
-                  <div className="flex items-baseline justify-between gap-2">
-                    <span className="text-sm font-semibold" style={{ color: "#2D5016" }}>{ps.season}</span>
-                    <span className="text-base font-bold" style={{ color: ps.color }}>{ps.rate}</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs" style={{ color: "#2C2C2C60" }}>{ps.dates}</span>
-                    <span className="text-xs" style={{ color: "#2C2C2C60" }}>{ps.unit}</span>
-                  </div>
-                  <p className="text-xs mt-0.5 italic" style={{ color: "#2C2C2C50" }}>{ps.note}</p>
-                </div>
-              </div>
-            ))}
+          <div className="p-6 rounded-2xl" style={{ backgroundColor: "#FAF8F5", border: "1px solid #6B8E2318" }}>
+            <div 
+              className="ownerrez-widget" 
+              data-propertyid="7793e94b1f944ec0844bf19d1afd63aa" 
+              data-widget-type="Peridot Properties Rates Widget - Rates" 
+              data-widgetid="46d17202101a446382ebdffa390b5cdb"
+            ></div>
           </div>
           <p className="text-xs mt-4 leading-relaxed" style={{ color: "#2C2C2C60" }}>
             Rates are per night, not including applicable taxes. A $395 cleaning fee applies.

@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 import CTABanner from "@/components/CTABanner";
+import RatesWidget from "@/components/RatesWidget";
 
 export const metadata: Metadata = {
   title: "Book Direct & Save | Peridot Properties",
@@ -160,6 +161,33 @@ export default function BookDirectPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Live Rates from OwnerRez */}
+      <section className="py-14 px-4" aria-label="Current seasonal rates">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-8">
+            <p
+              className="text-xs font-semibold tracking-widest uppercase mb-3"
+              style={{ color: "#4A7C8C" }}
+            >
+              Seasonal Pricing
+            </p>
+            <h2
+              className="text-3xl font-semibold"
+              style={{
+                fontFamily: "var(--font-cormorant), Georgia, serif",
+                color: "#2D5016",
+              }}
+            >
+              Current rates
+            </h2>
+            <p className="text-sm mt-2" style={{ color: "#2C2C2C80" }}>
+              Live pricing pulled directly from our booking system — always accurate
+            </p>
+          </div>
+          <RatesWidget />
         </div>
       </section>
 

@@ -40,14 +40,27 @@ export default function BookingWidget() {
         </div>
       </div>
 
-      {/* OwnerRez Widget */}
-      <div className="p-6" style={{ backgroundColor: "#FAF8F5" }}>
+      {/* OwnerRez Widgets */}
+      <div className="p-6 space-y-8" style={{ backgroundColor: "#FAF8F5" }}>
+        
+        {/* Availability Calendar */}
+        <div 
+          className="ownerrez-widget" 
+          data-propertyid="7793e94b1f944ec0844bf19d1afd63aa" 
+          data-widget-type="Peridot Properties Availability Calendar - Multiple Month Calendar" 
+          data-widgetid="b969355329d443b189781e9a90878e14"
+        ></div>
+
+        <hr style={{ borderColor: "#6B8E2320" }} />
+
+        {/* Booking Form */}
         <div 
           className="ownerrez-widget" 
           data-propertyid="7793e94b1f944ec0844bf19d1afd63aa" 
           data-widget-type="Peridot Properties Booking Widget - Booking/Inquiry" 
           data-widgetid="071cf3a2907547cc8291b6b0aadbd058"
         ></div>
+
         <Script
           src="https://app.ownerrez.com/widget.js"
           strategy="afterInteractive"
