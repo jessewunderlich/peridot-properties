@@ -47,12 +47,21 @@ export const metadata: Metadata = {
     title: "Peridot Properties | Handpicked Lakeside Stays in Minnesota",
     description:
       "Lakeside vacation rentals run by Charlotte Wunderlich and her family. Book direct and save.",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=630&fit=crop",
+        width: 1200,
+        height: 630,
+        alt: "Lakefront cabin on a Minnesota lake at golden hour",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Peridot Properties | Handpicked Lakeside Stays in Minnesota",
     description:
       "Lakeside vacation rentals run by Charlotte Wunderlich and her family. Book direct and save.",
+    images: ["https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=630&fit=crop"],
   },
   alternates: {
     canonical: "https://peridot.properties",

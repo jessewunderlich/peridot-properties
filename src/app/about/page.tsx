@@ -128,6 +128,12 @@ export default function AboutPage() {
               <p className="text-xs font-medium" style={{ color: "#FAF8F5" }}>
                 Charlotte Wunderlich &middot; Host &amp; Owner
               </p>
+              <p
+                className="inline-flex items-center gap-1 text-xs font-semibold mt-1.5 px-2.5 py-1 rounded-full"
+                style={{ backgroundColor: "#C8A951", color: "#2D5016" }}
+              >
+                ⭐ 5-Star Airbnb Superhost
+              </p>
             </div>
           </div>
         </div>

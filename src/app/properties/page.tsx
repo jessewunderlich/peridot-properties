@@ -8,11 +8,11 @@ import { properties } from "@/data/properties";
 export const metadata: Metadata = {
   title: "Our Properties | Peridot Properties",
   description:
-    "Browse handpicked lakeside vacation rentals in Minnesota's lake country — managed personally by Charlotte Wunderlich. Book direct and save.",
+    "Browse handpicked lakeside vacation rentals in Minnesota's lake country — hosted by Charlotte Wunderlich and her family. Book direct and save.",
   openGraph: {
     title: "Our Properties | Peridot Properties",
     description:
-      "Handpicked lakeside stays in Minnesota. New-build homes with private lake frontage, managed personally by Charlotte Wunderlich.",
+      "Handpicked lakeside stays in Minnesota. New-build homes with private lake frontage, hosted by Charlotte Wunderlich and her family.",
   },
 };
 
@@ -111,8 +111,8 @@ export default function PropertiesPage() {
 
       {/* ── CTA ── */}
       <CTABanner
-        heading="Not sure which property is right for you?"
-        subheading="Reach out to Charlotte directly. She'll help you find the perfect fit for your group, your dates, and your vision of the perfect lake trip."
+        heading="Questions about Lakeside Luxe?"
+        subheading="Charlotte is happy to answer anything about the property, the lake, or the area. Just send her an email."
         buttonLabel="Contact Charlotte"
         buttonHref="/book-direct#contact"
         secondaryLabel="Why Book Direct?"

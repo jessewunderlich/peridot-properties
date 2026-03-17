@@ -106,7 +106,7 @@ const guideSections = [
     icon: Fish,
     note: "You\u2019ll need a Minnesota fishing license. Non-resident options: $14/24hrs, $36/72hrs, $43/7 days, $51/annual. Buy online at the MN DNR site or pick one up at any bait shop.",
     items: [
-      { name: "Gene\u2019s Sport Shop", desc: "150 East Main St, Perham. Mon\u2013Sat 7am\u20135:30pm, Sun 8am\u20132pm. Pro staff who\u2019ll tell you what\u2019s hitting and where.", url: "" },
+      { name: "Gene\u2019s Sport Shop", desc: "150 East Main St, Perham. Mon\u2013Sat 7am\u20135:30pm, Sun 8am\u20132pm. Pro staff who\u2019ll tell you what\u2019s hitting and where." },
       { name: "North Side Bait & Tackle", desc: "448 1st Ave N, Perham. Convenient stop for live bait and tackle." },
       { name: "MN DNR Fishing Licenses", desc: "Buy your license online before you arrive \u2014 valid immediately.", url: "https://www.dnr.state.mn.us/licenses/online-sales.html" },
     ],

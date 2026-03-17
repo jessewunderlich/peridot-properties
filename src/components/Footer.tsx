@@ -21,7 +21,7 @@ export default function Footer() {
             </span>
           </div>
           <p className="text-sm leading-relaxed" style={{ color: "#FAF8F580" }}>
-            Lakeside vacation rentals run by Charlotte Wunderlich and her family.
+            A family vacation rental on Minnesota&apos;s lakes. Hosted by Charlotte.
             Book direct and save.
           </p>
           <div className="flex gap-3 mt-5">
@@ -50,6 +50,7 @@ export default function Footer() {
               { href: "/local-guide", label: "Local Guide" },
               { href: "/about", label: "About Us" },
               { href: "/book-direct", label: "Book Direct" },
+              { href: "/faq", label: "FAQ" },
             ].map((link) => (
               <li key={link.href}>
                 <Link

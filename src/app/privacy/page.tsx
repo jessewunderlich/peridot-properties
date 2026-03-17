@@ -89,19 +89,9 @@ export default function PrivacyPage() {
           Payment Processing
         </h2>
         <p>
-          When you make a direct booking, payment is processed securely through
-          our booking platform (OwnerRez) and payment processor (Stripe). We do
-          not store your credit card information on our servers. Please refer to{" "}
-          <a
-            href="https://stripe.com/privacy"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline"
-            style={{ color: "#6B8E23" }}
-          >
-            Stripe&apos;s Privacy Policy
-          </a>{" "}
-          for details on how they handle your payment data.
+          When online payments become available, they will be processed securely
+          through industry-standard payment processors. Currently, booking
+          inquiries are handled via email.
         </p>
 
         <h2

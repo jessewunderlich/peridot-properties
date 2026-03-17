@@ -40,7 +40,7 @@ const whyBookDirectHighlights = [
     icon: MessageCircle,
     title: "Personal Service",
     description:
-      "You're talking to Charlotte, not a call center. She knows every property, every lake, and every local secret worth knowing.",
+      "You\u2019re emailing Charlotte, not a call center. She knows every corner of Lakeside Luxe and every local secret worth knowing.",
   },
 ];
 
@@ -129,7 +129,8 @@ export default function HomePage() {
               Your next lake escape
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="flex justify-center">
+            <div className="w-full max-w-xl">
             {properties.map((property) => (
               <PropertyCard
                 key={property.slug}
@@ -145,6 +146,7 @@ export default function HomePage() {
                 priceRange={property.priceRange}
               />
             ))}
+            </div>
           </div>
           <div className="text-center mt-8">
             <Link
@@ -248,7 +250,7 @@ export default function HomePage() {
             className="text-4xl font-semibold mb-5"
             style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
           >
-            Properties built with love,<br />managed with care
+            Built with love,<br />shared with yours
           </h2>
           <p className="text-sm leading-relaxed mb-4" style={{ color: "#2C2C2C" }}>
             Peridot Properties is a family-run vacation rental on the shores of Minnesota&apos;s finest lakes.

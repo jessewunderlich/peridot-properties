@@ -39,7 +39,7 @@ const benefits = [
     icon: MessageCircle,
     title: "Personal Service",
     description:
-      "You're talking to Charlotte, not a call center. She knows every property, every lake, and every area. Have a question? You'll get a real answer fast.",
+      "You\u2019re emailing Charlotte, not a call center. She knows every corner of Lakeside Luxe and every local secret worth knowing.",
   },
   {
     icon: Clock,
@@ -241,8 +241,8 @@ export default function BookDirectPage() {
             Ready to find your stay?
           </h2>
           <p className="text-sm mb-8" style={{ color: "#2C2C2C80" }}>
-            Browse our curated collection of lakeside properties across
-            Minnesota&apos;s lake country.
+            Lakeside Luxe is on Pickerel Lake in Richville, MN &mdash; Charlotte&apos;s
+            favorite corner of Minnesota lake country.
           </p>
           <Link
             href="/properties"
