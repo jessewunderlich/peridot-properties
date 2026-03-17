@@ -15,7 +15,7 @@ import {
   Fish,
   TreePine,
   Wind,
-  Sun,
+
 } from "lucide-react";
 import CTABanner from "@/components/CTABanner";
 import SeasonCard from "@/components/SeasonCard";
@@ -563,41 +563,39 @@ export default async function PropertyPage({ params }: Props) {
 
       {/* ── Booking Widget ── */}
       <section id="booking" className="py-14 px-4" aria-label="Check availability and book">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-8">
+            <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#4A7C8C" }}>
+              Book Direct &amp; Save
+            </p>
+            <h2
+              className="text-3xl font-semibold mb-3"
+              style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+            >
+              Check Availability &amp; Reserve
+            </h2>
+            <p className="text-sm max-w-xl mx-auto" style={{ color: "#2C2C2C80" }}>
+              Booking direct with Charlotte saves you 10–15% compared to Airbnb or VRBO.
+            </p>
+          </div>
           <BookingWidget />
-          <div className="flex flex-col justify-center gap-6">
-            <div>
-              <p className="text-xs font-semibold tracking-widest uppercase mb-2" style={{ color: "#4A7C8C" }}>
-                Book Direct &amp; Save
-              </p>
-              <h2
-                className="text-3xl font-semibold mb-3"
-                style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
-              >
-                Skip the platform fees
-              </h2>
-              <p className="text-sm leading-relaxed" style={{ color: "#2C2C2C80" }}>
-                Booking direct with Charlotte saves you 10–15% compared to Airbnb or VRBO.
-                You also get flexible cancellation terms, early access to dates, and a host who
-                answers her own messages.
-              </p>
-            </div>
-            <div className="space-y-2">
-              {[
-                { icon: Sun, text: "Save 10–15% vs. Airbnb & VRBO" },
-                { icon: Sun, text: "Flexible cancellation for direct guests" },
-                { icon: Sun, text: "Personal service — talk to Charlotte directly" },
-                { icon: Sun, text: "Early access to new dates & return guest perks" },
-              ].map(({ text }, i) => (
-                <div key={i} className="flex items-center gap-2 text-sm" style={{ color: "#2C2C2C" }}>
-                  <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: "#6B8E23" }} aria-hidden="true" />
-                  {text}
-                </div>
-              ))}
-            </div>
+          <div className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2">
+            {[
+              "Save 10–15% vs. Airbnb & VRBO",
+              "Flexible cancellation",
+              "Talk to Charlotte directly",
+              "Early access to new dates",
+            ].map((text, i) => (
+              <div key={i} className="flex items-center gap-2 text-xs" style={{ color: "#2C2C2C80" }}>
+                <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: "#6B8E23" }} aria-hidden="true" />
+                {text}
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-4">
             <Link
               href="/book-direct"
-              className="inline-block text-sm font-medium underline underline-offset-4 transition-colors hover:opacity-70"
+              className="text-sm font-medium underline underline-offset-4 transition-colors hover:opacity-70"
               style={{ color: "#6B8E23" }}
             >
               Learn more about booking direct &rarr;
