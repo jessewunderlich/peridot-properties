@@ -40,26 +40,34 @@ export default function BookingWidget() {
         </div>
       </div>
 
-      {/* OwnerRez Widgets */}
-      <div className="p-6 space-y-8" style={{ backgroundColor: "#FAF8F5" }}>
+      {/* OwnerRez Widgets — side by side on desktop, stacked on mobile */}
+      <div className="p-6 grid grid-cols-1 lg:grid-cols-2 gap-6" style={{ backgroundColor: "#FAF8F5" }}>
         
         {/* Availability Calendar */}
-        <div 
-          className="ownerrez-widget" 
-          data-propertyid="7793e94b1f944ec0844bf19d1afd63aa" 
-          data-widget-type="Peridot Properties Availability Calendar - Multiple Month Calendar" 
-          data-widgetid="b969355329d443b189781e9a90878e14"
-        ></div>
-
-        <hr style={{ borderColor: "#6B8E2320" }} />
+        <div>
+          <p className="text-xs font-semibold tracking-wide uppercase mb-3" style={{ color: "#4A7C8C" }}>
+            Availability
+          </p>
+          <div 
+            className="ownerrez-widget" 
+            data-propertyid="7793e94b1f944ec0844bf19d1afd63aa" 
+            data-widget-type="Peridot Properties Availability Calendar - Multiple Month Calendar" 
+            data-widgetid="b969355329d443b189781e9a90878e14"
+          ></div>
+        </div>
 
         {/* Booking Form */}
-        <div 
-          className="ownerrez-widget" 
-          data-propertyid="7793e94b1f944ec0844bf19d1afd63aa" 
-          data-widget-type="Peridot Properties Booking Widget - Booking/Inquiry" 
-          data-widgetid="071cf3a2907547cc8291b6b0aadbd058"
-        ></div>
+        <div>
+          <p className="text-xs font-semibold tracking-wide uppercase mb-3" style={{ color: "#4A7C8C" }}>
+            Reserve Your Stay
+          </p>
+          <div 
+            className="ownerrez-widget" 
+            data-propertyid="7793e94b1f944ec0844bf19d1afd63aa" 
+            data-widget-type="Peridot Properties Booking Widget - Booking/Inquiry" 
+            data-widgetid="071cf3a2907547cc8291b6b0aadbd058"
+          ></div>
+        </div>
 
       </div>
     </div>
