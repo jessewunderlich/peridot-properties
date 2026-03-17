@@ -27,59 +27,15 @@ export default function BookingWidget() {
         </div>
       </div>
 
-      {/* Placeholder content */}
+      {/* OwnerRez Widget */}
       <div className="p-6" style={{ backgroundColor: "#FAF8F5" }}>
-        <div
-          className="rounded-xl p-8 text-center mb-5"
-          style={{ backgroundColor: "#6B8E2308", border: "2px dashed #6B8E2330" }}
-        >
-          <Calendar size={36} style={{ color: "#6B8E23" }} className="mx-auto mb-3" aria-hidden="true" />
-          <p className="text-sm font-medium mb-1" style={{ color: "#2D5016" }}>
-            OwnerRez Booking Widget
-          </p>
-          <p className="text-xs" style={{ color: "#2C2C2C60" }}>
-            Live availability calendar and booking form will appear here once the OwnerRez integration is configured.
-          </p>
-        </div>
-
-        <div className="space-y-3 mb-5">
-          <div className="flex items-center justify-between text-sm py-2 border-b" style={{ borderColor: "#6B8E2315" }}>
-            <span style={{ color: "#2C2C2C80" }}>Peak Summer (June–Aug)</span>
-            <span className="font-semibold" style={{ color: "#2D5016" }}>$300–$400 / night</span>
-          </div>
-          <div className="flex items-center justify-between text-sm py-2 border-b" style={{ borderColor: "#6B8E2315" }}>
-            <span style={{ color: "#2C2C2C80" }}>Shoulder Season</span>
-            <span className="font-semibold" style={{ color: "#2D5016" }}>$200–$275 / night</span>
-          </div>
-          <div className="flex items-center justify-between text-sm py-2" >
-            <span style={{ color: "#2C2C2C80" }}>Winter / Off-Season</span>
-            <span className="font-semibold" style={{ color: "#2D5016" }}>$150–$250 / night</span>
-          </div>
-        </div>
-
-        <div className="space-y-2 mb-5">
-          {[
-            { icon: Shield, text: "Flexible cancellation for direct bookings" },
-            { icon: DollarSign, text: "Save 10–15% booking direct vs. OTAs" },
-            { icon: Mail, text: "Email Charlotte directly — she responds within 24 hours" },
-          ].map(({ icon: Icon, text }) => (
-            <div key={text} className="flex items-center gap-2 text-xs" style={{ color: "#2C2C2C" }}>
-              <Icon size={13} style={{ color: "#6B8E23" }} aria-hidden="true" />
-              {text}
-            </div>
-          ))}
-        </div>
-
-        <Link
-          href="mailto:charlotte@peridot.properties?subject=Booking%20Inquiry"
-          className="block w-full text-center py-3 rounded-full text-sm font-semibold transition-all hover:opacity-90"
-          style={{ backgroundColor: "#6B8E23", color: "#FAF8F5" }}
-        >
-          Send a Booking Inquiry
-        </Link>
-        <p className="text-center text-xs mt-3" style={{ color: "#2C2C2C50" }}>
-          Prefer email? charlotte@peridot.properties
-        </p>
+        <div 
+          className="ownerrez-widget" 
+          data-propertyid="7793e94b1f944ec0844bf19d1afd63aa" 
+          data-widget-type="Peridot Properties Booking Widget - Booking/Inquiry" 
+          data-widgetid="071cf3a2907547cc8291b6b0aadbd058"
+        ></div>
+        <script src="https://app.ownerrez.com/widget.js" async></script>
       </div>
     </div>
   );
