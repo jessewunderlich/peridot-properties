@@ -164,8 +164,8 @@ export default async function PropertyPage({ params }: Props) {
             </h3>
             <ul className="space-y-3">
               {[
-                { icon: BedDouble, label: `${property.specs.bedrooms} bedrooms (king, queen, queen, bunks)` },
-                { icon: ShowerHead, label: `${property.specs.bathrooms} full bathrooms` },
+                { icon: BedDouble, label: `${property.specs.bedrooms} bedrooms (2 king suites, 2 queen, 1 twin)` },
+                { icon: ShowerHead, label: `${property.specs.bathrooms} bathrooms (full, 2× three-quarter, half)` },
                 { icon: Layers, label: `Sleeps up to ${property.specs.sleeps} guests` },
                 { icon: Waves, label: `${property.specs.frontage} private lake frontage` },
                 { icon: Sailboat, label: "Dock, kayaks & canoe" },
@@ -525,9 +525,64 @@ export default async function PropertyPage({ params }: Props) {
             ))}
           </div>
           <p className="text-xs mt-4 leading-relaxed" style={{ color: "#2C2C2C60" }}>
-            Rates are per night, not including applicable taxes. A cleaning fee applies.
+            Rates are per night, not including applicable taxes. A $395 cleaning fee applies.
             Exact pricing confirmed at booking. Holiday weekends may carry a premium.
           </p>
+        </div>
+      </section>
+
+      {/* ── Cancellation Policy ── */}
+      <section className="py-14 px-4" aria-label="Cancellation policy">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-8">
+            <h2
+              className="text-3xl font-semibold"
+              style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+            >
+              Cancellation Policy
+            </h2>
+            <p className="text-sm mt-2" style={{ color: "#2C2C2C80" }}>
+              Book with confidence — flexible terms for direct guests
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div
+              className="flex flex-col gap-3 p-5 rounded-xl"
+              style={{ backgroundColor: "#FAF8F5", border: "1px solid #6B8E2318" }}
+            >
+              <div className="flex items-center gap-2">
+                <span className="w-3 h-3 rounded-full shrink-0" style={{ backgroundColor: "#4CAF50" }} aria-hidden="true" />
+                <span className="text-sm font-semibold" style={{ color: "#2D5016" }}>Fully Refundable</span>
+              </div>
+              <p className="text-xs leading-relaxed" style={{ color: "#2C2C2C80" }}>
+                Cancel for any reason up to 24 hours before check-in for a full refund.
+              </p>
+            </div>
+            <div
+              className="flex flex-col gap-3 p-5 rounded-xl"
+              style={{ backgroundColor: "#FAF8F5", border: "1px solid #6B8E2318" }}
+            >
+              <div className="flex items-center gap-2">
+                <span className="w-3 h-3 rounded-full shrink-0" style={{ backgroundColor: "#C8A951" }} aria-hidden="true" />
+                <span className="text-sm font-semibold" style={{ color: "#2D5016" }}>50% Refundable</span>
+              </div>
+              <p className="text-xs leading-relaxed" style={{ color: "#2C2C2C80" }}>
+                Cancel within 24 hours of check-in for a 50% refund of the total booking amount.
+              </p>
+            </div>
+            <div
+              className="flex flex-col gap-3 p-5 rounded-xl"
+              style={{ backgroundColor: "#FAF8F5", border: "1px solid #6B8E2318" }}
+            >
+              <div className="flex items-center gap-2">
+                <span className="w-3 h-3 rounded-full shrink-0" style={{ backgroundColor: "#C0392B" }} aria-hidden="true" />
+                <span className="text-sm font-semibold" style={{ color: "#2D5016" }}>Non-Refundable</span>
+              </div>
+              <p className="text-xs leading-relaxed" style={{ color: "#2C2C2C80" }}>
+                After check-in time, the reservation is non-refundable.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

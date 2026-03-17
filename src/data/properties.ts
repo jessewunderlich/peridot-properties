@@ -156,15 +156,15 @@ export const properties: Property[] = [
       { place: "Brainerd, MN", distance: "~1 hour", note: "Via MN-210" },
     ],
     specs: {
-      bedrooms: 4,
-      bathrooms: 2,
-      sleeps: 10,
+      bedrooms: 5,
+      bathrooms: 4,
+      sleeps: 12,
       frontage: "150ft",
     },
     description: [
       "Built new in 2023, this home was designed from the ground up with lake life in mind. The open-concept main floor captures lake views from every angle, with floor-to-ceiling windows in the living and dining areas that fill the space with natural light from morning through golden hour.",
       "The kitchen is a cook's dream — plenty of counter space, quality appliances, and a fish-cleaning station just outside the back door for those who are serious about their catch. A propane fireplace anchors the living room, and the wide wraparound deck runs the full width of the lake-facing side.",
-      "Four bedrooms sleep up to 10 comfortably: a primary king suite, a second queen room, a queen flex room (or twin option), and a bunk room loved by kids (and adults who call dibs early). Two full bathrooms mean no morning bottlenecks.",
+      "Five bedrooms across three floors sleep up to 12: the master suite and guest suite each feature a king bed, two bedrooms have a queen, and the fifth has two twin beds — perfect for kids. Four bathrooms mean no morning bottlenecks: a full shared bath and a 3/4 tile shower en-suite on the third floor, a half bath on the second floor, and a 3/4 bath in the ground-floor guest suite.",
       "Step outside to 150 feet of pristine Pickerel Lake frontage — a private dock, sandy swim area, fire pit, and two kayaks plus a canoe that are yours to use all week.",
     ],
     amenities: [
@@ -485,9 +485,9 @@ export const properties: Property[] = [
       },
       amenityFeature: [
         { "@type": "LocationFeatureSpecification", name: "Lake frontage", value: "150 feet" },
-        { "@type": "LocationFeatureSpecification", name: "Bedrooms", value: "4" },
-        { "@type": "LocationFeatureSpecification", name: "Bathrooms", value: "2" },
-        { "@type": "LocationFeatureSpecification", name: "Maximum occupancy", value: "10" },
+        { "@type": "LocationFeatureSpecification", name: "Bedrooms", value: "5" },
+        { "@type": "LocationFeatureSpecification", name: "Bathrooms", value: "4" },
+        { "@type": "LocationFeatureSpecification", name: "Maximum occupancy", value: "12" },
         { "@type": "LocationFeatureSpecification", name: "WiFi", value: true },
         { "@type": "LocationFeatureSpecification", name: "Private dock", value: true },
       ],
