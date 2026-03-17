@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -90,6 +91,10 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <StickyBookButton />
+        <Script
+          src="https://app.ownerrez.com/widget.js"
+          strategy="lazyOnload"
+        />
         <Analytics />
       </body>
     </html>

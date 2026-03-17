@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { DollarSign } from "lucide-react";
-import Script from "next/script";
+
 
 export default function RatesWidget() {
   useEffect(() => {
@@ -46,10 +46,6 @@ export default function RatesWidget() {
           data-widgetid="46d17202101a446382ebdffa390b5cdb"
         ></div>
 
-        <Script
-          src="https://app.ownerrez.com/widget.js"
-          strategy="afterInteractive"
-        />
       </div>
     </div>
   );

@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { Calendar } from "lucide-react";
-import Script from "next/script";
+
 
 export default function BookingWidget() {
   useEffect(() => {
@@ -61,10 +61,6 @@ export default function BookingWidget() {
           data-widgetid="071cf3a2907547cc8291b6b0aadbd058"
         ></div>
 
-        <Script
-          src="https://app.ownerrez.com/widget.js"
-          strategy="afterInteractive"
-        />
       </div>
     </div>
   );

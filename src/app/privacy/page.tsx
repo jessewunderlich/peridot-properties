@@ -36,8 +36,8 @@ export default function PrivacyPage() {
         </h2>
         <p>
           When you submit an inquiry through our contact form, we collect the
-          information you provide: your name, email address, phone number
-          (optional), desired dates, number of guests, and any message you
+          information you provide: your name, email address, desired dates,
+          number of guests, and any message you
           include. We use this information solely to respond to your inquiry
           and process your booking.
         </p>

@@ -21,7 +21,6 @@ const localBusinessJsonLd = {
   email: "charlotte@peridot.properties",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "33746 N Pickerel Dr",
     addressLocality: "Richville",
     addressRegion: "MN",
     postalCode: "56576",

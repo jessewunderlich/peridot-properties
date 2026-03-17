@@ -6,11 +6,11 @@ import FAQAccordion from "./FAQAccordion";
 export const metadata: Metadata = {
   title: "FAQ | Peridot Properties",
   description:
-    "Common questions about Lakeside Luxe on Pickerel Lake, MN. Check-in times, cancellation policy, what's included, local area info, and more.",
+    "Common questions about staying at Lakeside Luxe in Minnesota lake country. Check-in times, cancellation policy, what's included, local area info, and more.",
   openGraph: {
     title: "FAQ | Peridot Properties",
     description:
-      "Everything you need to know before your stay at Lakeside Luxe on Pickerel Lake, MN.",
+      "Everything you need to know before your stay at Lakeside Luxe in Minnesota lake country.",
   },
 };
 
