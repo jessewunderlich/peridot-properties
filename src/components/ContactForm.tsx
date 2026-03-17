@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { Send, CheckCircle } from "lucide-react";
 
 interface FormData {
@@ -22,6 +23,7 @@ const initialForm: FormData = {
 };
 
 export default function ContactForm() {
+  const router = useRouter();
   const [form, setForm] = useState<FormData>(initialForm);
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -36,9 +38,7 @@ export default function ContactForm() {
     e.preventDefault();
     setSubmitting(true);
     try {
-      // TODO: Replace with your Formspree form ID at https://formspree.io
-      // Create a free account, make a form, and paste the endpoint here
-      const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+      const FORMSPREE_ENDPOINT = "https://formspree.io/f/meerpkle";
       const res = await fetch(FORMSPREE_ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
@@ -53,7 +53,8 @@ export default function ContactForm() {
         }),
       });
       if (res.ok) {
-        setSubmitted(true);
+        router.push("/thank-you");
+        return;
       } else {
         alert("Something went wrong. Please email charlotte@peridot.properties directly.");
       }
