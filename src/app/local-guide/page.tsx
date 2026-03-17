@@ -1,43 +1,55 @@
 import type { Metadata } from "next";
-import { Utensils, Music, Sailboat, Fish, ShoppingBag, Sparkles } from "lucide-react";
+import { Utensils, Music, Sailboat, Fish, ShoppingBag, Sparkles, TreePine, Bike, Map } from "lucide-react";
 import CTABanner from "@/components/CTABanner";
 
 export const metadata: Metadata = {
   title: "Local Guide | Peridot Properties",
   description:
-    "Explore the best dining, events, and lake activities near Peridot Properties. Your guide to Minnesota's lake country.",
+    "Your insider guide to dining, fishing, boat rentals, events, and activities near our lakefront vacation rentals in Minnesota&apos;s Otter Tail County.",
 };
 
 const guideSections = [
   {
-    title: "Dining (Within 20 Min)",
+    title: "Dining",
     icon: Utensils,
+    note: "Charlotte&apos;s personal picks. Ask her what to order when you book — she has strong opinions.",
     locations: [
       {
         area: "Perham (~10 mi)",
         places: [
-          { name: "1894", desc: "Hand-patted burgers, housemade pizza, wings, tater tot hotdish. Happy hour daily 4-6 PM." },
-          { name: "Lakes Cafe", desc: "Locally owned 25+ years, classic American cafe fare." },
-          { name: "Disgruntled Brewing", desc: "Brewery atmosphere, top-rated in town." },
-          { name: "Silver Moon Lounge & Steakhouse", desc: "Steaks, prime rib Fridays with meat raffles. Tue-Sat 11am-close, Sun 11am-8pm." },
-          { name: "The Cactus", desc: "Steak, seafood, pasta, burgers, pizza, full bar." },
-          { name: "Zorbaz (Perham)", desc: "Pizza, Mexican, outdoor seating, dog-friendly patio." },
+          { name: "1894", desc: "Hand-patted burgers, housemade pizza, wings, tater tot hotdish. Happy hour daily 4\u20136 PM. Top-rated in town." },
+          { name: "Brew Ales & Eats", desc: "American bar & grill with a big menu. 4.3 stars, 149 reviews. Solid go-to for families." },
+          { name: "Lakes Cafe", desc: "Locally owned 25+ years. Classic American cafe — the kind of place where regulars know your name." },
+          { name: "Disgruntled Brewing", desc: "Brewery atmosphere with craft beer on tap. Great spot for a laid-back afternoon." },
+          { name: "Silver Moon Lounge & Steakhouse", desc: "Steaks, prime rib Fridays with meat raffles. Tue\u2013Sat 11am\u2013close, Sun 11am\u20138pm." },
+          { name: "The Cactus", desc: "Steak, seafood, pasta, burgers, pizza, full bar. Something for everyone." },
+          { name: "Zorbaz (Perham)", desc: "Pizza, Mexican food, outdoor seating, dog-friendly patio. A lake country institution." },
+          { name: "The Salty Pickle Bar & Grill", desc: "3 mi south on Hwy 78. Famous Salty Gouda Pickles, smash burgers, volleyball courts. Bingo Wed & Sun, karaoke nights, live music in summer." },
+          { name: "Mrs B\u2019s Cafe", desc: "Cozy American cafe, 4.4 stars. Great for a quieter breakfast or lunch." },
+          { name: "BluTaco", desc: "Mexican fare in Perham for when you want something different." },
+          { name: "Pizza Ranch", desc: "Buffet-style pizza & chicken. Reliable family spot, kids love it." },
         ],
       },
       {
         area: "Battle Lake (~15 mi)",
         places: [
-          { name: "Zorbaz on Otter Tail Lake", desc: "Lakeside pizza bar, boat dock access, pick up food by boat, great margaritas." },
-          { name: "The Rusty Nail", desc: "Family-owned burgers & beer bar." },
+          { name: "Zorbaz on Otter Tail Lake", desc: "THE lakeside pizza bar. Boat dock access \u2014 you can literally pick up food by boat. Great margaritas, outdoor patio on the water." },
+          { name: "The Rusty Nail", desc: "Family-owned burgers & beer bar. Casual, friendly, good food." },
         ],
       },
       {
-        area: "Detroit Lakes (~25-30 mi)",
+        area: "Detroit Lakes (~25\u201330 mi)",
         places: [
-          { name: "The Fireside", desc: "Iconic northern MN dining, house-made food, open-air charcoal grill, lake views." },
-          { name: "Brygge Taps & Taste", desc: "Craft beer, American cuisine." },
-          { name: "Spanky's Stone Hearth", desc: "Prime steaks, fresh seafood, lakeside dining, stone fireplaces." },
-          { name: "Lakeside Tavern & Brewery", desc: "Burgers, bar food, lakeside." },
+          { name: "The Fireside", desc: "Iconic northern MN dining. House-made food, open-air charcoal grill, lake views. Worth the drive." },
+          { name: "Brygge Taps & Taste", desc: "Craft beer selection with American cuisine in a modern taproom." },
+          { name: "Spanky\u2019s Stone Hearth", desc: "Prime steaks, fresh seafood, lakeside dining with stone fireplaces. Date night worthy." },
+          { name: "Lakeside Tavern & Brewery", desc: "Burgers, bar food, craft brews right on the lake." },
+        ],
+      },
+      {
+        area: "Fergus Falls (~35 mi)",
+        places: [
+          { name: "Outstate Brewing Company", desc: "Craft brewery downtown on the Otter Tail River. Great taproom atmosphere." },
         ],
       },
     ],
@@ -45,47 +57,86 @@ const guideSections = [
   {
     title: "Events & Entertainment",
     icon: Music,
-    note: "Charlotte can share the latest on bingo nights, karaoke, and street dances — just ask when you book!",
+    note: "Charlotte always knows what\u2019s happening this weekend \u2014 ask her when you book and she\u2019ll share the latest.",
     items: [
-      { name: "Silver Moon", desc: "Meat raffles on Prime Rib Fridays." },
-      { name: "Zorbaz", desc: "Thursday trivia nights." },
-      { name: "PACC (Perham Area Community Center)", desc: "Roller skating on select Saturdays." },
-      { name: "Turtle Fest", desc: "Annual June festival in Perham." },
-      { name: "Perham Area Chamber", desc: "Events calendar", url: "https://member.perham.com/events" },
+      { name: "Silver Moon", desc: "Meat raffles on Prime Rib Fridays. A true Minnesota tradition." },
+      { name: "The Salty Pickle", desc: "Bingo every Wednesday & Sunday. Karaoke nights. Horse races on Saturdays. Live outdoor shows in summer.", url: "https://thesaltypicklebarandgrill.com" },
+      { name: "Zorbaz", desc: "Thursday trivia nights at multiple locations." },
+      { name: "Turtle Fest (Perham)", desc: "June 17\u201321, 2026. Street fair, turtle races, parade, fireworks, 5K/10K, live music, food vendors. Downtown Perham." },
+      { name: "WE Fest (Detroit Lakes)", desc: "August 5\u20138, 2026. Largest country music camping festival in the US. Headliners: Lainey Wilson, Thomas Rhett, Brooks & Dunn. 30,000+ fans nightly.", url: "https://wefest.com" },
+      { name: "Oktoberfest Perham", desc: "Fall festival with hayrides, pumpkin carving, crafts, kids\u2019 activities, vendor street fair." },
+      { name: "PACC (Perham Area Community Center)", desc: "Roller skating on select Saturdays. Newly renovated facility." },
+      { name: "Perham Area Chamber Events", desc: "Full community calendar with weekly events.", url: "https://member.perham.com/events" },
+    ],
+  },
+  {
+    title: "Outdoor Activities",
+    icon: TreePine,
+    items: [
+      { name: "Maplewood State Park (~20 mi)", desc: "25 mi of hiking trails, 8 lakes, sandy beach at South Lida Lake, horseback trails, camping. Hallaway Hill overlook is a must. 5-mile scenic auto tour. 150 bird species. Vehicle permit required.", url: "https://www.dnr.state.mn.us/state_parks/park.html?id=spk00225" },
+      { name: "Perham Lakeside Golf Club", desc: "27 holes of championship golf (Maple, Oak, Pine courses). Driving range, putting greens. 1 mile north of Perham. Est. 1946.", url: "https://perhamlakesidegolf.com" },
+      { name: "Thumper Pond Golf Club (~12 mi, Ottertail)", desc: "18 holes, par 72, 6,606 yards. The longest course in the area." },
+      { name: "Frazee Golf Course (~11 mi)", desc: "9 holes, par 35. Quick and affordable round." },
+      { name: "ITOW Veterans Museum (Perham)", desc: "805 W Main St. Self-guided tours by donation. Tue\u2013Fri 10am\u20131pm (summer). Group tours $3/adults, $2/students. (218) 346-7678." },
+      { name: "Pelican Rapids (~20 mi)", desc: "World\u2019s Largest Pelican statue (15.5 ft), pelican sculpture scavenger hunt around town, Mercantile on Main art gallery, suspension bridge over Pelican River." },
+      { name: "Thea\u2019s Pumpkin Patch (Pelican Rapids)", desc: "8-acre pumpkin patch + 11-acre corn maze. Apple cider donuts. Fall seasonal." },
+    ],
+  },
+  {
+    title: "Biking & Trails",
+    icon: Bike,
+    items: [
+      { name: "Central Lakes State Trail", desc: "55-mile paved trail starting in Fergus Falls (~35 mi). Flat, shaded, passes through 10 communities. Rest stops every 7\u201310 miles. Trailhead has parking, restrooms, and a bike repair station.", url: "https://www.dnr.state.mn.us/state_trails/central_lakes/index.html" },
+      { name: "Heartland State Trail (Detroit Lakes)", desc: "7.5-mile paved segment south of Detroit Lakes. The main trail runs 49 mi from Park Rapids to Cass Lake." },
+      { name: "Perham Wetlands Trail", desc: "In-town trail system through restored prairie and wetlands. Easy walk or bike." },
     ],
   },
   {
     title: "Boat Rentals",
     icon: Sailboat,
-    note: "Our property includes two kayaks and a canoe, but if you want motor power on the lake, these are our go-to rental companies.",
+    note: "Our property includes two kayaks and a canoe, but if you want motor power on the lake, these are our go-to companies.",
     items: [
-      { name: "MN Tru North (Perham)", desc: "Pontoons starting at $375-400/day, also jetskis & kayaks.", url: "https://mntrunorth.com" },
+      { name: "MN Tru North (Perham)", desc: "Pontoons, jetskis, kayaks. Your closest rental option.", url: "https://mntrunorth.com" },
+      { name: "Mark\u2019s Fleet Supply (Perham)", desc: "Water sports rentals starting at $30/4hrs, $45/8hrs." },
       { name: "Baxstar Outdoors (Detroit Lakes area)", desc: "Premium pontoon rentals with HD digital mapping & fishing spots." },
     ],
   },
   {
-    title: "Bait & Tackle",
+    title: "Fishing",
     icon: Fish,
-    note: "Pick up a Minnesota fishing license at any of these shops — they'll also give you the latest intel on what's hitting.",
+    note: "You\u2019ll need a Minnesota fishing license. Non-resident options: $14/24hrs, $36/72hrs, $43/7 days, $51/annual. Buy online at the MN DNR site or pick one up at any bait shop.",
     items: [
-      { name: "Gene's Sport Shop", desc: "150 East Main St, Perham. Mon-Sat 7am-5:30pm, Sun 8am-2pm. Pro staff for advice." },
-      { name: "North Side Bait & Tackle", desc: "448 1st Ave N, Perham." },
-      { name: "Sport Shop Bait & Tackle", desc: "Perham." },
+      { name: "Gene\u2019s Sport Shop", desc: "150 East Main St, Perham. Mon\u2013Sat 7am\u20135:30pm, Sun 8am\u20132pm. Pro staff who\u2019ll tell you what\u2019s hitting and where.", url: "" },
+      { name: "North Side Bait & Tackle", desc: "448 1st Ave N, Perham. Convenient stop for live bait and tackle." },
+      { name: "MN DNR Fishing Licenses", desc: "Buy your license online before you arrive \u2014 valid immediately.", url: "https://www.dnr.state.mn.us/licenses/online-sales.html" },
     ],
   },
   {
-    title: "Groceries & Essentials",
+    title: "Groceries & Liquor",
     icon: ShoppingBag,
     items: [
-      { name: "The Market at Perham", desc: "250 E Main St, open 7am-9pm daily. Produce, bakery, meat departments." },
-      { name: "Family Dollar", desc: "102 Market Dr, Perham. 8am-10pm daily." },
+      { name: "The Market at Perham", desc: "250 E Main St. Open 7am\u20139pm daily. Full produce, bakery, and meat departments. Your main grocery stop." },
+      { name: "Landmark Liquors", desc: "125 2nd Ave NE, Perham. Mon\u2013Sat 9am\u201310pm. Wine, beer, spirits." },
+      { name: "Perham Municipal Liquor Store", desc: "Mon\u2013Sat 9am\u201310pm. Wide selection." },
+      { name: "Family Dollar", desc: "102 Market Dr, Perham. 8am\u201310pm daily. Basics and essentials." },
     ],
   },
   {
-    title: "Pre-Arrival Services (Add-Ons)",
-    icon: Sparkles,
+    title: "Day Trips",
+    icon: Map,
     items: [
-      { name: "Grocery & Beverage Pre-Stocking", desc: "Want cold drinks waiting in the fridge when you arrive? Send Charlotte your shopping list and we'll have everything ready for you. Starting at $50 for the service plus the cost of items." },
+      { name: "Fergus Falls (~35 mi)", desc: "Downtown shops on Lincoln Ave, Otto the Big Otter statue, Broken Down Dam Park, Otter Tail County Historical Museum, A Center for the Arts (restored 1921 vaudeville theater), Scenic River Walk." },
+      { name: "Detroit Lakes (~25\u201330 mi)", desc: "Beach on Detroit Lake, downtown shopping, WE Fest grounds, Heartland Trail biking, great restaurant scene." },
+      { name: "Pelican Rapids (~20 mi)", desc: "World\u2019s Largest Pelican, Maplewood State Park, suspension bridge, art galleries, antique mall (14,000 sq ft)." },
+      { name: "Fargo, ND (~45 min)", desc: "Full city amenities. Shopping, dining, Fargo\u2013Moorhead attractions. Easy drive via I-94." },
+    ],
+  },
+  {
+    title: "Pre-Arrival Services",
+    icon: Sparkles,
+    note: "Because vacation starts the moment you walk in the door.",
+    items: [
+      { name: "Grocery & Beverage Pre-Stocking", desc: "Want cold drinks and snacks waiting in the fridge when you arrive? Send Charlotte your shopping list and we\u2019ll have everything ready. Starting at $50 for the service plus the cost of items." },
     ],
   },
 ];
@@ -93,7 +144,7 @@ const guideSections = [
 export default function LocalGuidePage() {
   return (
     <>
-      {/* ── Page Header ── */}
+      {/* \u2500\u2500 Page Header \u2500\u2500 */}
       <section
         className="py-16 px-4 text-center"
         style={{ background: "linear-gradient(160deg, #2D5016 0%, #4A7C8C 100%)" }}
@@ -108,11 +159,11 @@ export default function LocalGuidePage() {
           Area Guide
         </h1>
         <p className="text-base max-w-xl mx-auto" style={{ color: "#FAF8F5CC" }}>
-          The best dining, events, and lake activities near our properties.
+          Everything you need to know about dining, fishing, activities, and local secrets near our properties in Otter Tail County.
         </p>
       </section>
 
-      {/* ── Guide Content ── */}
+      {/* \u2500\u2500 Guide Content \u2500\u2500 */}
       <section className="py-16 px-4 max-w-4xl mx-auto" aria-label="Local recommendations">
         <div className="flex flex-col gap-12">
           {guideSections.map((section) => (
@@ -190,10 +241,10 @@ export default function LocalGuidePage() {
         </div>
       </section>
 
-      {/* ── CTA ── */}
+      {/* \u2500\u2500 CTA \u2500\u2500 */}
       <CTABanner
         heading="Ready to experience the lake life?"
-        subheading="Book your family's next escape direct and save."
+        subheading="Book your family&apos;s next escape direct and save."
         buttonLabel="Browse Properties"
         buttonHref="/properties"
         secondaryLabel="Contact Charlotte"
