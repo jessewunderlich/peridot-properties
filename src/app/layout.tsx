@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     "Boutique vacation rentals managed personally by Charlotte Wunderlich. Handpicked lakeside stays in Minnesota's lake country — book direct and save.",
   keywords: [
     "Minnesota lake vacation rental",
-    "Pickerel Lake rental",
+    "lakefront cabin rental",
     "lake house Minnesota",
     "Otter Tail County cabin",
     "walleye fishing Minnesota",

@@ -6,7 +6,7 @@ export default function BookingWidget() {
     <div
       className="rounded-2xl overflow-hidden"
       style={{ border: "1px solid #6B8E2325", boxShadow: "0 4px 24px rgba(45,80,22,0.10)" }}
-      data-ownerrez-widget="peridot-pickerel-lake"
+      data-ownerrez-widget="peridot-properties"
     >
       {/* Widget header */}
       <div
@@ -71,7 +71,7 @@ export default function BookingWidget() {
         </div>
 
         <Link
-          href="mailto:charlotte@peridot.properties?subject=Booking%20Inquiry%20-%20Pickerel%20Lake"
+          href="mailto:charlotte@peridot.properties?subject=Booking%20Inquiry"
           className="block w-full text-center py-3 rounded-full text-sm font-semibold transition-all hover:opacity-90"
           style={{ backgroundColor: "#6B8E23", color: "#FAF8F5" }}
         >

@@ -101,7 +101,7 @@ export default function ContactForm() {
         </h3>
         <p className="text-sm leading-relaxed" style={{ color: "#2C2C2C80" }}>
           Thanks for reaching out! Charlotte will get back to you within 24 hours.
-          We can&apos;t wait to share Pickerel Lake with you.
+          We can&apos;t wait to share Minnesota&apos;s lakes with you.
         </p>
         <button
           onClick={() => { setSubmitted(false); setForm(initialForm); }}

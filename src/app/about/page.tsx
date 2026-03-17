@@ -5,13 +5,13 @@ import PeridotGem from "@/components/PeridotGem";
 import CTABanner from "@/components/CTABanner";
 
 export const metadata: Metadata = {
-  title: "About | Peridot Properties — Charlotte Wunderlich, Pickerel Lake",
+  title: "About | Peridot Properties — Charlotte Wunderlich",
   description:
-    "Meet Charlotte Wunderlich, owner of Peridot Properties. Learn why we fell in love with Pickerel Lake and why we named our vacation rental after a gemstone.",
+    "Meet Charlotte Wunderlich, owner of Peridot Properties. Learn why we fell in love with Minnesota's lake country and why we named our vacation rental after a gemstone.",
   openGraph: {
     title: "About Peridot Properties | Charlotte Wunderlich",
     description:
-      "A family-run lakefront vacation rental on Pickerel Lake, MN. Meet Charlotte and learn the story behind Peridot Properties.",
+      "A family-run vacation rental company in Minnesota's lake country. Meet Charlotte and learn the story behind Peridot Properties.",
   },
 };
 
@@ -26,7 +26,7 @@ const values = [
     icon: Leaf,
     title: "Respect for the Lake",
     description:
-      "Pickerel Lake is a treasure, and we take that seriously. We ask guests to practice catch-and-release selectively, keep the shoreline clean, and leave no trace.",
+      "Minnesota's lakes are a treasure, and we take that seriously. We ask guests to practice catch-and-release selectively, keep the shoreline clean, and leave no trace.",
   },
   {
     icon: Users,
@@ -96,20 +96,19 @@ export default function AboutPage() {
                 a little bit wild, and fully disconnected from the everyday.
               </p>
               <p>
-                When my family found Pickerel Lake, we knew immediately it was something special.
-                The water is deep and clear, the fish are plentiful, and the sunsets over the western
-                shoreline are genuinely jaw-dropping. We built the house we always dreamed of staying in —
-                and then decided to share it. Starting with Pickerel Lake, we&apos;re expanding across
-                Minnesota&apos;s lake country &mdash; one carefully chosen property at a time.
+                When my family found our first lakefront property, we knew immediately it was something special.
+                The water was deep and clear, the fish were plentiful, and the sunsets were genuinely
+                jaw-dropping. We built the house we always dreamed of staying in &mdash;
+                and then decided to share it. Now we&apos;re expanding across
+                Minnesota&apos;s lake country, one carefully chosen property at a time.
               </p>
               <p>
                 I handle every booking personally. When you reach out, you&apos;re talking to me &mdash; not a
-                property manager, not a virtual assistant. I can tell you what the walleye have been doing,
-                which restaurant in Perham has the best Friday fish fry, and exactly how to get the
-                outdoor shower to stop squeaking (there&apos;s a trick).
+                property manager, not a virtual assistant. I know our properties inside and out &mdash;
+                from the best fishing spots to the nearest Friday fish fry.
               </p>
               <p>
-                I hope Pickerel Lake becomes your place the way it became ours.
+                I hope our lakes become your place the way they became ours.
               </p>
               <p className="font-medium" style={{ color: "#2D5016" }}>
                 &mdash; Charlotte Wunderlich
@@ -122,7 +121,7 @@ export default function AboutPage() {
           >
             <Image
               src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=800&fit=crop"
-              alt="Charlotte Wunderlich, owner of Peridot Properties, on the dock at Pickerel Lake"
+              alt="Charlotte Wunderlich, owner and host at Peridot Properties"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -179,7 +178,7 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-4 text-sm leading-relaxed" style={{ color: "#2C2C2C" }}>
               <p>
-                Peridot is the color of Pickerel Lake on a July afternoon &mdash; that specific shade of
+                Peridot is the color of a Minnesota lake on a July afternoon &mdash; that specific shade of
                 yellow-green where the shallow water meets the sky and everything glows.
               </p>
               <p>
@@ -199,42 +198,43 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── Why Pickerel Lake ── */}
-      <section className="py-16 px-4 max-w-5xl mx-auto" aria-label="Why Pickerel Lake">
+      {/* ── Why Minnesota's Lake Country ── */}
+      <section className="py-16 px-4 max-w-5xl mx-auto" aria-label="Why Minnesota lake country">
         <div className="text-center mb-10">
           <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#4A7C8C" }}>
-            Our Lake
+            Our Region
           </p>
           <h2
             className="text-4xl font-semibold"
             style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
           >
-            Why Pickerel Lake?
+            Why Minnesota&apos;s Lake Country?
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
           <div className="space-y-4 text-sm leading-relaxed" style={{ color: "#2C2C2C" }}>
             <p>
-              Minnesota has over 11,000 lakes. We visited a lot of them before we chose Pickerel.
-              Here&apos;s what won us over:
+              Minnesota has over 11,000 lakes. We&apos;ve spent years exploring them, and we keep coming
+              back to the same corner of the state &mdash; Otter Tail County and the surrounding region.
+              Here&apos;s why:
             </p>
             <p>
-              The fishing is exceptional. Walleye, smallmouth bass, northern pike &mdash; the lake has real
-              depth (78 feet at max) and structure, which creates the habitat serious anglers look for.
+              The fishing is exceptional. Walleye, smallmouth bass, northern pike &mdash; these lakes have real
+              depth, structure, and the habitat serious anglers look for.
               Our guests consistently report catching fish, not just trying to.
             </p>
             <p>
-              The lake isn&apos;t overcrowded. Pickerel doesn&apos;t have the jet-ski-and-noise-complaints atmosphere
-              of some of the more famous resort lakes. It&apos;s a local lake, beloved by the community,
-              and it has a quiet dignity we really respect.
+              The lakes aren&apos;t overcrowded. You won&apos;t find the jet-ski-and-noise-complaints atmosphere
+              of some of the more famous resort destinations. These are local lakes, beloved by the community,
+              with a quiet dignity we really respect.
             </p>
             <p>
-              Richville and Perham are genuine small-town Minnesota. The neighbors wave. The bait shop
+              The towns are genuine small-town Minnesota. The neighbors wave. The bait shop
               owner will actually tell you where the fish are. The Friday night fish fry at the VFW
               is not to be missed.
             </p>
             <p>
-              And the views. Facing west across Pickerel Lake at sunset, in late September when the
+              And the views. Facing west across the water at sunset, in late September when the
               maples have gone red and gold &mdash; that view is worth everything.
             </p>
           </div>
@@ -244,7 +244,7 @@ export default function AboutPage() {
           >
             <Image
               src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=700&h=500&fit=crop"
-              alt="Sunset over Pickerel Lake with fall foliage reflecting in the calm water"
+              alt="Sunset over a Minnesota lake with fall foliage reflecting in the calm water"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
