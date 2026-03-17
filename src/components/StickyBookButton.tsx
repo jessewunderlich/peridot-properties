@@ -2,9 +2,12 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function StickyBookButton() {
   const [visible, setVisible] = useState(false);
+  const pathname = usePathname();
+  const isPropertyPage = pathname.startsWith("/properties/") && pathname !== "/properties";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,11 +28,11 @@ export default function StickyBookButton() {
       }}
     >
       <Link
-        href="/properties"
+        href={isPropertyPage ? "#booking" : "/properties"}
         className="block w-full text-center py-3.5 rounded-full text-sm font-semibold shadow-lg transition-all active:scale-95"
         style={{ backgroundColor: "#6B8E23", color: "#FAF8F5" }}
       >
-        Browse Properties & Book Direct
+        {isPropertyPage ? "Check Availability" : "Browse Properties & Book Direct"}
       </Link>
     </div>
   );

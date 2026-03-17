@@ -15,7 +15,6 @@ import {
   Fish,
   TreePine,
   Wind,
-  MapPin,
   Sun,
 } from "lucide-react";
 import CTABanner from "@/components/CTABanner";

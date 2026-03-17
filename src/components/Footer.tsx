@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Gem, MapPin, Mail, Phone, Facebook, Instagram } from "lucide-react";
+import { Gem, MapPin, Mail, Phone } from "lucide-react";
 
 export default function Footer() {
   return (

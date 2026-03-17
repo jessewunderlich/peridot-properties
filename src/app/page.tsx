@@ -135,7 +135,7 @@ export default function HomePage() {
               <PropertyCard
                 key={property.slug}
                 name={property.name}
-                location={`${property.location.city}, ${property.location.state} &bull; ${property.location.county}`}
+                location={`${property.location.city}, ${property.location.state} · ${property.location.county}`}
                 description={property.description[0]}
                 bedrooms={property.specs.bedrooms}
                 bathrooms={property.specs.bathrooms}
