@@ -396,10 +396,10 @@ export const properties: Property[] = [
         distance: "10 miles",
         icon: Map,
         highlights: [
-          "Minnesota's Only Toy Town (great for kids)",
+          "1894, Lakes Cafe, Disgruntled Brewing, Silver Moon",
           "Perham Wetlands trail system",
-          "East Otter Tail County Fair (August)",
-          "Local restaurants: Hwy 55 Diner, The Rusty Nail Roadhouse",
+          "Gene's Sport Shop for bait & tackle",
+          "Turtle Fest (annual June festival)",
           "Perham Cinema for rainy days",
         ],
       },
@@ -408,11 +408,11 @@ export const properties: Property[] = [
         distance: "25–30 miles",
         icon: Coffee,
         highlights: [
+          "The Fireside, Brygge Taps & Taste, Spanky's Stone Hearth",
           "WE Fest country music festival (August)",
-          "Becker County Museum",
-          "Detroit Lakes Wetland Management District",
+          "Baxstar Outdoors pontoon rentals",
           "Shopping downtown & on Hwy 10",
-          "Lakes Area Brew Pub & local dining",
+          "Becker County Museum",
         ],
       },
       {
@@ -462,26 +462,7 @@ export const properties: Property[] = [
         desc: "The region is exceptional for waterfowl (ducks & geese), pheasant, grouse, deer, and turkey. Public land nearby and local outfitters can connect you with guides and access.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We've done lakes all over Minnesota and Pickerel is genuinely one of the best. Caught our limit of walleye both days, and the house is absolutely stunning — modern and cozy at the same time. Charlotte was incredibly responsive. We're already planning our return trip.",
-        author: "Mike & Sarah T.",
-        location: "Minneapolis, MN",
-      },
-      {
-        quote:
-          "This was our family's fourth year at the lake and our first time staying on Pickerel. The private dock made all the difference. Kids were on the water all day, we had incredible sunsets from the deck, and the loons woke us up every morning. Pure Minnesota magic.",
-        author: "The Andersons",
-        location: "Edina, MN",
-      },
-      {
-        quote:
-          "Came up in October for the fall foliage and honestly the colors were even better than advertised. The house was spotless, the fire pit is incredible, and the area is so peaceful. Perfect for a girlfriend trip — we felt like we had the whole lake to ourselves.",
-        author: "Rachel K.",
-        location: "Fargo, ND",
-      },
-    ],
+    testimonials: [],
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "VacationRental",
@@ -510,7 +491,6 @@ export const properties: Property[] = [
         { "@type": "LocationFeatureSpecification", name: "WiFi", value: true },
         { "@type": "LocationFeatureSpecification", name: "Private dock", value: true },
       ],
-      // telephone: "+1XXXXXXXXXX",
       email: "charlotte@peridot.properties",
     },
   },

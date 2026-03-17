@@ -47,7 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/local-guide`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.5,
+      priority: 0.7,
     },
     {
       url: `${baseUrl}/privacy`,

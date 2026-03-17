@@ -66,7 +66,7 @@ export default function DestinationsPage() {
           className="text-base max-w-xl mx-auto"
           style={{ color: "#FAF8F5CC" }}
         >
-          Explore the regions where we curate our properties — each chosen
+          Explore the regions where our properties are — each chosen
           for its natural beauty, fishing, and that unmistakable Minnesota
           lake magic.
         </p>

@@ -51,7 +51,7 @@ const guideSections = [
       { name: "Zorbaz", desc: "Thursday trivia nights." },
       { name: "PACC (Perham Area Community Center)", desc: "Roller skating on select Saturdays." },
       { name: "Turtle Fest", desc: "Annual June festival in Perham." },
-      { name: "Perham Area Chamber", desc: "Events calendar: member.perham.com/events" },
+      { name: "Perham Area Chamber", desc: "Events calendar", url: "https://member.perham.com/events" },
     ],
   },
   {
@@ -59,7 +59,7 @@ const guideSections = [
     icon: Sailboat,
     note: "Our property includes two kayaks and a canoe, but if you want motor power on the lake, these are our go-to rental companies.",
     items: [
-      { name: "MN Tru North (Perham)", desc: "Pontoons starting at $375-400/day, also jetskis & kayaks. mntrunorth.com" },
+      { name: "MN Tru North (Perham)", desc: "Pontoons starting at $375-400/day, also jetskis & kayaks.", url: "https://mntrunorth.com" },
       { name: "Baxstar Outdoors (Detroit Lakes area)", desc: "Premium pontoon rentals with HD digital mapping & fishing spots." },
     ],
   },
@@ -167,6 +167,20 @@ export default function LocalGuidePage() {
                       <span className="text-[#2C2C2C90]">
                         {item.desc}
                       </span>
+                      {"url" in item && item.url && (
+                        <>
+                          {" "}
+                          <a
+                            href={item.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-xs underline underline-offset-2 hover:opacity-70"
+                            style={{ color: "#6B8E23" }}
+                          >
+                            Visit website &rarr;
+                          </a>
+                        </>
+                      )}
                     </li>
                   ))}
                 </ul>

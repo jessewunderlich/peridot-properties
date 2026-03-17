@@ -597,23 +597,25 @@ export default async function PropertyPage({ params }: Props) {
       </section>
 
       {/* ── Testimonials ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: "#2D501608" }} aria-label="Guest reviews">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-10">
-            <h2
-              className="text-4xl font-semibold"
-              style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
-            >
-              What guests are saying
-            </h2>
+      {property.testimonials.length > 0 && (
+        <section className="py-16 px-4" style={{ backgroundColor: "#2D501608" }} aria-label="Guest reviews">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-10">
+              <h2
+                className="text-4xl font-semibold"
+                style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+              >
+                What guests are saying
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {property.testimonials.map((t) => (
+                <TestimonialCard key={t.author} {...t} />
+              ))}
+            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {property.testimonials.map((t) => (
-              <TestimonialCard key={t.author} {...t} />
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* ── CTA ── */}
       <CTABanner

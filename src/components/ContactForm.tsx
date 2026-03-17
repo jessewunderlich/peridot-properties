@@ -6,7 +6,6 @@ import { Send, CheckCircle } from "lucide-react";
 interface FormData {
   name: string;
   email: string;
-  phone: string;
   checkIn: string;
   checkOut: string;
   guests: string;
@@ -16,7 +15,6 @@ interface FormData {
 const initialForm: FormData = {
   name: "",
   email: "",
-  phone: "",
   checkIn: "",
   checkOut: "",
   guests: "",
@@ -47,7 +45,6 @@ export default function ContactForm() {
         body: JSON.stringify({
           name: form.name,
           email: form.email,
-          phone: form.phone || "Not provided",
           guests: form.guests,
           checkIn: form.checkIn,
           checkOut: form.checkOut,
@@ -153,19 +150,6 @@ export default function ContactForm() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-        <div>
-          <label htmlFor="phone" style={labelStyle}>Phone (optional)</label>
-          <input
-            id="phone"
-            type="tel"
-            name="phone"
-            value={form.phone}
-            onChange={handleChange}
-            placeholder="(612) 123-4567"
-            style={inputStyle}
-            autoComplete="tel"
-          />
-        </div>
         <div>
           <label htmlFor="guests" style={labelStyle}>Number of Guests *</label>
           <select

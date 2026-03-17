@@ -120,13 +120,13 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#4A7C8C" }}>
-              Our Properties
+              Our Property
             </p>
             <h2
               className="text-4xl font-semibold"
               style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
             >
-              Where will you escape to?
+              Your next lake escape
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -148,11 +148,11 @@ export default function HomePage() {
           </div>
           <div className="text-center mt-8">
             <Link
-              href="/properties"
+              href="/properties/pickerel-lake-retreat"
               className="inline-block text-sm font-medium underline underline-offset-4 transition-colors hover:opacity-70"
               style={{ color: "#6B8E23" }}
             >
-              View all properties &rarr;
+              View Lakeside Luxe &rarr;
             </Link>
           </div>
         </div>
@@ -213,28 +213,30 @@ export default function HomePage() {
       </section>
 
       {/* ── Testimonials ── */}
-      <section className="py-20 px-4" aria-label="Guest reviews">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="flex justify-center gap-1 mb-3">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} size={16} fill="#C8A951" style={{ color: "#C8A951" }} aria-hidden="true" />
+      {properties[0].testimonials.length > 0 && (
+        <section className="py-20 px-4" aria-label="Guest reviews">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="flex justify-center gap-1 mb-3">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={16} fill="#C8A951" style={{ color: "#C8A951" }} aria-hidden="true" />
+                ))}
+              </div>
+              <h2
+                className="text-4xl font-semibold"
+                style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+              >
+                Guests love it here
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {properties[0].testimonials.map((t) => (
+                <TestimonialCard key={t.author} {...t} />
               ))}
             </div>
-            <h2
-              className="text-4xl font-semibold"
-              style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
-            >
-              Guests love it here
-            </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {properties[0].testimonials.map((t) => (
-              <TestimonialCard key={t.author} {...t} />
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* ── About Peridot Properties ── */}
       <section className="py-20 px-4" style={{ backgroundColor: "#2D501608" }} aria-label="About Peridot Properties">

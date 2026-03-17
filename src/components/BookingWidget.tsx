@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Calendar, Shield, DollarSign, Phone } from "lucide-react";
+import { Calendar, Shield, DollarSign, Mail } from "lucide-react";
 
 export default function BookingWidget() {
   return (
@@ -61,7 +61,7 @@ export default function BookingWidget() {
           {[
             { icon: Shield, text: "Flexible cancellation for direct bookings" },
             { icon: DollarSign, text: "Save 10–15% booking direct vs. OTAs" },
-            { icon: Phone, text: "Personal host support — reach Charlotte directly" },
+            { icon: Mail, text: "Email Charlotte directly — she responds within 24 hours" },
           ].map(({ icon: Icon, text }) => (
             <div key={text} className="flex items-center gap-2 text-xs" style={{ color: "#2C2C2C" }}>
               <Icon size={13} style={{ color: "#6B8E23" }} aria-hidden="true" />
