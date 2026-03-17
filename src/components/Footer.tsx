@@ -1,5 +1,7 @@
 import Link from "next/link";
-import { Gem, MapPin, Mail, Phone } from "lucide-react";
+// Facebook & Instagram used in social links section (uncomment when accounts are created)
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { Gem, MapPin, Mail, Phone, Facebook, Instagram } from "lucide-react";
 
 export default function Footer() {
   return (
