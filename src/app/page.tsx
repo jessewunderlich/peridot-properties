@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import {
   Star,
   DollarSign,
@@ -10,6 +11,35 @@ import TestimonialCard from "@/components/TestimonialCard";
 import CTABanner from "@/components/CTABanner";
 import PropertyCard from "@/components/PropertyCard";
 import { properties } from "@/data/properties";
+
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  name: "Peridot Properties",
+  description: "Family-run lakeside vacation rentals in Minnesota's Otter Tail County. Book direct and save.",
+  url: "https://peridot.properties",
+  email: "charlotte@peridot.properties",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "33746 N Pickerel Dr",
+    addressLocality: "Richville",
+    addressRegion: "MN",
+    postalCode: "56576",
+    addressCountry: "US",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: "46.5",
+    longitude: "-95.1",
+  },
+  priceRange: "$150–$400/night",
+  amenityFeature: [
+    { "@type": "LocationFeatureSpecification", name: "Lake frontage", value: "150 feet" },
+    { "@type": "LocationFeatureSpecification", name: "WiFi", value: true },
+    { "@type": "LocationFeatureSpecification", name: "Private dock", value: true },
+    { "@type": "LocationFeatureSpecification", name: "Kayaks & canoe", value: true },
+  ],
+};
 
 export const metadata: Metadata = {
   title: "Peridot Properties | Handpicked Lakeside Stays in Minnesota",
@@ -47,6 +77,14 @@ const whyBookDirectHighlights = [
 export default function HomePage() {
   return (
     <>
+      {/* LocalBusiness JSON-LD for local SEO */}
+      <Script
+        id="local-business-jsonld"
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+      />
+
       {/* ── Hero ── */}
       <section
         className="relative min-h-[85vh] flex items-center justify-center overflow-hidden"

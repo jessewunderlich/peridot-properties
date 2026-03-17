@@ -66,6 +66,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://peridot.properties",
   },
+  authors: [{ name: "Charlotte Wunderlich" }],
   other: {
     "geo.region": "US-MN",
     "geo.placename": "Richville, Minnesota",
@@ -81,6 +82,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
+      <head>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      </head>
       <body className="antialiased">
         <Navbar />
         <main>{children}</main>
