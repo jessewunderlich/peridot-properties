@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, X, Gem } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import PeridotGem from "@/components/PeridotGem";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -30,11 +31,9 @@ export default function Navbar() {
       >
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group" aria-label="Peridot Properties home">
-          <Gem
+          <PeridotGem
             size={24}
-            style={{ color: "#6B8E23" }}
             className="group-hover:scale-110 transition-transform"
-            aria-hidden="true"
           />
           <span
             className="text-xl font-semibold tracking-wide"

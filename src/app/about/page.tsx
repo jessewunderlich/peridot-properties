@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Heart, Gem, MapPin, Users, Star, Leaf } from "lucide-react";
+import PeridotGem from "@/components/PeridotGem";
 import CTABanner from "@/components/CTABanner";
 
 export const metadata: Metadata = {
@@ -145,7 +146,7 @@ export default function AboutPage() {
             className="p-8 rounded-2xl flex flex-col items-center text-center"
             style={{ background: "linear-gradient(135deg, #6B8E2315, #C8A95115)", border: "1px solid #6B8E2320" }}
           >
-            <Gem size={56} style={{ color: "#6B8E23" }} className="mb-4" aria-hidden="true" />
+            <PeridotGem size={56} className="mb-4" />
             <p
               className="text-5xl font-semibold mb-2"
               style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}

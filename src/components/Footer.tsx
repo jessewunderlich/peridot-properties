@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Gem, MapPin, Mail, Phone, Facebook, Instagram } from "lucide-react";
+import { MapPin, Mail, Phone, Facebook, Instagram } from "lucide-react";
+import PeridotGem from "@/components/PeridotGem";
 
 export default function Footer() {
   return (
@@ -11,7 +12,7 @@ export default function Footer() {
         {/* Brand */}
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <Gem size={22} style={{ color: "#C8A951" }} aria-hidden="true" />
+            <PeridotGem size={22} />
             <span
               className="text-xl font-semibold"
               style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#FAF8F5" }}
