@@ -1,9 +1,20 @@
 "use client";
 
+import { useEffect } from "react";
 import { Calendar } from "lucide-react";
 import Script from "next/script";
 
 export default function BookingWidget() {
+  useEffect(() => {
+    // If the widget script is already loaded and we just navigated back to this page,
+    // we need to tell it to rescan the DOM and render the new widget container.
+    // @ts-expect-error - OwnerRez is added to window by the widget script
+    if (window.OwnerRez && typeof window.OwnerRez.loadDefaultWidgets === "function") {
+      // @ts-expect-error - OwnerRez global
+      window.OwnerRez.loadDefaultWidgets();
+    }
+  }, []);
+
   return (
     <div
       className="rounded-2xl overflow-hidden"
@@ -39,7 +50,7 @@ export default function BookingWidget() {
         ></div>
         <Script
           src="https://app.ownerrez.com/widget.js"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
         />
       </div>
     </div>

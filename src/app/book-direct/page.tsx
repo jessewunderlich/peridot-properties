@@ -123,7 +123,7 @@ export default function BookDirectPage() {
           >
             {/* Header */}
             <div
-              className="grid grid-cols-3 gap-2 sm:gap-4 px-3 sm:px-5 py-3 text-xs font-semibold uppercase tracking-wide"
+              className="grid grid-cols-[1.5fr_1fr_1fr] md:grid-cols-[2fr_1fr_1fr] gap-2 sm:gap-4 px-3 sm:px-5 py-3 text-[10px] sm:text-xs font-semibold uppercase tracking-wide"
               style={{ backgroundColor: "#2D5016", color: "#FAF8F5" }}
             >
               <span />
@@ -133,7 +133,7 @@ export default function BookDirectPage() {
             {comparisonRows.map((row) => (
               <div
                 key={row.item}
-                className="grid grid-cols-3 gap-2 sm:gap-4 px-3 sm:px-5 py-3 text-xs sm:text-sm border-t"
+                className="grid grid-cols-[1.5fr_1fr_1fr] md:grid-cols-[2fr_1fr_1fr] gap-2 sm:gap-4 px-3 sm:px-5 py-3 text-xs sm:text-sm border-t"
                 style={{
                   borderColor: "#6B8E2315",
                   backgroundColor: row.highlight ? "#6B8E2308" : "#FAF8F5",
