@@ -1,7 +1,6 @@
 import {
   type LucideIcon,
   Wifi,
-  Flame,
   Sailboat,
   TreePine,
   Fish,
@@ -151,10 +150,10 @@ export const properties: Property[] = [
     },
     distances: [
       { place: "Perham, MN", distance: "10 miles", note: "Grocery, restaurants, hardware" },
-      { place: "Detroit Lakes, MN", distance: "25–30 miles", note: "Shopping, dining, entertainment" },
+      { place: "Detroit Lakes, MN", distance: "~45 minutes", note: "Shopping, dining, entertainment" },
       { place: "Fergus Falls, MN", distance: "35 miles", note: "Full-service city" },
       { place: "Minneapolis, MN", distance: "~3 hours", note: "Via I-94 to US-10" },
-      { place: "Fargo, ND", distance: "~45 minutes", note: "Via I-94" },
+      { place: "Fargo, ND", distance: "~1 hour 10 min", note: "Via I-94" },
       { place: "Brainerd, MN", distance: "~1 hour", note: "Via MN-210" },
     ],
     specs: {
@@ -164,10 +163,10 @@ export const properties: Property[] = [
       frontage: "150ft",
     },
     description: [
-      "Built new in 2023, this home was designed from the ground up with lake life in mind. The open-concept main floor captures lake views from every angle, with floor-to-ceiling windows in the living and dining areas that fill the space with natural light from morning through golden hour.",
-      "The kitchen is a cook's dream — plenty of counter space, quality appliances, and a fish-cleaning station just outside the back door for those who are serious about their catch. A propane fireplace anchors the living room, and the wide wraparound deck runs the full width of the lake-facing side.",
-      "Five bedrooms across three floors sleep up to 12: the third floor hosts the master suite with a king bed, two queen bedrooms, and both a full shared bath and a 3/4 tile shower en-suite. The second floor has a twin bedroom — perfect for kids — with a half bath. The ground-floor guest suite rounds it out with a king bed and its own 3/4 bath.",
-      "Step outside to 150 feet of pristine Pickerel Lake frontage — a private dock, sandy swim area, fire pit, and two kayaks plus a canoe that are yours to use all week.",
+      "Brand new and designed from the ground up with lake life in mind. The open-concept main floor captures lake views from every angle, with floor-to-ceiling windows in the living and dining areas that fill the space with natural light from morning through golden hour.",
+      "The kitchen is a cook\u2019s dream \u2014 plenty of counter space, quality appliances, and a wide wraparound deck that runs the full width of the lake-facing side.",
+      "Five bedrooms across three floors with beds for 10: the third floor hosts the master suite with a king bed, two queen bedrooms, and both a full shared bath and a 3/4 tile shower en-suite. The second floor has two twin bedrooms \u2014 perfect for kids \u2014 with a half bath. The ground-floor guest suite rounds it out with a king bed and its own 3/4 bath.",
+      "Step outside to 150 feet of pristine Pickerel Lake frontage \u2014 a private dock, sandy swim area, fire pit, and three kayaks, two inflatable paddle boards, and a paddle boat that are yours to use all week.",
     ],
     amenities: [
       {
@@ -177,9 +176,7 @@ export const properties: Property[] = [
           "Full kitchen with quartz countertops",
           "Stainless steel appliances",
           "Drip coffee maker & French press",
-          "Instant Pot & slow cooker",
-          "Cast iron skillets for your catch",
-          "Fish-cleaning station outside",
+          "Slow cooker",
           "Full set of dishes, pots & pans",
           "Outdoor propane grill",
         ],
@@ -189,27 +186,26 @@ export const properties: Property[] = [
         icon: Waves,
         items: [
           "150ft of private lake frontage",
-          "Private dock with boat lift",
+          "Private dock",
           "Sandy swim area",
-          "Two kayaks & one canoe",
-          "Life jackets (adult & kids)",
-          "Fishing rods & basic tackle",
+          "Three kayaks",
+          "Two inflatable paddle boards",
+          "Paddle boat (seats up to 5)",
+          "Life jackets for kids",
           "Fire pit with firewood provided",
-          "Outdoor dining on the deck",
         ],
       },
       {
         category: "Entertainment",
         icon: Tv,
         items: [
-          '65" smart TV in living room',
+          '70" smart TV in living room',
           "Streaming apps (Netflix, Disney+)",
           "High-speed WiFi throughout",
           "Board games & card games",
           "Corn hole & lawn games",
           "Bluetooth speaker",
           "Books & magazines",
-          "Kids' toys and floaties",
         ],
       },
       {
@@ -217,21 +213,20 @@ export const properties: Property[] = [
         icon: Sofa,
         items: [
           "Central A/C & forced-air heat",
-          "Propane fireplace in living room",
           "Washer & dryer in-unit",
-          "Pack-n-play & high chair available",
+          "Pack-n-play & Bumbo seats (2x) available",
           "Fresh linens & bath towels",
           "Beach towels for lake days",
-          "Keypad entry — no key needed",
-          "EV charging outlet in garage",
+          "Keypad entry \u2014 no key needed",
+          "Off-street parking for up to 4 cars",
         ],
       },
     ],
     houseRules: [
       "Check-in: 4:00 PM | Check-out: 10:00 AM",
       "No smoking anywhere on the property",
-      "No pets allowed — we appreciate your understanding",
-      "Maximum 12 guests overnight",
+      "No animals on the property \u2014 we maintain an allergen-free environment to accommodate all guests",
+      "Maximum 12 people on the property at any time (beds for 10)",
       "Quiet hours 10 PM – 8 AM (neighbor-friendly lake)",
       "No parties or events beyond registered guests",
       "Leave firewood stacked neatly — we provide the first bundle",
@@ -239,45 +234,27 @@ export const properties: Property[] = [
     ],
     pricing: [
       {
-        season: "Peak Summer",
+        season: "Summer",
         icon: Sun,
-        dates: "June – August",
-        rate: "$300 – $400",
+        dates: "June \u2013 August",
+        rate: "$599 weekday / $699 weekend",
         unit: "per night",
-        note: "Minimum 3-night stay on weekends",
+        note: "4-night minimum \u2022 10% off 7+ nights \u2022 $395 cleaning fee",
         color: "#C8A951",
       },
       {
-        season: "Shoulder Season",
-        icon: Leaf,
-        dates: "September & October",
-        rate: "$200 – $275",
-        unit: "per night",
-        note: "2-night minimum most weekends",
-        color: "#8B6914",
-      },
-      {
-        season: "Winter",
+        season: "Off Season",
         icon: Snowflake,
-        dates: "November – March",
-        rate: "$150 – $250",
+        dates: "September \u2013 May",
+        rate: "$299 weekday / $399 weekend",
         unit: "per night",
-        note: "Ice fishing weekends book fast!",
+        note: "2-night minimum \u2022 20% off 7+ nights \u2022 $395 cleaning fee",
         color: "#4A7C8C",
       },
-      {
-        season: "Spring",
-        icon: Bird,
-        dates: "April – May",
-        rate: "$175 – $250",
-        unit: "per night",
-        note: "Walleye opener weekend premium applies",
-        color: "#6B8E23",
-      },
     ],
-    priceRange: "From $150/night",
+    priceRange: "From $299/night",
     gallery: [
-      { id: 1, alt: "Living room with lake views and propane fireplace", url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop" },
+      { id: 1, alt: "Living room with lake views and open floor plan", url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop" },
       { id: 2, alt: "Kitchen with quartz countertops and stainless appliances", url: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop" },
       { id: 3, alt: "Primary bedroom with king bed and lake views", url: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&h=600&fit=crop" },
       { id: 4, alt: "Private dock and sandy beach on Pickerel Lake", url: "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=800&h=600&fit=crop" },
@@ -310,7 +287,7 @@ export const properties: Property[] = [
           icon: Sailboat,
           title: "Boat Launch",
           description:
-            "A public boat launch is just minutes from the property on the south end of the lake. Our dock accommodates boats up to 24ft with the boat lift.",
+            "A public boat launch is just minutes from the property on the south end of the lake. Our private dock is available for guest use.",
         },
         {
           icon: Wind,
@@ -332,7 +309,7 @@ export const properties: Property[] = [
         activities: [
           { label: "Walleye & smallmouth bass fishing" },
           { label: "Swimming off the private dock" },
-          { label: "Kayaking & canoeing the shoreline" },
+          { label: "Kayaking & paddle boarding the shoreline" },
           { label: "Pontoon boat rentals (nearby marinas)" },
           { label: "Tubing & water skiing" },
           { label: "Evening campfire & s'mores" },
@@ -368,7 +345,7 @@ export const properties: Property[] = [
           { label: "Cross-country skiing nearby" },
           { label: "Snowmobiling on groomed trails" },
           { label: "Snowshoeing through the forest" },
-          { label: "Cozy nights by the fireplace" },
+          { label: "Cozy nights by the fire pit" },
           { label: "Northern lights (best in winter)" },
           { label: "Ice skating on the bay" },
           { label: "Perham's Winter Jubilee events" },
@@ -398,7 +375,7 @@ export const properties: Property[] = [
         distance: "10 miles",
         icon: Map,
         highlights: [
-          "1894, Lakes Cafe, Disgruntled Brewing, Silver Moon",
+          "1894, Lakes Cafe, Disgruntled Brewing, Brew, Nest",
           "Perham Wetlands trail system",
           "Gene's Sport Shop for bait & tackle",
           "Turtle Fest (annual June festival)",
@@ -407,7 +384,7 @@ export const properties: Property[] = [
       },
       {
         place: "Detroit Lakes, MN",
-        distance: "25–30 miles",
+        distance: "~45 minutes",
         icon: Coffee,
         highlights: [
           "The Fireside, Brygge Taps & Taste, Spanky's Stone Hearth",
@@ -431,7 +408,7 @@ export const properties: Property[] = [
       },
       {
         place: "Pelican Rapids, MN",
-        distance: "20 miles",
+        distance: "~45 minutes",
         icon: Music,
         highlights: [
           "Turkey River canoe route",
@@ -507,4 +484,4 @@ export function getProperty(slug: string): Property | undefined {
 export const spotlightProperty = properties[0];
 
 // Icons used on quick-highlights strip (shared between home + property pages)
-export { BedDouble, ShowerHead, Layers, Wifi, Car, Flame };
+export { BedDouble, ShowerHead, Layers, Wifi, Car };

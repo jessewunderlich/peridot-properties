@@ -11,7 +11,6 @@ import {
   Car,
   Wifi,
   Coffee,
-  Flame,
   Fish,
   TreePine,
   Wind,
@@ -165,16 +164,14 @@ export default async function PropertyPage({ params }: Props) {
             </h3>
             <ul className="space-y-3">
               {[
-                { icon: BedDouble, label: `${property.specs.bedrooms} bedrooms (2 king, 2 queen, 1 twin across 3 floors)` },
+                { icon: BedDouble, label: `${property.specs.bedrooms} bedrooms (2 king, 2 queen, 2 twin across 3 floors)` },
                 { icon: ShowerHead, label: `${property.specs.bathrooms} bathrooms (full + 3/4 en-suite, half, 3/4 suite)` },
-                { icon: Layers, label: `Sleeps up to ${property.specs.sleeps} guests` },
+                { icon: Layers, label: `Beds for 10 \u2022 max ${property.specs.sleeps} on property` },
                 { icon: Waves, label: `${property.specs.frontage} private lake frontage` },
-                { icon: Sailboat, label: "Dock, kayaks & canoe" },
-                { icon: Car, label: "2-car garage + driveway" },
+                { icon: Sailboat, label: "Dock, kayaks & paddle boards" },
+                { icon: Car, label: "Off-street parking for 4 cars" },
                 { icon: Wifi, label: "High-speed WiFi" },
                 { icon: Coffee, label: "Full kitchen" },
-                { icon: Flame, label: "Propane fireplace" },
-                { icon: Fish, label: "Fish cleaning station" },
                 { icon: Wind, label: "Central A/C & heat" },
                 { icon: TreePine, label: "Fire pit with firewood" },
               ].map(({ icon: Icon, label }) => (
@@ -532,7 +529,7 @@ export default async function PropertyPage({ params }: Props) {
                 <span className="text-sm font-semibold" style={{ color: "#2D5016" }}>Fully Refundable</span>
               </div>
               <p className="text-xs leading-relaxed" style={{ color: "#2C2C2C80" }}>
-                Cancel for any reason at least 2 days before check-in for a full refund.
+                Cancel for any reason at least 48 hours before check-in for a full refund.
               </p>
             </div>
             <div
@@ -544,7 +541,7 @@ export default async function PropertyPage({ params }: Props) {
                 <span className="text-sm font-semibold" style={{ color: "#2D5016" }}>50% Refundable</span>
               </div>
               <p className="text-xs leading-relaxed" style={{ color: "#2C2C2C80" }}>
-                Cancel within 1–2 days of check-in for a 50% refund of the total booking amount.
+                Cancel within 24–48 hours of check-in for a 50% refund of the total booking amount.
               </p>
             </div>
             <div

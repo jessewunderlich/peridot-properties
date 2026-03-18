@@ -22,7 +22,7 @@ const guideSections = [
           { name: "Brew Ales & Eats", desc: "American bar & grill with a big menu. 4.3 stars, 149 reviews. Solid go-to for families." },
           { name: "Lakes Cafe", desc: "Locally owned 25+ years. Classic American cafe — the kind of place where regulars know your name." },
           { name: "Disgruntled Brewing", desc: "Brewery atmosphere with craft beer on tap. Great spot for a laid-back afternoon." },
-          { name: "Silver Moon Lounge & Steakhouse", desc: "Steaks, prime rib Fridays with meat raffles. Tue\u2013Sat 11am\u2013close, Sun 11am\u20138pm." },
+          { name: "Brew", desc: "Local craft beer and casual bites. A great spot to unwind after a day on the lake." },
           { name: "The Cactus", desc: "Steak, seafood, pasta, burgers, pizza, full bar. Something for everyone." },
           { name: "Zorbaz (Perham)", desc: "Pizza, Mexican food, outdoor seating, dog-friendly patio. A lake country institution." },
           { name: "The Salty Pickle Bar & Grill", desc: "3 mi south on Hwy 78. Famous Salty Gouda Pickles, smash burgers, volleyball courts. Bingo Wed & Sun, karaoke nights, live music in summer." },
@@ -60,7 +60,7 @@ const guideSections = [
     icon: Music,
     note: "Charlotte always knows what\u2019s happening this weekend \u2014 ask her when you book and she\u2019ll share the latest.",
     items: [
-      { name: "Silver Moon", desc: "Meat raffles on Prime Rib Fridays. A true Minnesota tradition." },
+      { name: "Nest", desc: "Cozy spot for coffee, brunch, and baked goods. Perfect morning stop." },
       { name: "The Salty Pickle", desc: "Bingo every Wednesday & Sunday. Karaoke nights. Horse races on Saturdays. Live outdoor shows in summer.", url: "https://thesaltypicklebarandgrill.com" },
       { name: "Zorbaz", desc: "Thursday trivia nights at multiple locations." },
       { name: "Turtle Fest (Perham)", desc: "June 17\u201321, 2026. Street fair, turtle races, parade, fireworks, 5K/10K, live music, food vendors. Downtown Perham." },
@@ -79,7 +79,7 @@ const guideSections = [
       { name: "Thumper Pond Golf Club (~12 mi, Ottertail)", desc: "18 holes, par 72, 6,606 yards. The longest course in the area." },
       { name: "Frazee Golf Course (~11 mi)", desc: "9 holes, par 35. Quick and affordable round." },
       { name: "ITOW Veterans Museum (Perham)", desc: "805 W Main St. Self-guided tours by donation. Tue\u2013Fri 10am\u20131pm (summer). Group tours $3/adults, $2/students. (218) 346-7678." },
-      { name: "Pelican Rapids (~20 mi)", desc: "World\u2019s Largest Pelican statue (15.5 ft), pelican sculpture scavenger hunt around town, Mercantile on Main art gallery, suspension bridge over Pelican River." },
+      { name: "Pelican Rapids (~45 min)", desc: "World\u2019s Largest Pelican statue (15.5 ft), pelican sculpture scavenger hunt around town, Mercantile on Main art gallery, suspension bridge over Pelican River." },
       { name: "Thea\u2019s Pumpkin Patch (Pelican Rapids)", desc: "8-acre pumpkin patch + 11-acre corn maze. Apple cider donuts. Fall seasonal." },
     ],
   },
@@ -95,7 +95,7 @@ const guideSections = [
   {
     title: "Boat Rentals",
     icon: Sailboat,
-    note: "Our property includes two kayaks and a canoe, but if you want motor power on the lake, these are our go-to companies.",
+    note: "Our property includes three kayaks, two inflatable paddle boards, and a paddle boat, but if you want motor power on the lake, these are our go-to companies.",
     items: [
       { name: "MN Tru North (Perham)", desc: "Pontoons, jetskis, kayaks. Your closest rental option.", url: "https://mntrunorth.com" },
       { name: "Mark\u2019s Fleet Supply (Perham)", desc: "Water sports rentals starting at $30/4hrs, $45/8hrs." },
@@ -128,8 +128,8 @@ const guideSections = [
     items: [
       { name: "Fergus Falls (~35 mi)", desc: "Downtown shops on Lincoln Ave, Otto the Big Otter statue, Broken Down Dam Park, Otter Tail County Historical Museum, A Center for the Arts (restored 1921 vaudeville theater), Scenic River Walk." },
       { name: "Detroit Lakes (~25\u201330 mi)", desc: "Beach on Detroit Lake, downtown shopping, WE Fest grounds, Heartland Trail biking, great restaurant scene." },
-      { name: "Pelican Rapids (~20 mi)", desc: "World\u2019s Largest Pelican, Maplewood State Park, suspension bridge, art galleries, antique mall (14,000 sq ft)." },
-      { name: "Fargo, ND (~45 min)", desc: "Full city amenities. Shopping, dining, Fargo\u2013Moorhead attractions. Easy drive via I-94." },
+      { name: "Pelican Rapids (~45 min)", desc: "World\u2019s Largest Pelican, Maplewood State Park, suspension bridge, art galleries, antique mall (14,000 sq ft)." },
+      { name: "Fargo, ND (~1 hr 10 min)", desc: "Full city amenities. Shopping, dining, Fargo\u2013Moorhead attractions. Easy drive via I-94." },
     ],
   },
   {
@@ -137,7 +137,7 @@ const guideSections = [
     icon: Sparkles,
     note: "Because vacation starts the moment you walk in the door.",
     items: [
-      { name: "Grocery & Beverage Pre-Stocking", desc: "Want cold drinks and snacks waiting in the fridge when you arrive? Send Charlotte your shopping list and we\u2019ll have everything ready. Starting at $50 for the service plus the cost of items." },
+      { name: "Grocery & Beverage Pre-Stocking", desc: "Want the fridge and pantry fully loaded when you arrive? Send Charlotte your shopping list and we\u2019ll have everything ready. $100 service fee plus the cost of items." },
     ],
   },
 ];
