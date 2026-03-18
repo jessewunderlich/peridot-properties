@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import { Calendar } from "lucide-react";
 
 
 export default function BookingWidget() {
@@ -17,35 +16,15 @@ export default function BookingWidget() {
 
   return (
     <div
-      className="rounded-2xl overflow-hidden"
-      style={{ border: "1px solid #6B8E2325", boxShadow: "0 4px 24px rgba(45,80,22,0.10)" }}
+      className="or-booking-wrapper rounded-2xl overflow-hidden"
+      style={{ border: "1px solid #6B8E2325", boxShadow: "0 4px 24px rgba(45,80,22,0.10)", backgroundColor: "#FAF8F5" }}
       data-ownerrez-widget="peridot-properties"
     >
-      {/* Widget header */}
-      <div
-        className="px-6 py-5 flex items-center gap-3"
-        style={{ background: "linear-gradient(135deg, #2D5016 0%, #4A7C8C 100%)" }}
-      >
-        <Calendar size={22} style={{ color: "#C8A951" }} aria-hidden="true" />
-        <div>
-          <h3
-            className="text-lg font-semibold"
-            style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#FAF8F5" }}
-          >
-            Check Availability
-          </h3>
-          <p className="text-xs" style={{ color: "#FAF8F580" }}>
-            Real-time availability via OwnerRez
-          </p>
-        </div>
-      </div>
-
-      {/* OwnerRez Widgets — stacked for cleaner layout */}
-      <div className="p-6 sm:p-8 space-y-6" style={{ backgroundColor: "#FAF8F5" }}>
+      <div className="p-6 sm:p-8 space-y-8">
         
         {/* Availability Calendar */}
         <div>
-          <p className="text-xs font-semibold tracking-wide uppercase mb-3" style={{ color: "#4A7C8C" }}>
+          <p className="text-xs font-semibold tracking-wide uppercase mb-4" style={{ color: "#4A7C8C" }}>
             Availability
           </p>
           <div 
@@ -60,7 +39,7 @@ export default function BookingWidget() {
 
         {/* Booking Form */}
         <div>
-          <p className="text-xs font-semibold tracking-wide uppercase mb-3" style={{ color: "#4A7C8C" }}>
+          <p className="text-xs font-semibold tracking-wide uppercase mb-4" style={{ color: "#4A7C8C" }}>
             Reserve Your Stay
           </p>
           <div 
