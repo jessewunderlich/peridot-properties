@@ -28,8 +28,8 @@ const localBusinessJsonLd = {
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: "46.5",
-    longitude: "-95.1",
+    latitude: "46.4985",
+    longitude: "-95.1012",
   },
   priceRange: "$299–$699/night",
   amenityFeature: [

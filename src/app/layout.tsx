@@ -71,8 +71,8 @@ export const metadata: Metadata = {
   other: {
     "geo.region": "US-MN",
     "geo.placename": "Richville, Minnesota",
-    "geo.position": "46.5;-95.1",
-    ICBM: "46.5, -95.1",
+    "geo.position": "46.4985;-95.1012",
+    ICBM: "46.4985, -95.1012",
   },
 };
 
@@ -85,6 +85,7 @@ export default function RootLayout({
     <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
       <head>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="preconnect" href="https://app.ownerrez.com" />
       </head>
       <body className="antialiased">
         <Navbar />

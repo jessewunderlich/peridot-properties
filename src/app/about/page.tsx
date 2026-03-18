@@ -244,7 +244,7 @@ export default function AboutPage() {
             style={{ border: "1px solid #6B8E2315" }}
           >
             <Image
-              src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=700&h=500&fit=crop"
+              src="/images/pickerel-lake/golden-sunset.jpg"
               alt="Sunset over a Minnesota lake with fall foliage reflecting in the calm water"
               fill
               className="object-cover"

@@ -172,7 +172,7 @@ export default function LocalGuidePage() {
         >
           <div className="relative h-56 sm:h-72">
             <Image
-              src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&h=400&fit=crop"
+              src="/images/pickerel-lake/aerial-lake-view.jpg"
               alt="Otter Tail County lake landscape with forest and calm water"
               fill
               className="object-cover"

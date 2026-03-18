@@ -145,8 +145,8 @@ export const properties: Property[] = [
       state: "MN",
       zip: "56576",
       county: "Otter Tail County",
-      lat: 46.5,
-      lng: -95.1,
+      lat: 46.4985,
+      lng: -95.1012,
     },
     distances: [
       { place: "Perham, MN", distance: "10 miles", note: "Grocery, restaurants, hardware" },
@@ -296,7 +296,7 @@ export const properties: Property[] = [
         },
       ],
       fishingTips:
-        '"Our guests consistently have the best luck trolling the weedline on the northwest shore for walleye. Early morning (5–8 AM) and the two hours before sunset are magical. For bass, work the rocky points on the east side. A Minnesota fishing license is required and available at the Perham bait shop — they\'ll also give you the latest scoop on what\'s been hitting."',
+        "Our guests consistently have the best luck trolling the weedline on the northwest shore for walleye. Early morning (5–8 AM) and the two hours before sunset are magical. For bass, work the rocky points on the east side. A Minnesota fishing license is required and available at the Perham bait shop — they'll also give you the latest scoop on what's been hitting.",
     },
     seasons: [
       {
@@ -458,8 +458,8 @@ export const properties: Property[] = [
       },
       geo: {
         "@type": "GeoCoordinates",
-        latitude: "46.5",
-        longitude: "-95.1",
+        latitude: "46.4985",
+        longitude: "-95.1012",
       },
       amenityFeature: [
         { "@type": "LocationFeatureSpecification", name: "Lake frontage", value: "150 feet" },

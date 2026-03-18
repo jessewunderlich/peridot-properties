@@ -56,11 +56,11 @@ const benefits = [
 ];
 
 const comparisonRows = [
-  { item: "Nightly rate (5 nights at $300)", direct: "$1,500", platform: "$1,500" },
+  { item: "Nightly rate (5 nights at $299)", direct: "$1,495", platform: "$1,495" },
   { item: "Guest service fee", direct: "$0", platform: "$210–300" },
   { item: "Cleaning fee", direct: "$395", platform: "$395" },
   { item: "Processing fee", direct: "$44", platform: "Hidden in service fee" },
-  { item: "Total", direct: "$1,939", platform: "$2,105–2,395", highlight: true },
+  { item: "Total", direct: "$1,934", platform: "$2,100–2,390", highlight: true },
   { item: "Your savings", direct: "$166–456", platform: "—", highlight: true },
 ];
 
@@ -113,7 +113,7 @@ export default function BookDirectPage() {
               See the difference
             </h2>
             <p className="text-sm mt-2" style={{ color: "#2C2C2C80" }}>
-              A typical 5-night summer stay at $300/night
+              A typical 5-night off-season stay at $299/night
             </p>
           </div>
 
