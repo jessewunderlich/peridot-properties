@@ -40,8 +40,8 @@ export default function BookingWidget() {
         </div>
       </div>
 
-      {/* OwnerRez Widgets — side by side on desktop, stacked on mobile */}
-      <div className="p-6 grid grid-cols-1 lg:grid-cols-2 gap-6" style={{ backgroundColor: "#FAF8F5" }}>
+      {/* OwnerRez Widgets — stacked for cleaner layout */}
+      <div className="p-6 sm:p-8 space-y-6" style={{ backgroundColor: "#FAF8F5" }}>
         
         {/* Availability Calendar */}
         <div>
@@ -55,6 +55,8 @@ export default function BookingWidget() {
             data-widgetid="b969355329d443b189781e9a90878e14"
           ></div>
         </div>
+
+        <hr style={{ borderColor: "#6B8E2315" }} />
 
         {/* Booking Form */}
         <div>
