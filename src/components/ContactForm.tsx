@@ -150,23 +150,21 @@ export default function ContactForm() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-        <div>
-          <label htmlFor="guests" style={labelStyle}>Number of Guests *</label>
-          <select
-            id="guests"
-            name="guests"
-            value={form.guests}
-            onChange={handleChange}
-            required
-            style={inputStyle}
-          >
-            <option value="">Select guests</option>
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((n) => (
-              <option key={n} value={n}>{n} {n === 1 ? "guest" : "guests"}</option>
-            ))}
-          </select>
-        </div>
+      <div>
+        <label htmlFor="guests" style={labelStyle}>Number of Guests *</label>
+        <select
+          id="guests"
+          name="guests"
+          value={form.guests}
+          onChange={handleChange}
+          required
+          style={inputStyle}
+        >
+          <option value="">Select guests</option>
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((n) => (
+            <option key={n} value={n}>{n} {n === 1 ? "guest" : "guests"}</option>
+          ))}
+        </select>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
