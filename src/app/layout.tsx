@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     images: ["https://peridot.properties/images/pickerel-lake/hero-sunset.jpg"],
   },
   alternates: {
-    canonical: "https://peridot.properties",
+    canonical: "/",
   },
   authors: [{ name: "Charlotte Wunderlich" }],
   other: {

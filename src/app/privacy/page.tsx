@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Peridot Properties",
+  title: "Privacy Policy",
   description: "Privacy policy for Peridot Properties vacation rental website.",
+  alternates: { canonical: "/privacy" },
 };
 
 export default function PrivacyPage() {

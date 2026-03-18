@@ -4,13 +4,22 @@ import CTABanner from "@/components/CTABanner";
 import FAQAccordion from "./FAQAccordion";
 
 export const metadata: Metadata = {
-  title: "FAQ | Peridot Properties",
+  title: "FAQ",
   description:
     "Common questions about staying at Lakeside Luxe in Minnesota lake country. Check-in times, cancellation policy, what's included, local area info, and more.",
+  alternates: { canonical: "/faq" },
   openGraph: {
     title: "FAQ | Peridot Properties",
     description:
       "Everything you need to know before your stay at Lakeside Luxe in Minnesota lake country.",
+    url: "https://peridot.properties/faq",
+    images: [{ url: "https://peridot.properties/images/pickerel-lake/hero-sunset.jpg", width: 1600, height: 900, alt: "Sunset over Pickerel Lake" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FAQ | Peridot Properties",
+    description: "Everything you need to know before your stay at Lakeside Luxe.",
+    images: ["https://peridot.properties/images/pickerel-lake/hero-sunset.jpg"],
   },
 };
 
@@ -19,7 +28,7 @@ const faqJsonLd = {
   "@type": "FAQPage",
   mainEntity: [
     { "@type": "Question", name: "What are the check-in and check-out times?", acceptedAnswer: { "@type": "Answer", text: "Check-in is at 4:00 PM. Check-out is at 10:00 AM. If you need a different arrangement, reach out to Charlotte ahead of time and she'll do her best to accommodate." } },
-    { "@type": "Question", name: "What is the cancellation policy?", acceptedAnswer: { "@type": "Answer", text: "Cancel for any reason at least 48 hours before check-in for a full refund. Cancel within 24-48 hours of check-in for a 50% refund. After check-in time, the reservation is non-refundable." } },
+    { "@type": "Question", name: "What is the cancellation policy?", acceptedAnswer: { "@type": "Answer", text: "Cancellation terms are shared during booking and included in your confirmation. If you want to review them before booking, email Charlotte and she’ll send them over." } },
     { "@type": "Question", name: "How do I book?", acceptedAnswer: { "@type": "Answer", text: "Use the booking calendar on the property page to select your dates and book directly. If your desired dates aren't available or you have questions, use the Send Inquiry button or email charlotte@peridot.properties." } },
     { "@type": "Question", name: "Is there a minimum stay?", acceptedAnswer: { "@type": "Answer", text: "Summer (June-August): 4-night minimum. Off season (September-May): 2-night minimum." } },
     { "@type": "Question", name: "Are animals allowed?", acceptedAnswer: { "@type": "Answer", text: "No animals are permitted on the property. We maintain an allergen-free environment to accommodate all guests, including those with sensitivities and allergies." } },

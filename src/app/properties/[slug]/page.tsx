@@ -38,11 +38,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!property) return {};
 
   return {
-    title: `${property.name} | Peridot Properties`,
+    title: property.name,
     description: `${property.tagline}. ${property.description[0]}`,
+    alternates: { canonical: `/properties/${slug}` },
     openGraph: {
       title: `${property.name} | Peridot Properties`,
       description: property.tagline,
+      url: `https://peridot.properties/properties/${slug}`,
+      images: [{ url: `https://peridot.properties${property.heroImage}`, width: 1600, height: 900, alt: property.gallery[0]?.alt ?? property.name }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${property.name} | Peridot Properties`,
+      description: property.tagline,
+      images: [`https://peridot.properties${property.heroImage}`],
     },
   };
 }
@@ -166,7 +175,7 @@ export default async function PropertyPage({ params }: Props) {
               {[
                 { icon: BedDouble, label: `${property.specs.bedrooms} bedrooms (2 king, 2 queen, 2 twin across 3 floors)` },
                 { icon: ShowerHead, label: `${property.specs.bathrooms} bathrooms (full + 3/4 en-suite, half, 3/4 suite)` },
-                { icon: Layers, label: `Beds for 10 \u2022 max ${property.specs.sleeps} on property` },
+                { icon: Layers, label: `Beds for ${property.specs.sleeps} \u2022 max ${property.specs.maxOccupancy ?? property.specs.sleeps} on property` },
                 { icon: Waves, label: `${property.specs.frontage} private lake frontage` },
                 { icon: Sailboat, label: "Dock, kayaks & paddle boards" },
                 { icon: Car, label: "Off-street parking for 4 cars" },
@@ -188,6 +197,19 @@ export default async function PropertyPage({ params }: Props) {
             >
               {property.comingSoon ? "Coming Soon" : "Check Availability"}
             </Link>
+
+            {/* Rates preview */}
+            {!property.comingSoon && (
+              <div className="mt-6 pt-5" style={{ borderTop: "1px solid #6B8E2320" }}>
+                <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#4A7C8C" }}>
+                  Seasonal Rates
+                </p>
+                <RatesWidget />
+                <p className="text-xs mt-3 leading-relaxed" style={{ color: "#2C2C2C50" }}>
+                  Per night, before taxes. $395 cleaning fee. Exact pricing confirmed at booking.
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -480,30 +502,6 @@ export default async function PropertyPage({ params }: Props) {
           </div>
         </div>
       </section>
-
-      {/* ── Pricing ── */}
-      {!property.comingSoon && (
-        <section className="py-14 px-4" style={{ backgroundColor: "#2D501608" }} aria-label="Pricing">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-8">
-              <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#4A7C8C" }}>
-                Seasonal Rates
-              </p>
-              <h2
-                className="text-3xl font-semibold"
-                style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
-              >
-                Pricing Overview
-              </h2>
-            </div>
-            <RatesWidget />
-            <p className="text-xs mt-4 leading-relaxed" style={{ color: "#2C2C2C60" }}>
-              Rates are per night, not including applicable taxes. A $395 cleaning fee applies.
-              Exact pricing confirmed at booking. Holiday weekends may carry a premium.
-            </p>
-          </div>
-        </section>
-      )}
 
       {/* ── Cancellation Policy ── */}
       <section className="py-14 px-4" aria-label="Cancellation policy">

@@ -6,13 +6,22 @@ import CTABanner from "@/components/CTABanner";
 import { properties } from "@/data/properties";
 
 export const metadata: Metadata = {
-  title: "Our Properties | Peridot Properties",
+  title: "Our Properties",
   description:
     "Browse handpicked lakeside vacation rentals in Minnesota's lake country — hosted by Charlotte Wunderlich and her family. Book direct and save.",
+  alternates: { canonical: "/properties" },
   openGraph: {
     title: "Our Properties | Peridot Properties",
     description:
       "Handpicked lakeside stays in Minnesota. New-build homes with private lake frontage, hosted by Charlotte Wunderlich and her family.",
+    url: "https://peridot.properties/properties",
+    images: [{ url: "https://peridot.properties/images/pickerel-lake/hero-sunset.jpg", width: 1600, height: 900, alt: "Sunset over Pickerel Lake" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Properties | Peridot Properties",
+    description: "Handpicked lakeside stays in Minnesota. Book direct and save.",
+    images: ["https://peridot.properties/images/pickerel-lake/hero-sunset.jpg"],
   },
 };
 
@@ -87,7 +96,7 @@ export default function PropertiesPage() {
                     <Bath size={13} aria-hidden="true" /> {property.specs.bathrooms} bathrooms
                   </span>
                   <span className="flex items-center gap-1" style={{ color: "#2C2C2C80" }}>
-                    <Users size={13} aria-hidden="true" /> Sleeps {property.specs.sleeps}
+                    <Users size={13} aria-hidden="true" /> Beds for {property.specs.sleeps} · max {property.specs.maxOccupancy ?? property.specs.sleeps}
                   </span>
                   <span className="flex items-center gap-1" style={{ color: "#2C2C2C80" }}>
                     <Waves size={13} aria-hidden="true" /> {property.specs.frontage} frontage

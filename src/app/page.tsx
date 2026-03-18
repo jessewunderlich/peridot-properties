@@ -49,6 +49,7 @@ export const metadata: Metadata = {
     description:
       "Lakeside vacation rentals run by Charlotte Wunderlich and her family. Book direct and save.",
     url: "https://peridot.properties",
+    images: [{ url: "https://peridot.properties/images/pickerel-lake/hero-sunset.jpg", width: 1600, height: 900, alt: "Sunset over Pickerel Lake in Otter Tail County, Minnesota" }],
   },
 };
 
@@ -178,6 +179,7 @@ export default function HomePage() {
                 bedrooms={property.specs.bedrooms}
                 bathrooms={property.specs.bathrooms}
                 sleeps={property.specs.sleeps}
+                maxOccupancy={property.specs.maxOccupancy}
                 lakeFrontage={property.specs.frontage}
                 imageUrl={property.heroImage}
                 href={`/properties/${property.slug}`}

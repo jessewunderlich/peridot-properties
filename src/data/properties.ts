@@ -108,6 +108,7 @@ export interface Property {
     bedrooms: number;
     bathrooms: number;
     sleeps: number;
+    maxOccupancy?: number;
     frontage: string;
   };
   description: string[];
@@ -159,7 +160,8 @@ export const properties: Property[] = [
     specs: {
       bedrooms: 5,
       bathrooms: 4,
-      sleeps: 12,
+      sleeps: 10,
+      maxOccupancy: 12,
       frontage: "150ft",
     },
     description: [

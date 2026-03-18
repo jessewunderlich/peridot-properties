@@ -9,6 +9,7 @@ interface PropertyCardProps {
   bedrooms: number;
   bathrooms: number;
   sleeps: number;
+  maxOccupancy?: number;
   lakeFrontage: string;
   imageUrl: string;
   href: string;
@@ -23,6 +24,7 @@ export default function PropertyCard({
   bedrooms,
   bathrooms,
   sleeps,
+  maxOccupancy,
   lakeFrontage,
   imageUrl,
   href,
@@ -75,7 +77,7 @@ export default function PropertyCard({
             <Bath size={13} aria-hidden="true" /> {bathrooms} bathrooms
           </span>
           <span className="flex items-center gap-1" style={{ color: "#2C2C2C80" }}>
-            <Users size={13} aria-hidden="true" /> Sleeps {sleeps}
+            <Users size={13} aria-hidden="true" /> {maxOccupancy ? `Beds for ${sleeps} · max ${maxOccupancy}` : `Sleeps ${sleeps}`}
           </span>
           <span className="flex items-center gap-1" style={{ color: "#2C2C2C80" }}>
             <Waves size={13} aria-hidden="true" /> {lakeFrontage} frontage

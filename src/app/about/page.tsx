@@ -5,13 +5,22 @@ import PeridotGem from "@/components/PeridotGem";
 import CTABanner from "@/components/CTABanner";
 
 export const metadata: Metadata = {
-  title: "About | Peridot Properties — Charlotte Wunderlich",
+  title: "About — Charlotte Wunderlich",
   description:
     "Meet Charlotte Wunderlich, owner of Peridot Properties. Learn why we fell in love with Minnesota's lake country and why we named our vacation rental after a gemstone.",
+  alternates: { canonical: "/about" },
   openGraph: {
     title: "About Peridot Properties | Charlotte Wunderlich",
     description:
       "A family-run vacation rental company in Minnesota's lake country. Meet Charlotte and learn the story behind Peridot Properties.",
+    url: "https://peridot.properties/about",
+    images: [{ url: "https://peridot.properties/images/pickerel-lake/golden-sunset.jpg", width: 1200, height: 800, alt: "Sunset over a Minnesota lake" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Peridot Properties | Charlotte Wunderlich",
+    description: "A family-run vacation rental company in Minnesota's lake country.",
+    images: ["https://peridot.properties/images/pickerel-lake/golden-sunset.jpg"],
   },
 };
 

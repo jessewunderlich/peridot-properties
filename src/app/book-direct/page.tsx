@@ -12,13 +12,22 @@ import CTABanner from "@/components/CTABanner";
 import RatesWidget from "@/components/RatesWidget";
 
 export const metadata: Metadata = {
-  title: "Book Direct & Save | Peridot Properties",
+  title: "Book Direct & Save",
   description:
     "Save 10–15% when you book directly with Peridot Properties. No platform fees, flexible cancellation, and personal service from Charlotte.",
+  alternates: { canonical: "/book-direct" },
   openGraph: {
     title: "Book Direct & Save | Peridot Properties",
     description:
       "Skip the Airbnb fees. Book direct with Charlotte and save on your Minnesota lake vacation.",
+    url: "https://peridot.properties/book-direct",
+    images: [{ url: "https://peridot.properties/images/pickerel-lake/hero-sunset.jpg", width: 1600, height: 900, alt: "Sunset over Pickerel Lake" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Book Direct & Save | Peridot Properties",
+    description: "Skip the Airbnb fees. Book direct with Charlotte and save.",
+    images: ["https://peridot.properties/images/pickerel-lake/hero-sunset.jpg"],
   },
 };
 
@@ -60,8 +69,8 @@ const comparisonRows = [
   { item: "Guest service fee", direct: "$0", platform: "$210–300" },
   { item: "Cleaning fee", direct: "$395", platform: "$395" },
   { item: "Processing fee", direct: "$44", platform: "Hidden in service fee" },
-  { item: "Total", direct: "$1,934", platform: "$2,100–2,390", highlight: true },
-  { item: "Your savings", direct: "$166–456", platform: "—", highlight: true },
+  { item: "Total", direct: "$1,934", platform: "$2,100–2,190", highlight: true },
+  { item: "Your savings", direct: "$166–256", platform: "—", highlight: true },
 ];
 
 export default function BookDirectPage() {
@@ -292,3 +301,4 @@ export default function BookDirectPage() {
     </>
   );
 }
+
