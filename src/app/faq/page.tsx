@@ -76,8 +76,8 @@ export default function FAQPage() {
       <CTABanner
         heading="Still have questions?"
         subheading="Charlotte is happy to help. Send her an email and she'll get back to you within 24 hours."
-        buttonLabel="Contact Charlotte"
-        buttonHref="/book-direct#contact"
+        buttonLabel="Send an Inquiry"
+        buttonHref="/properties/pickerel-lake-retreat#booking"
         secondaryLabel="Browse Properties"
         secondaryHref="/properties"
       />

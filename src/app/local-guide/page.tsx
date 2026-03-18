@@ -313,8 +313,8 @@ export default function LocalGuidePage() {
         subheading="Book your family&apos;s next escape direct and save."
         buttonLabel="Browse Properties"
         buttonHref="/properties"
-        secondaryLabel="Contact Charlotte"
-        secondaryHref="/book-direct#contact"
+        secondaryLabel="Send an Inquiry"
+        secondaryHref="/properties/pickerel-lake-retreat#booking"
       />
     </>
   );

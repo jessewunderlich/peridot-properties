@@ -305,8 +305,8 @@ export default function AboutPage() {
         subheading="We'd love to share Minnesota's lakes with you. Reach out anytime — Charlotte is always happy to chat about our properties, the area, or help you plan your trip."
         buttonLabel="Browse Our Properties"
         buttonHref="/properties"
-        secondaryLabel="Contact Charlotte"
-        secondaryHref="/book-direct#contact"
+        secondaryLabel="Send an Inquiry"
+        secondaryHref="/properties/pickerel-lake-retreat#booking"
       />
     </>
   );

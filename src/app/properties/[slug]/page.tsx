@@ -22,7 +22,7 @@ import SeasonCard from "@/components/SeasonCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import BookingWidget from "@/components/BookingWidget";
 import RatesWidget from "@/components/RatesWidget";
-import ContactForm from "@/components/ContactForm";
+
 import { properties, getProperty } from "@/data/properties";
 
 interface Props {
@@ -602,26 +602,6 @@ export default async function PropertyPage({ params }: Props) {
             </Link>
           </div>
         </div>
-      </section>
-
-      {/* ── Contact Form ── */}
-      <section id="contact" className="py-14 px-4 max-w-3xl mx-auto" aria-label="Send a booking inquiry">
-        <div className="text-center mb-8">
-          <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#4A7C8C" }}>
-            Get In Touch
-          </p>
-          <h2
-            className="text-3xl font-semibold"
-            style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
-          >
-            Send Charlotte a message
-          </h2>
-          <p className="text-sm mt-3" style={{ color: "#2C2C2C80" }}>
-            Questions, custom requests, or just want to check availability for specific dates?
-            Fill out the form and Charlotte will be in touch within 24 hours.
-          </p>
-        </div>
-        <ContactForm />
       </section>
 
       {/* ── Testimonials ── */}
