@@ -247,6 +247,10 @@ button[type='submit'].btn:not(.inquiry-button-holder .btn):hover {
 table.dayNames, table.dayNames thead, table.dayNames thead tr {
   background: transparent !important;
 }
+table.dayNames {
+  border-bottom: 1px solid rgba(107, 142, 35, 0.08) !important;
+  width: 100% !important;
+}
 table.dayNames thead td, .day-header {
   font-family: 'Inter', system-ui, sans-serif !important;
   font-weight: 600 !important;
@@ -257,6 +261,17 @@ table.dayNames thead td, .day-header {
   text-align: center !important;
   padding: 12px 4px 8px !important;
   border: none !important;
+}
+
+/* Calendar Grid Layout Fix:
+   OwnerRez positions .dayRows absolutely at top equal to dayNames default height (14px).
+   Our padding makes dayNames ~38px, so we must push dayRows down to match.
+   Each week is a separate table, so dayCells needs height:100% to eliminate gaps. */
+.dayRows {
+  top: 38px !important;
+}
+.dayCells {
+  height: 100% !important;
 }
 
 /* Day Cells */

@@ -1,0 +1,581 @@
+/* ═══════════════════════════════════════════════════════════════
+   Peridot Properties — OwnerRez Widget CSS v6
+   Corrected against ACTUAL widget DOM classes
+   Applied to: Booking (799235038), Calendar (799235093), Rates (799235055)
+   Last updated: 2026-03-18
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Web Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* ── Base Reset ── */
+body {
+  background: transparent !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* ── Typography: Body ── */
+body, .form-control, .btn, table, label,
+select, input, textarea, p, span, div, td, th, li, dt, dd, dl {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+}
+body, p, span, div, td, li, dd {
+  color: #2C2C2C !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+}
+
+/* ── Typography: Headings (Cormorant Garamond) ── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  color: #2D5016 !important;
+  font-weight: 600 !important;
+}
+
+/* Hide the OwnerRez page header (gray jumbotron) — rendered in outer frame only */
+.jumbotron { display: none !important; }
+.page-header { display: none !important; }
+
+/* ── Typography: Labels ── */
+label, dt {
+  color: #2D5016 !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  margin-bottom: 6px !important;
+  letter-spacing: 0.01em !important;
+}
+
+/* ── Typography: Muted/secondary text ── */
+.help-block, .text-muted, small, .small {
+  color: rgba(44, 44, 44, 0.5) !important;
+  font-size: 12px !important;
+}
+
+/* ── Hidden Fields (Booking widget) ── */
+#group-Phone { display: none !important; }
+#group-DiscountCode { display: none !important; }
+
+/* ══════════════════════════════════════
+   FORM INPUTS
+   ══════════════════════════════════════ */
+.form-control,
+input[type='text'], input[type='email'], input[type='tel'],
+input[type='number'], input[type='date'],
+select, textarea {
+  background-color: #FAF8F5 !important;
+  border: 1px solid rgba(107, 142, 35, 0.19) !important;
+  border-radius: 8px !important;
+  font-size: 14px !important;
+  padding: 10px 14px !important;
+  color: #2C2C2C !important;
+  box-shadow: none !important;
+  min-height: 42px !important;
+  transition: border-color 0.2s, box-shadow 0.2s !important;
+}
+.form-control:focus, input:focus, select:focus, textarea:focus {
+  border-color: #6B8E23 !important;
+  box-shadow: 0 0 0 3px rgba(107, 142, 35, 0.15) !important;
+  outline: none !important;
+}
+.form-control::placeholder, input::placeholder, textarea::placeholder {
+  color: rgba(44, 44, 44, 0.35) !important;
+}
+
+/* Date input override (OwnerRez uses inline style="background:#fff") */
+.date-holder .form-control,
+.input-group.date .form-control {
+  background-color: #FAF8F5 !important;
+}
+
+/* ── Input Groups: Style the calendar icon trigger to match ── */
+.input-group .input-group-btn .btn.btn-default {
+  background: rgba(107, 142, 35, 0.08) !important;
+  background-image: none !important;
+  border: 1px solid rgba(107, 142, 35, 0.19) !important;
+  border-left: none !important;
+  border-radius: 0 8px 8px 0 !important;
+  color: #6B8E23 !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+  min-height: 42px !important;
+  padding: 10px 12px !important;
+}
+.input-group .input-group-btn .btn.btn-default .glyphicon {
+  color: #6B8E23 !important;
+}
+.input-group .input-group-btn .btn.btn-default:hover {
+  background: rgba(107, 142, 35, 0.15) !important;
+}
+/* Fix input radius when icon button is present */
+.input-group .form-control:first-child {
+  border-radius: 8px 0 0 8px !important;
+}
+
+/* ── Select Dropdowns ── */
+select.form-control {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236B8E23' d='M2 4l4 4 4-4'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 14px center !important;
+  padding-right: 36px !important;
+  -webkit-appearance: none !important;
+}
+
+/* ── Form Layout Spacing ── */
+.form-group {
+  margin-bottom: 20px !important;
+}
+
+/* ══════════════════════════════════════
+   BUTTONS
+   ══════════════════════════════════════ */
+
+/* Primary CTA: Book Now / Send Inquiry (full-width block buttons) */
+.btn-default.btn-block,
+.btn-primary,
+.btn-success,
+input[type='submit'].btn {
+  background: #6B8E23 !important;
+  background-image: none !important;
+  border: none !important;
+  border-radius: 9999px !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  padding: 12px 32px !important;
+  color: #FAF8F5 !important;
+  letter-spacing: 0.02em !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+  transition: all 0.2s ease !important;
+  cursor: pointer !important;
+}
+.btn-default.btn-block:hover,
+.btn-primary:hover,
+.btn-success:hover,
+input[type='submit'].btn:hover {
+  background: #5a7a1c !important;
+  background-image: none !important;
+  color: #FAF8F5 !important;
+  text-shadow: none !important;
+  box-shadow: 0 4px 16px rgba(45, 80, 22, 0.22) !important;
+}
+
+/* "See Details" outline button (booking quote area) */
+.booknow-show-details {
+  background: transparent !important;
+  background-image: none !important;
+  border: 1px solid rgba(107, 142, 35, 0.35) !important;
+  color: #6B8E23 !important;
+  border-radius: 9999px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+  padding: 8px 20px !important;
+  transition: all 0.2s ease !important;
+}
+.booknow-show-details:hover {
+  background: rgba(107, 142, 35, 0.08) !important;
+  border-color: #6B8E23 !important;
+  color: #2D5016 !important;
+}
+
+/* ══════════════════════════════════════
+   BOOKING WIDGET — Calendar (flex-calendar)
+   These classes appear in the inline date picker
+   ══════════════════════════════════════ */
+
+/* Calendar nav bar */
+.book-cal-nav,
+.input-group:has(.book-cal-today) {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  margin-bottom: 16px !important;
+}
+
+/* Prev/Next arrows (booking calendar) */
+.book-cal-previous, .book-cal-next {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #2D5016 !important;
+  background-image: none !important;
+  border: none !important;
+  color: #FAF8F5 !important;
+  border-radius: 50% !important;
+  width: 36px !important;
+  height: 36px !important;
+  padding: 0 !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+  transition: all 0.2s ease !important;
+  flex-shrink: 0 !important;
+}
+.book-cal-previous:hover, .book-cal-next:hover {
+  background: #3d6a20 !important;
+  color: #FAF8F5 !important;
+}
+.book-cal-previous .glyphicon, .book-cal-next .glyphicon {
+  color: #FAF8F5 !important;
+}
+
+/* "Today" pill button (booking calendar) */
+.book-cal-today {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: rgba(200, 169, 81, 0.12) !important;
+  background-image: none !important;
+  border: 1px solid #C8A951 !important;
+  color: #2D5016 !important;
+  border-radius: 9999px !important;
+  height: 36px !important;
+  padding: 0 20px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+  transition: all 0.2s ease !important;
+}
+.book-cal-today:hover {
+  background: rgba(200, 169, 81, 0.22) !important;
+}
+
+/* Flex calendar grid (booking widget) */
+.flex-calendar { width: 100% !important; max-width: 100% !important; }
+.flex-calendar-month-wrapper { width: 100% !important; }
+.flex-calendar-month-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 20px !important;
+  color: #2D5016 !important;
+  font-weight: 600 !important;
+  margin-bottom: 12px !important;
+}
+.day-header {
+  font-weight: 600 !important;
+  font-size: 11px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  color: rgba(44, 44, 44, 0.5) !important;
+}
+.flex-calendar .day-content {
+  font-size: 13px !important;
+  color: #2C2C2C !important;
+}
+.flex-calendar .flex-calendar-today .day-content {
+  background-color: rgba(200, 169, 81, 0.25) !important;
+  border-radius: 50% !important;
+  font-weight: 600 !important;
+}
+.flex-calendar .flex-calendar-booking-middle,
+.flex-calendar .flex-calendar-booking-start,
+.flex-calendar .flex-calendar-booking-end {
+  background-color: rgba(107, 142, 35, 0.10) !important;
+}
+.flex-calendar .flex-calendar-selected {
+  background-color: rgba(107, 142, 35, 0.18) !important;
+}
+.flex-calendar .flex-calendar-selected .day-content {
+  background-color: #6B8E23 !important;
+  color: #FAF8F5 !important;
+  border-radius: 50% !important;
+  font-weight: 600 !important;
+}
+
+/* ══════════════════════════════════════
+   SINGLE MONTH CALENDAR WIDGET
+   Uses .pager-or, .btn-group, table.dayNames, td.today
+   ══════════════════════════════════════ */
+
+/* Calendar nav (Single Month) */
+.pager-or {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin-bottom: 16px !important;
+}
+.pager-or .buttons.btn-group {
+  display: flex !important;
+  gap: 4px !important;
+}
+/* Prev/Next arrows (Single Month Calendar) */
+.pager-or .btn.btn-default.previous,
+.pager-or .btn.btn-default.next {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #2D5016 !important;
+  background-image: none !important;
+  border: none !important;
+  color: #FAF8F5 !important;
+  border-radius: 50% !important;
+  width: 32px !important;
+  height: 32px !important;
+  padding: 0 !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+  transition: all 0.2s ease !important;
+}
+.pager-or .btn.btn-default.previous:hover,
+.pager-or .btn.btn-default.next:hover {
+  background: #3d6a20 !important;
+  color: #FAF8F5 !important;
+}
+.pager-or .btn.btn-default.previous .glyphicon,
+.pager-or .btn.btn-default.next .glyphicon {
+  color: #FAF8F5 !important;
+}
+.pager-or .btn.btn-default.previous.disabled {
+  opacity: 0.3 !important;
+  cursor: not-allowed !important;
+}
+/* "Showing March 2026" text */
+.pager-or .showingSummary {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 18px !important;
+  color: #2D5016 !important;
+}
+.pager-or .showingSummary strong {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 18px !important;
+  color: #2D5016 !important;
+  font-weight: 600 !important;
+}
+
+/* Day name headers (Su Mo Tu...) */
+table.dayNames thead td {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 11px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  color: rgba(44, 44, 44, 0.5) !important;
+  text-align: center !important;
+  padding: 8px 4px !important;
+  background: transparent !important;
+}
+
+/* Day number cells */
+.dayCells tr.numbers td {
+  font-size: 13px !important;
+  color: #2C2C2C !important;
+  text-align: center !important;
+  padding: 6px 4px !important;
+}
+
+/* Today highlight (Single Month Calendar) */
+.dayCells tr.numbers td.today {
+  background-color: rgba(200, 169, 81, 0.25) !important;
+  border-radius: 6px !important;
+  font-weight: 600 !important;
+}
+
+/* Next month days (grayed out) */
+.dayCells tr.numbers td.nextMonth {
+  color: rgba(44, 44, 44, 0.3) !important;
+}
+
+/* Calendar border/outline */
+#calendarArea .container-or {
+  border: 1px solid rgba(107, 142, 35, 0.15) !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  padding: 8px !important;
+}
+
+/* Booking ribbons on calendar */
+.dayBookings .booking {
+  background-color: rgba(107, 142, 35, 0.12) !important;
+  border-radius: 4px !important;
+}
+.dayBookings .booking .text,
+.dayBookings .ribbon-text {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 9px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  color: #2D5016 !important;
+}
+
+/* ══════════════════════════════════════
+   QUOTE / PRICE SUMMARY BAR
+   (Booking widget — appears after dates selected)
+   ══════════════════════════════════════ */
+.booknow-quote, .booknow-quote-wrapper,
+.booknow-total, .booknow-quote-total {
+  background: linear-gradient(135deg, #2D5016 0%, #4A7C8C 100%) !important;
+  border: none !important;
+  color: #FAF8F5 !important;
+  border-radius: 16px !important;
+  padding: 16px 20px !important;
+}
+.booknow-quote *, .booknow-total * {
+  color: #FAF8F5 !important;
+}
+.booknow-quote a {
+  color: #C8A951 !important;
+  text-decoration: underline !important;
+}
+.booknow-quote a:hover {
+  color: #FAF8F5 !important;
+}
+
+/* Alert info used for rate info banners */
+.alert-info {
+  background: linear-gradient(135deg, #2D5016 0%, #4A7C8C 100%) !important;
+  border: none !important;
+  color: #FAF8F5 !important;
+  border-radius: 12px !important;
+  padding: 14px 18px !important;
+}
+.alert-info * { color: #FAF8F5 !important; }
+
+/* ══════════════════════════════════════
+   RATE TABLE (Rates widget)
+   Uses .table.table-striped
+   ══════════════════════════════════════ */
+table.table {
+  border-collapse: collapse !important;
+  width: 100% !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  border: none !important;
+}
+table.table thead th {
+  background-color: #2D5016 !important;
+  color: #FAF8F5 !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 11px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  padding: 12px 16px !important;
+  border: none !important;
+}
+table.table tbody td {
+  padding: 14px 16px !important;
+  border-bottom: 1px solid rgba(107, 142, 35, 0.08) !important;
+  border-top: none !important;
+  font-size: 14px !important;
+  color: #2C2C2C !important;
+  background: transparent !important;
+}
+/* Override Bootstrap's striped rows */
+table.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: rgba(107, 142, 35, 0.03) !important;
+}
+table.table-striped > tbody > tr:nth-of-type(even) {
+  background-color: transparent !important;
+}
+table.table tbody tr:last-child td {
+  border-bottom: none !important;
+}
+table.table tbody tr:hover td {
+  background-color: rgba(107, 142, 35, 0.06) !important;
+}
+
+/* Rate table season name */
+table.table tbody td:first-child {
+  font-weight: 500 !important;
+  color: #2D5016 !important;
+}
+
+/* Rate label (Night, Weekend Night) */
+table.table tbody dt {
+  font-weight: 600 !important;
+  font-size: 12px !important;
+  color: #2D5016 !important;
+}
+
+/* ══════════════════════════════════════
+   PANELS (Bootstrap .panel used by OwnerRez)
+   ══════════════════════════════════════ */
+.panel {
+  border: 1px solid rgba(107, 142, 35, 0.18) !important;
+  border-radius: 16px !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+}
+.panel-heading {
+  border-radius: 16px 16px 0 0 !important;
+}
+.panel-default > .panel-heading {
+  background: rgba(107, 142, 35, 0.06) !important;
+  border-bottom: 1px solid rgba(107, 142, 35, 0.12) !important;
+  color: #2D5016 !important;
+}
+.panel-primary, .panel-primary > .panel-heading {
+  background: linear-gradient(135deg, #2D5016 0%, #4A7C8C 100%) !important;
+  border: none !important;
+  color: #FAF8F5 !important;
+}
+.panel-primary * { color: #FAF8F5 !important; }
+
+/* .well (used for various info boxes) */
+.well {
+  background: linear-gradient(135deg, #2D5016 0%, #4A7C8C 100%) !important;
+  border: none !important;
+  color: #FAF8F5 !important;
+  border-radius: 16px !important;
+  padding: 16px 20px !important;
+}
+.well * { color: #FAF8F5 !important; }
+
+/* ══════════════════════════════════════
+   ALERTS / VALIDATION
+   ══════════════════════════════════════ */
+.alert-danger {
+  background: rgba(192, 57, 43, 0.08) !important;
+  color: #C0392B !important;
+  border: 1px solid rgba(192, 57, 43, 0.2) !important;
+  border-radius: 8px !important;
+}
+.alert-danger * { color: #C0392B !important; }
+.has-error .form-control {
+  border-color: #C0392B !important;
+}
+.alert-success {
+  background: rgba(107, 142, 35, 0.08) !important;
+  color: #2D5016 !important;
+  border: 1px solid rgba(107, 142, 35, 0.2) !important;
+  border-radius: 8px !important;
+}
+
+/* Hidden validation summary (initially hidden, shows on error) */
+.validation-summary-valid { display: none !important; }
+
+/* ══════════════════════════════════════
+   LINKS & MISC
+   ══════════════════════════════════════ */
+a {
+  color: #6B8E23 !important;
+  transition: color 0.2s ease !important;
+}
+a:hover {
+  color: #2D5016 !important;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px !important; height: 6px !important; }
+::-webkit-scrollbar-track { background: rgba(107, 142, 35, 0.04) !important; }
+::-webkit-scrollbar-thumb { background: rgba(107, 142, 35, 0.2) !important; border-radius: 3px !important; }
+
+/* ── Checkbox / Radio ── */
+input[type="checkbox"], input[type="radio"] {
+  accent-color: #6B8E23 !important;
+}
+
+/* ── Footer links at bottom of widget ── */
+div[style*="text-align: center"][style*="color: #999"] {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 12px !important;
+  color: rgba(44, 44, 44, 0.4) !important;
+}
+div[style*="text-align: center"][style*="color: #999"] a {
+  color: #6B8E23 !important;
+  font-size: 12px !important;
+}
