@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@400;500;600;700&display=swap');body{background:transparent !important;margin:0 !important;padding:0 !important;}
+.loadingMessage,.loadingMessage.hidden{display:none !important;visibility:hidden !important;}
 body, .form-control, .btn, table, label, select, input, textarea, p, span, div, td, th, li, dt, dd, dl, a{font-family:'Inter', system-ui, -apple-system, sans-serif !important;}
 body, p, span, div, td, li, dd{color:#2C2C2C !important;font-size:14px !important;line-height:1.6 !important;}
 h1, h2, h3, h4, h5, h6, .flex-calendar-month-title, .pager-or .showingSummary, .pager-or .showingSummary strong{font-family:'Cormorant Garamond', Georgia, serif !important;color:#2D5016 !important;font-weight:600 !important;}
