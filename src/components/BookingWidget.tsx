@@ -30,8 +30,8 @@ export default function BookingWidget() {
           <div 
             className="ownerrez-widget" 
             data-propertyid="7793e94b1f944ec0844bf19d1afd63aa" 
-            data-widget-type="Peridot Properties Availability Calendar - Multiple Month Calendar" 
-            data-widgetid="b969355329d443b189781e9a90878e14"
+            data-widget-type="Peridot Properties Single Month Calendar - Single Month Calendar" 
+            data-widgetid="b68ab7b5c9d74f089140b6f1c3bb26fe"
           ></div>
         </div>
 
