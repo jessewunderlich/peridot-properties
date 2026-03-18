@@ -35,9 +35,9 @@ export default function PrivacyPage() {
           Information We Collect
         </h2>
         <p>
-          When you submit an inquiry through our contact form, we collect the
-          information you provide: your name, email address, desired dates,
-          number of guests, and any message you
+          When you submit an inquiry through our booking widget (powered by
+          OwnerRez), we collect the information you provide: your name, email
+          address, desired dates, number of guests, and any message you
           include. We use this information solely to respond to your inquiry
           and process your booking.
         </p>
@@ -89,9 +89,9 @@ export default function PrivacyPage() {
           Payment Processing
         </h2>
         <p>
-          When online payments become available, they will be processed securely
-          through industry-standard payment processors. Currently, booking
-          inquiries are handled via email.
+          Payments are processed securely through OwnerRez using
+          industry-standard payment processors. We do not store your credit
+          card information on our servers.
         </p>
 
         <h2

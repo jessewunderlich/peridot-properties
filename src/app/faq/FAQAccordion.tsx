@@ -17,7 +17,7 @@ const faqSections = [
       },
       {
         q: "How do I book?",
-        a: "Send Charlotte an inquiry through the contact form or email charlotte@peridot.properties directly. She\u2019ll respond within 24 hours.",
+        a: "Use the booking widget on the property page to check availability and send an inquiry, or email charlotte@peridot.properties directly. She\u2019ll respond within 24 hours.",
       },
       {
         q: "Is there a minimum stay?",
