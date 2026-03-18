@@ -284,6 +284,7 @@ export default function BookDirectPage() {
 
       {/* Contact Form */}
       <section
+        id="contact"
         className="py-14 px-4 max-w-3xl mx-auto"
         aria-label="Send a booking inquiry"
       >

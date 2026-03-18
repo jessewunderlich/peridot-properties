@@ -275,7 +275,7 @@ export const properties: Property[] = [
     ],
     priceRange: "From $150/night",
     gallery: [
-      { id: 1, alt: "Living room with lake views and stone fireplace", url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop" },
+      { id: 1, alt: "Living room with lake views and propane fireplace", url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop" },
       { id: 2, alt: "Kitchen with quartz countertops and stainless appliances", url: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop" },
       { id: 3, alt: "Primary bedroom with king bed and lake views", url: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&h=600&fit=crop" },
       { id: 4, alt: "Private dock and sandy beach on Pickerel Lake", url: "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=800&h=600&fit=crop" },
