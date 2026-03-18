@@ -174,6 +174,7 @@ export default function HomePage() {
                 name={property.name}
                 location={`${property.location.city}, ${property.location.state} · ${property.location.county}`}
                 description={property.description[0]}
+                comingSoon={property.comingSoon}
                 bedrooms={property.specs.bedrooms}
                 bathrooms={property.specs.bathrooms}
                 sleeps={property.specs.sleeps}

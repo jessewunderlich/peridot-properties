@@ -96,12 +96,20 @@ export default function PropertiesPage() {
                 <p className="text-sm font-semibold" style={{ color: "#6B8E23" }}>
                   {property.priceRange}
                 </p>
+                {property.comingSoon && (
+                  <p
+                    className="text-xs font-semibold tracking-wide uppercase px-3 py-1 rounded-full w-fit"
+                    style={{ backgroundColor: "#C8A95120", color: "#C8A951" }}
+                  >
+                    Coming Soon
+                  </p>
+                )}
                 <Link
                   href={`/properties/${property.slug}`}
                   className="text-center py-3 rounded-full text-sm font-semibold transition-all hover:opacity-90 hover:shadow-lg"
                   style={{ backgroundColor: "#6B8E23", color: "#FAF8F5" }}
                 >
-                  View Lakeside Luxe
+                  {property.comingSoon ? "Preview Property" : "View Lakeside Luxe"}
                 </Link>
               </div>
             </div>

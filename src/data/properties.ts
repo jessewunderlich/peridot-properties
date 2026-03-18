@@ -93,6 +93,7 @@ export interface Property {
   slug: string;
   name: string;
   tagline: string;
+  comingSoon?: boolean;
   heroImage: string;
   location: {
     address: string;
@@ -137,6 +138,7 @@ export const properties: Property[] = [
     slug: "pickerel-lake-retreat",
     name: "Lakeside Luxe",
     tagline: "Your lakeside escape on Pickerel Lake",
+    comingSoon: true,
     heroImage: "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop",
     location: {
       address: "33746 N Pickerel Dr",

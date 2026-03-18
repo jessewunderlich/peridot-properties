@@ -13,6 +13,7 @@ interface PropertyCardProps {
   imageUrl: string;
   href: string;
   priceRange?: string;
+  comingSoon?: boolean;
 }
 
 export default function PropertyCard({
@@ -26,6 +27,7 @@ export default function PropertyCard({
   imageUrl,
   href,
   priceRange,
+  comingSoon,
 }: PropertyCardProps) {
   return (
     <article
@@ -40,6 +42,14 @@ export default function PropertyCard({
           className="object-cover transition-transform hover:scale-105"
           sizes="(max-width: 768px) 100vw, 600px"
         />
+        {comingSoon && (
+          <span
+            className="absolute top-3 right-3 text-xs font-semibold tracking-wide uppercase px-3 py-1.5 rounded-full"
+            style={{ backgroundColor: "#C8A951", color: "#2D5016" }}
+          >
+            Coming Soon
+          </span>
+        )}
       </div>
       <div className="p-6 flex flex-col gap-3 flex-1" style={{ backgroundColor: "#FAF8F5" }}>
         <div>
@@ -81,7 +91,7 @@ export default function PropertyCard({
           className="mt-2 text-center py-2.5 rounded-full text-sm font-semibold transition-all hover:opacity-90"
           style={{ backgroundColor: "#6B8E23", color: "#FAF8F5" }}
         >
-          View Property
+          {comingSoon ? "Preview Property" : "View Property"}
         </Link>
       </div>
     </article>

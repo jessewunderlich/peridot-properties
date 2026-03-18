@@ -187,9 +187,9 @@ export default async function PropertyPage({ params }: Props) {
             <Link
               href="#booking"
               className="mt-6 block w-full text-center py-3 rounded-full text-sm font-semibold transition-all hover:opacity-90"
-              style={{ backgroundColor: "#6B8E23", color: "#FAF8F5" }}
+              style={{ backgroundColor: property.comingSoon ? "#C8A951" : "#6B8E23", color: property.comingSoon ? "#2D5016" : "#FAF8F5" }}
             >
-              Check Availability
+              {property.comingSoon ? "Coming Soon" : "Check Availability"}
             </Link>
           </div>
         </div>
@@ -485,26 +485,28 @@ export default async function PropertyPage({ params }: Props) {
       </section>
 
       {/* ── Pricing ── */}
-      <section className="py-14 px-4" style={{ backgroundColor: "#2D501608" }} aria-label="Pricing">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-8">
-            <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#4A7C8C" }}>
-              Seasonal Rates
+      {!property.comingSoon && (
+        <section className="py-14 px-4" style={{ backgroundColor: "#2D501608" }} aria-label="Pricing">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-8">
+              <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#4A7C8C" }}>
+                Seasonal Rates
+              </p>
+              <h2
+                className="text-3xl font-semibold"
+                style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+              >
+                Pricing Overview
+              </h2>
+            </div>
+            <RatesWidget />
+            <p className="text-xs mt-4 leading-relaxed" style={{ color: "#2C2C2C60" }}>
+              Rates are per night, not including applicable taxes. A $395 cleaning fee applies.
+              Exact pricing confirmed at booking. Holiday weekends may carry a premium.
             </p>
-            <h2
-              className="text-3xl font-semibold"
-              style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
-            >
-              Pricing Overview
-            </h2>
           </div>
-          <RatesWidget />
-          <p className="text-xs mt-4 leading-relaxed" style={{ color: "#2C2C2C60" }}>
-            Rates are per night, not including applicable taxes. A $395 cleaning fee applies.
-            Exact pricing confirmed at booking. Holiday weekends may carry a premium.
-          </p>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* ── Cancellation Policy ── */}
       <section className="py-14 px-4" aria-label="Cancellation policy">
@@ -564,43 +566,94 @@ export default async function PropertyPage({ params }: Props) {
       {/* ── Booking Widget ── */}
       <section id="booking" className="py-14 px-4" aria-label="Check availability and book">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-8">
-            <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#4A7C8C" }}>
-              Book Direct &amp; Save
-            </p>
-            <h2
-              className="text-3xl font-semibold mb-3"
-              style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
-            >
-              Check Availability &amp; Reserve
-            </h2>
-            <p className="text-sm max-w-xl mx-auto" style={{ color: "#2C2C2C80" }}>
-              Booking direct with Charlotte saves you 10–15% compared to Airbnb or VRBO.
-            </p>
-          </div>
-          <BookingWidget />
-          <div className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2">
-            {[
-              "Save 10–15% vs. Airbnb & VRBO",
-              "Flexible cancellation",
-              "Talk to Charlotte directly",
-              "Early access to new dates",
-            ].map((text, i) => (
-              <div key={i} className="flex items-center gap-2 text-xs" style={{ color: "#2C2C2C80" }}>
-                <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: "#6B8E23" }} aria-hidden="true" />
-                {text}
+          {property.comingSoon ? (
+            <>
+              <div className="text-center mb-8">
+                <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#C8A951" }}>
+                  Coming Soon
+                </p>
+                <h2
+                  className="text-3xl font-semibold mb-3"
+                  style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+                >
+                  Bookings Opening Soon
+                </h2>
+                <p className="text-sm max-w-xl mx-auto" style={{ color: "#2C2C2C80" }}>
+                  We&apos;re putting the finishing touches on Lakeside Luxe. Sign up below to be the first to know when bookings open.
+                </p>
               </div>
-            ))}
-          </div>
-          <div className="text-center mt-4">
-            <Link
-              href="/book-direct"
-              className="text-sm font-medium underline underline-offset-4 transition-colors hover:opacity-70"
-              style={{ color: "#6B8E23" }}
-            >
-              Learn more about booking direct &rarr;
-            </Link>
-          </div>
+              <div
+                className="max-w-lg mx-auto rounded-2xl p-8 text-center"
+                style={{ backgroundColor: "#FAF8F5", border: "1px solid #6B8E2325", boxShadow: "0 4px 24px rgba(45,80,22,0.10)" }}
+              >
+                <div
+                  className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5"
+                  style={{ backgroundColor: "#C8A95120" }}
+                >
+                  <span className="text-2xl" aria-hidden="true">🔔</span>
+                </div>
+                <h3
+                  className="text-xl font-semibold mb-2"
+                  style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+                >
+                  Get Notified
+                </h3>
+                <p className="text-sm mb-6" style={{ color: "#2C2C2C80" }}>
+                  Email Charlotte to get on the early access list. Direct bookers get first pick of dates.
+                </p>
+                <a
+                  href="mailto:charlotte@peridot.properties?subject=Notify%20me%20when%20Lakeside%20Luxe%20opens"
+                  className="inline-block px-8 py-3 rounded-full text-sm font-semibold transition-all hover:opacity-90 hover:shadow-lg"
+                  style={{ backgroundColor: "#6B8E23", color: "#FAF8F5" }}
+                >
+                  Email Charlotte
+                </a>
+                <p className="text-xs mt-4" style={{ color: "#2C2C2C50" }}>
+                  charlotte@peridot.properties
+                </p>
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="text-center mb-8">
+                <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#4A7C8C" }}>
+                  Book Direct &amp; Save
+                </p>
+                <h2
+                  className="text-3xl font-semibold mb-3"
+                  style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
+                >
+                  Check Availability &amp; Reserve
+                </h2>
+                <p className="text-sm max-w-xl mx-auto" style={{ color: "#2C2C2C80" }}>
+                  Booking direct with Charlotte saves you 10–15% compared to Airbnb or VRBO.
+                </p>
+              </div>
+              <BookingWidget />
+              <div className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2">
+                {[
+                  "Save 10–15% vs. Airbnb & VRBO",
+                  "Flexible cancellation",
+                  "Talk to Charlotte directly",
+                  "Early access to new dates",
+                ].map((text, i) => (
+                  <div key={i} className="flex items-center gap-2 text-xs" style={{ color: "#2C2C2C80" }}>
+                    <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: "#6B8E23" }} aria-hidden="true" />
+                    {text}
+                  </div>
+                ))}
+              </div>
+              <div className="text-center mt-4">
+                <Link
+                  href="/book-direct"
+                  className="text-sm font-medium underline underline-offset-4 transition-colors hover:opacity-70"
+                  style={{ color: "#6B8E23" }}
+                >
+                  Learn more about booking direct &rarr;
+                </Link>
+              </div>
+            </>
+          )}
         </div>
       </section>
 
@@ -627,10 +680,12 @@ export default async function PropertyPage({ params }: Props) {
 
       {/* ── CTA ── */}
       <CTABanner
-        heading="This is your lake house."
-        subheading="Dates fill up quickly in summer and during ice fishing season. Reserve your spot today."
-        buttonLabel="Check Availability"
-        buttonHref="#booking"
+        heading={property.comingSoon ? "Be the first to book." : "This is your lake house."}
+        subheading={property.comingSoon
+          ? "Lakeside Luxe is almost ready. Email Charlotte to get on the early access list."
+          : "Dates fill up quickly in summer and during ice fishing season. Reserve your spot today."}
+        buttonLabel={property.comingSoon ? "Email Charlotte" : "Check Availability"}
+        buttonHref={property.comingSoon ? "mailto:charlotte@peridot.properties?subject=Early%20access%20to%20Lakeside%20Luxe" : "#booking"}
         secondaryLabel="Browse All Properties"
         secondaryHref="/properties"
       />
