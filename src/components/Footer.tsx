@@ -1,5 +1,4 @@
 import Link from "next/link";
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Mail, Facebook, Instagram } from "lucide-react";
 import PeridotGem from "@/components/PeridotGem";
 
@@ -25,7 +24,6 @@ export default function Footer() {
             A family vacation rental on Minnesota&apos;s lakes. Hosted by Charlotte.
             Book direct and save.
           </p>
-          {/* Social links — uncomment when accounts are created
           <div className="flex gap-3 mt-5">
             <a href="https://facebook.com/peridotpm" target="_blank" rel="noopener noreferrer" aria-label="Peridot Properties on Facebook" className="p-3 rounded-full transition-colors hover:opacity-80" style={{ backgroundColor: "#6B8E2340" }}>
               <Facebook size={18} style={{ color: "#FAF8F5" }} aria-hidden="true" />
@@ -34,7 +32,6 @@ export default function Footer() {
               <Instagram size={18} style={{ color: "#FAF8F5" }} aria-hidden="true" />
             </a>
           </div>
-          */}
         </div>
 
         {/* Navigation */}
