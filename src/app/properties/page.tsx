@@ -14,14 +14,14 @@ export const metadata: Metadata = {
     title: "Our Properties | Peridot Properties",
     description:
       "Handpicked lakeside stays in Minnesota. New-build homes with private lake frontage, hosted by Charlotte Wunderlich and her family.",
-    url: "https://peridot.properties/properties",
-    images: [{ url: "https://peridot.properties/images/pickerel-lake/hero-sunset.jpg", width: 1600, height: 900, alt: "Sunset over Pickerel Lake" }],
+    url: "https://www.peridot.properties/properties",
+    images: [{ url: "https://www.peridot.properties/images/pickerel-lake/hero-sunset.jpg", width: 1600, height: 900, alt: "Sunset over Pickerel Lake" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Our Properties | Peridot Properties",
     description: "Handpicked lakeside stays in Minnesota. Book direct and save.",
-    images: ["https://peridot.properties/images/pickerel-lake/hero-sunset.jpg"],
+    images: ["https://www.peridot.properties/images/pickerel-lake/hero-sunset.jpg"],
   },
 };
 

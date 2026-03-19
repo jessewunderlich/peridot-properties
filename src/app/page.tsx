@@ -12,12 +12,25 @@ import CTABanner from "@/components/CTABanner";
 import PropertyCard from "@/components/PropertyCard";
 import { properties } from "@/data/properties";
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Peridot Properties",
+  url: "https://www.peridot.properties",
+  logo: "https://www.peridot.properties/icon.svg",
+  email: "charlotte@peridot.properties",
+  sameAs: [
+    "https://facebook.com/peridotpm",
+    "https://instagram.com/peridotpm",
+  ],
+};
+
 const localBusinessJsonLd = {
   "@context": "https://schema.org",
   "@type": "LodgingBusiness",
   name: "Peridot Properties",
   description: "Family-run lakeside vacation rentals in Minnesota's Otter Tail County. Book direct and save.",
-  url: "https://peridot.properties",
+  url: "https://www.peridot.properties",
   email: "charlotte@peridot.properties",
   address: {
     "@type": "PostalAddress",
@@ -48,8 +61,8 @@ export const metadata: Metadata = {
     title: "Peridot Properties | Handpicked Lakeside Stays in Minnesota",
     description:
       "Lakeside vacation rentals run by Charlotte Wunderlich and her family. Book direct and save.",
-    url: "https://peridot.properties",
-    images: [{ url: "https://peridot.properties/images/pickerel-lake/hero-sunset.jpg", width: 1600, height: 900, alt: "Sunset over Pickerel Lake in Otter Tail County, Minnesota" }],
+    url: "https://www.peridot.properties",
+    images: [{ url: "https://www.peridot.properties/images/pickerel-lake/hero-sunset.jpg", width: 1600, height: 900, alt: "Sunset over Pickerel Lake in Otter Tail County, Minnesota" }],
   },
 };
 
@@ -77,6 +90,13 @@ const whyBookDirectHighlights = [
 export default function HomePage() {
   return (
     <>
+      {/* Organization JSON-LD */}
+      <Script
+        id="organization-jsonld"
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
       {/* LocalBusiness JSON-LD for local SEO */}
       <Script
         id="local-business-jsonld"

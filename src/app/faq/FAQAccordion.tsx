@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 import { ChevronDown } from "lucide-react";
 
 const faqSections = [
@@ -13,7 +13,7 @@ const faqSections = [
       },
       {
         q: "What is the cancellation policy?",
-        a: "Cancellation terms are shared during booking and included in your confirmation. If you want to review them before booking, email Charlotte and she’ll send them over.",
+        a: "Cancel at least 48 hours before check-in for a full refund. Cancel between 24 and 48 hours before check-in for a 50% refund. After check-in time, the reservation is non-refundable. Direct guests always receive the most flexible terms available.",
       },
       {
         q: "How do I book?",
@@ -83,6 +83,7 @@ const faqSections = [
 
 function AccordionItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
+  const id = useId();
 
   return (
     <div
@@ -90,9 +91,11 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
       style={{ borderColor: "#6B8E2318" }}
     >
       <button
+        id={`${id}-btn`}
         className="w-full flex items-center justify-between text-left py-4 px-1 gap-4"
         onClick={() => setOpen((prev) => !prev)}
         aria-expanded={open}
+        aria-controls={`${id}-panel`}
       >
         <span
           className="text-sm font-semibold leading-snug"
@@ -112,6 +115,9 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
       </button>
       {open && (
         <p
+          id={`${id}-panel`}
+          role="region"
+          aria-labelledby={`${id}-btn`}
           className="text-sm leading-relaxed pb-4 px-1"
           style={{ color: "#2C2C2C" }}
         >

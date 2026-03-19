@@ -44,14 +44,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `${property.name} | Peridot Properties`,
       description: property.tagline,
-      url: `https://peridot.properties/properties/${slug}`,
-      images: [{ url: `https://peridot.properties${property.heroImage}`, width: 1600, height: 900, alt: property.gallery[0]?.alt ?? property.name }],
+      url: `https://www.peridot.properties/properties/${slug}`,
+      images: [{ url: `https://www.peridot.properties${property.heroImage}`, width: 1600, height: 900, alt: property.gallery[0]?.alt ?? property.name }],
     },
     twitter: {
       card: "summary_large_image",
       title: `${property.name} | Peridot Properties`,
       description: property.tagline,
-      images: [`https://peridot.properties${property.heroImage}`],
+      images: [`https://www.peridot.properties${property.heroImage}`],
     },
   };
 }
@@ -64,12 +64,41 @@ export default async function PropertyPage({ params }: Props) {
     notFound();
   }
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.peridot.properties/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Properties",
+        item: "https://www.peridot.properties/properties",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: property.name,
+        item: `https://www.peridot.properties/properties/${slug}`,
+      },
+    ],
+  };
+
   return (
     <>
       {/* JSON-LD structured data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(property.jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       {/* ── Page Header ── */}

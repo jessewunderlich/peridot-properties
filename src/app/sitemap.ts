@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { properties } from "@/data/properties";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://peridot.properties";
+  const baseUrl = "https://www.peridot.properties";
 
   const propertyPages = properties.map((p) => ({
     url: `${baseUrl}/properties/${p.slug}`,

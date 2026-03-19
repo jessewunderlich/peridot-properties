@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Image from "next/image";
 import { Utensils, Music, Sailboat, Fish, ShoppingBag, Sparkles, TreePine, Bike, Map, MapPin } from "lucide-react";
 import CTABanner from "@/components/CTABanner";
+
+const sectionId = (title: string) => title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
 export const metadata: Metadata = {
   title: "Local Guide",
@@ -11,14 +14,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Local Guide | Peridot Properties",
     description: "Dining, fishing, boat rentals, events, and activities near Pickerel Lake in Otter Tail County, MN.",
-    url: "https://peridot.properties/local-guide",
-    images: [{ url: "https://peridot.properties/images/pickerel-lake/aerial-lake-view.jpg", width: 1200, height: 800, alt: "Aerial view of Otter Tail County lake country" }],
+    url: "https://www.peridot.properties/local-guide",
+    images: [{ url: "https://www.peridot.properties/images/pickerel-lake/aerial-lake-view.jpg", width: 1200, height: 800, alt: "Aerial view of Otter Tail County lake country" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Local Guide | Peridot Properties",
     description: "Dining, fishing, boat rentals, events, and activities near Pickerel Lake.",
-    images: ["https://peridot.properties/images/pickerel-lake/aerial-lake-view.jpg"],
+    images: ["https://www.peridot.properties/images/pickerel-lake/aerial-lake-view.jpg"],
   },
 };
 
@@ -244,9 +247,26 @@ export default function LocalGuidePage() {
 
       {/* \u2500\u2500 Guide Content \u2500\u2500 */}
       <section className="py-16 px-4 max-w-4xl mx-auto" aria-label="Local recommendations">
+        <div className="bg-[#FAF8F5] rounded-2xl p-5 sm:p-6 border border-[#6B8E2320] mb-8">
+          <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: "#4A7C8C" }}>
+            Jump to
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {guideSections.map((section) => (
+              <Link
+                key={section.title}
+                href={`#${sectionId(section.title)}`}
+                className="px-3 py-2 rounded-full text-xs font-semibold transition-colors hover:opacity-80"
+                style={{ backgroundColor: "#6B8E2315", color: "#2D5016" }}
+              >
+                {section.title}
+              </Link>
+            ))}
+          </div>
+        </div>
         <div className="flex flex-col gap-12">
           {guideSections.map((section) => (
-            <div key={section.title} className="bg-[#FAF8F5] rounded-2xl p-6 sm:p-10 border border-[#6B8E2320]">
+            <div id={sectionId(section.title)} key={section.title} className="bg-[#FAF8F5] rounded-2xl p-6 sm:p-10 border border-[#6B8E2320] scroll-mt-24">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 rounded-full flex items-center justify-center bg-[#6B8E2315]">
                   <section.icon size={24} className="text-[#6B8E23]" aria-hidden="true" />

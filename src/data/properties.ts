@@ -449,7 +449,7 @@ export const properties: Property[] = [
       name: "Peridot Properties — Lakeside Luxe",
       description:
         "New-build 5-bedroom vacation home on Pickerel Lake with 50ft of private lake frontage. Sleeps 12. Located at 33746 N Pickerel Dr, Richville, MN 56576.",
-      url: "https://peridot.properties/properties/pickerel-lake-retreat",
+      url: "https://www.peridot.properties/properties/pickerel-lake-retreat",
       address: {
         "@type": "PostalAddress",
         streetAddress: "33746 N Pickerel Dr",

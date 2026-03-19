@@ -21,7 +21,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://peridot.properties"),
+  metadataBase: new URL("https://www.peridot.properties"),
   title: {
     default: "Peridot Properties | Handpicked Lakeside Stays in Minnesota",
     template: "%s | Peridot Properties",
@@ -43,14 +43,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://peridot.properties",
+    url: "https://www.peridot.properties",
     siteName: "Peridot Properties",
     title: "Peridot Properties | Handpicked Lakeside Stays in Minnesota",
     description:
       "Lakeside vacation rentals run by Charlotte Wunderlich and her family. Book direct and save.",
     images: [
       {
-        url: "https://peridot.properties/images/pickerel-lake/hero-sunset.jpg",
+        url: "https://www.peridot.properties/images/pickerel-lake/hero-sunset.jpg",
         width: 1600,
         height: 900,
         alt: "Sunset over Pickerel Lake in Otter Tail County, Minnesota",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: "Peridot Properties | Handpicked Lakeside Stays in Minnesota",
     description:
       "Lakeside vacation rentals run by Charlotte Wunderlich and her family. Book direct and save.",
-    images: ["https://peridot.properties/images/pickerel-lake/hero-sunset.jpg"],
+    images: ["https://www.peridot.properties/images/pickerel-lake/hero-sunset.jpg"],
   },
   alternates: {
     canonical: "/",
@@ -88,8 +88,15 @@ export default function RootLayout({
         <link rel="preconnect" href="https://app.ownerrez.com" />
       </head>
       <body className="antialiased">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:px-4 focus:py-2 focus:rounded-full focus:text-sm focus:font-semibold"
+          style={{ backgroundColor: "#6B8E23", color: "#FAF8F5" }}
+        >
+          Skip to content
+        </a>
         <Navbar />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
         <StickyBookButton />
         <Script

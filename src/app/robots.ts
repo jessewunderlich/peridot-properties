@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://peridot.properties/sitemap.xml",
+    sitemap: "https://www.peridot.properties/sitemap.xml",
   };
 }
