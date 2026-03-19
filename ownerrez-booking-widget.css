@@ -53,8 +53,8 @@ table.dayNames thead td,.day-header{font-family:'Inter',system-ui,sans-serif!imp
 .dayBookings .booking .text,.dayBookings .ribbon-text{font-size:9px!important;font-weight:700!important;text-transform:uppercase!important;letter-spacing:.05em!important;color:#2D5016!important}
 .dayCells tr.numbers td.nextMonth,.dayCells tr.numbers td.prevMonth,.flex-calendar .flex-calendar-out-of-range .day-content{color:rgba(44,44,44,.35)!important;background-color:rgba(250,248,245,.8)!important}
 #legend{font-family:'Inter',system-ui,sans-serif!important;font-size:11px!important;color:rgba(44,44,44,.5)!important}
-.booknow-quote,.booknow-quote-wrapper,.booknow-total,.alert-info{background:linear-gradient(135deg,#2D5016 0%,#4A7C8C 100%)!important;border:none!important;color:#FAF8F5!important;border-radius:16px!important;padding:20px 24px!important;box-shadow:0 4px 12px rgba(45,80,22,.08)!important}
-.booknow-quote *,.booknow-total *,.alert-info *{color:#FAF8F5!important}
+.booknow-quote,.booknow-quote-wrapper,.booknow-total,.alert-info,.alert-warning{background:linear-gradient(135deg,#2D5016 0%,#4A7C8C 100%)!important;border:none!important;color:#FAF8F5!important;border-radius:16px!important;padding:20px 24px!important;box-shadow:0 4px 12px rgba(45,80,22,.08)!important}
+.booknow-quote *,.booknow-total *,.alert-info *,.alert-warning *{color:#FAF8F5!important}
 .booknow-quote-info{display:flex!important;flex-wrap:wrap!important;align-items:baseline!important;gap:8px 10px!important}
 .booknow-quote .h1,.booknow-quote-total,span.h1.booknow-quote-total{font-family:'Inter',system-ui,-apple-system,sans-serif!important;font-size:clamp(32px,5vw,44px)!important;line-height:1!important;font-weight:700!important;letter-spacing:-.03em!important;color:#FAF8F5!important;display:inline-block!important}
 .booknow-quote-nights,.booknow-quote-nightslabel,.booknow-quote-from,span.h1.booknow-quote-nights{font-family:'Inter',system-ui,-apple-system,sans-serif!important;font-size:15px!important;line-height:1.4!important;font-weight:500!important;letter-spacing:0!important;color:rgba(250,248,245,.85)!important;display:inline!important}
