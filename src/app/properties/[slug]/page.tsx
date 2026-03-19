@@ -550,7 +550,7 @@ export default async function PropertyPage({ params }: Props) {
                 <span className="text-sm font-semibold" style={{ color: "#2D5016" }}>50% Refundable</span>
               </div>
               <p className="text-xs leading-relaxed" style={{ color: "#2C2C2C80" }}>
-                Cancel within 24–48 hours of check-in for a 50% refund of the total booking amount.
+                Cancel between 24 and 48 hours before check-in for a 50% refund of the total booking amount.
               </p>
             </div>
             <div
