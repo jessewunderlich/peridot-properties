@@ -323,11 +323,11 @@ export default function BookDirectPage() {
 
       <CTABanner
         heading="Your perfect lake trip starts here"
-        subheading="Browse our properties, pick your dates, and book direct for the best rate. Charlotte is always happy to help plan your trip."
-        buttonLabel="Browse Properties"
-        buttonHref="/properties"
-        secondaryLabel="About Peridot Properties"
-        secondaryHref="/about"
+        subheading="Browse the property details, pick your dates, and book direct for the best rate."
+        buttonLabel="Book Now"
+        buttonHref="/properties/pickerel-lake-retreat#booking"
+        secondaryLabel="Browse Properties"
+        secondaryHref="/properties"
       />
     </>
   );

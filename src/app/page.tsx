@@ -134,11 +134,11 @@ export default function HomePage() {
               Browse Properties
             </Link>
             <Link
-              href="/book-direct"
+              href="/properties/pickerel-lake-retreat#booking"
               className="px-8 py-4 rounded-full text-sm font-semibold border transition-all hover:bg-white/10"
               style={{ borderColor: "#FAF8F560", color: "#FAF8F5" }}
             >
-              Why Book Direct?
+              Book Now
             </Link>
           </div>
         </div>
@@ -248,7 +248,7 @@ export default function HomePage() {
               className="inline-block text-sm font-medium underline underline-offset-4 transition-colors hover:opacity-70"
               style={{ color: "#6B8E23" }}
             >
-              See the full comparison &rarr;
+              See how much you save &rarr;
             </Link>
           </div>
         </div>
@@ -318,8 +318,8 @@ export default function HomePage() {
         subheading="Summer weekends fill fast. Lock in your dates now and save by booking direct with Charlotte."
         buttonLabel="Browse Properties"
         buttonHref="/properties"
-        secondaryLabel="Why Book Direct?"
-        secondaryHref="/book-direct"
+        secondaryLabel="Book Now"
+        secondaryHref="/properties/pickerel-lake-retreat#booking"
       />
     </>
   );

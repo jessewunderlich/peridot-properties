@@ -128,9 +128,9 @@ export default function PropertiesPage() {
 
       {/* ── CTA ── */}
       <CTABanner
-        heading="Questions about Lakeside Luxe?"
-        subheading="Charlotte is happy to answer anything about the property, the lake, or the area. Just send her an email."
-        buttonLabel="Send an Inquiry"
+        heading="Ready to check dates?"
+        subheading="View availability for Lakeside Luxe or learn why booking direct saves you more."
+        buttonLabel="Check Availability"
         buttonHref="/properties/pickerel-lake-retreat#booking"
         secondaryLabel="Why Book Direct?"
         secondaryHref="/book-direct"

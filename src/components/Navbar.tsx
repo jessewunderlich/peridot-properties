@@ -11,7 +11,7 @@ const navLinks = [
   { href: "/local-guide", label: "Local Guide" },
   { href: "/faq", label: "FAQ" },
   { href: "/about", label: "About" },
-  { href: "/book-direct", label: "Book Direct" },
+  { href: "/properties/pickerel-lake-retreat#booking", label: "Book Now" },
 ];
 
 export default function Navbar() {
@@ -62,7 +62,7 @@ export default function Navbar() {
           ))}
           <li>
             <Link
-              href="/book-direct"
+              href="/properties/pickerel-lake-retreat#booking"
               className="ml-3 px-5 py-2 rounded-full text-sm font-semibold transition-all hover:opacity-90 hover:shadow-md"
               style={{
                 backgroundColor: "#6B8E23",
@@ -70,7 +70,7 @@ export default function Navbar() {
                 fontFamily: "var(--font-inter), sans-serif",
               }}
             >
-              Book Direct
+              Book Now
             </Link>
           </li>
         </ul>

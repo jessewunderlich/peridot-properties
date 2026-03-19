@@ -323,10 +323,10 @@ export default function LocalGuidePage() {
       {/* \u2500\u2500 CTA \u2500\u2500 */}
       <CTABanner
         heading="Ready to experience the lake life?"
-        subheading="Book your family&apos;s next escape direct and save."
+        subheading="Browse the property details or jump straight into booking."
         buttonLabel="Browse Properties"
         buttonHref="/properties"
-        secondaryLabel="Send an Inquiry"
+        secondaryLabel="Book Now"
         secondaryHref="/properties/pickerel-lake-retreat#booking"
       />
     </>

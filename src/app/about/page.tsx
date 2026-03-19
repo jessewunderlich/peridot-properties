@@ -311,10 +311,10 @@ export default function AboutPage() {
       {/* ── CTA ── */}
       <CTABanner
         heading="Come be our guest"
-        subheading="We'd love to share Minnesota's lakes with you. Reach out anytime — Charlotte is always happy to chat about our properties, the area, or help you plan your trip."
+        subheading="We'd love to share Minnesota's lakes with you. Browse the property details or jump straight into booking."
         buttonLabel="Browse Our Properties"
         buttonHref="/properties"
-        secondaryLabel="Send an Inquiry"
+        secondaryLabel="Book Now"
         secondaryHref="/properties/pickerel-lake-retreat#booking"
       />
     </>
