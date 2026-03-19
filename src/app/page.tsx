@@ -31,9 +31,9 @@ const localBusinessJsonLd = {
     latitude: "46.4985",
     longitude: "-95.1012",
   },
-  priceRange: "$299–$699/night",
+  priceRange: "$299–$599/night",
   amenityFeature: [
-    { "@type": "LocationFeatureSpecification", name: "Lake frontage", value: "150 feet" },
+    { "@type": "LocationFeatureSpecification", name: "Lake frontage", value: "50 feet" },
     { "@type": "LocationFeatureSpecification", name: "WiFi", value: true },
     { "@type": "LocationFeatureSpecification", name: "Private dock", value: true },
     { "@type": "LocationFeatureSpecification", name: "Kayaks & paddle boards", value: true },

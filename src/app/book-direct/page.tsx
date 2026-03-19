@@ -64,13 +64,31 @@ const benefits = [
   },
 ];
 
-const comparisonRows = [
-  { item: "Nightly rate (5 nights at $299)", direct: "$1,495", platform: "$1,495" },
-  { item: "Guest service fee", direct: "$0", platform: "$210–300" },
-  { item: "Cleaning fee", direct: "$395", platform: "$395" },
-  { item: "Processing fee", direct: "$44", platform: "Hidden in service fee" },
-  { item: "Total", direct: "$1,934", platform: "$2,100–2,190", highlight: true },
-  { item: "Your savings", direct: "$166–256", platform: "—", highlight: true },
+const comparisonExamples = [
+  {
+    label: "Off-season example",
+    subtitle: "A typical 5-night stay at $299/night",
+    rows: [
+      { item: "Nightly rate (5 nights at $299)", direct: "$1,495", platform: "$1,495" },
+      { item: "Guest service fee", direct: "$0", platform: "$210–300" },
+      { item: "Cleaning fee", direct: "$395", platform: "$395" },
+      { item: "Processing fee", direct: "$44", platform: "Hidden in service fee" },
+      { item: "Total", direct: "$1,934", platform: "$2,100–2,190", highlight: true },
+      { item: "Your savings", direct: "$166–256", platform: "—", highlight: true },
+    ],
+  },
+  {
+    label: "Summer example",
+    subtitle: "A typical 5-night stay at $599/night",
+    rows: [
+      { item: "Nightly rate (5 nights at $599)", direct: "$2,995", platform: "$2,995" },
+      { item: "Guest service fee", direct: "$0", platform: "$420–600" },
+      { item: "Cleaning fee", direct: "$395", platform: "$395" },
+      { item: "Processing fee", direct: "$87", platform: "Hidden in service fee" },
+      { item: "Total", direct: "$3,477", platform: "$3,810–3,990", highlight: true },
+      { item: "Your savings", direct: "$333–513", platform: "—", highlight: true },
+    ],
+  },
 ];
 
 export default function BookDirectPage() {
@@ -104,7 +122,7 @@ export default function BookDirectPage() {
 
       {/* Fee Comparison */}
       <section className="py-14 px-4" aria-label="Fee comparison">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="text-center mb-8">
             <div
               className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4"
@@ -122,50 +140,63 @@ export default function BookDirectPage() {
               See the difference
             </h2>
             <p className="text-sm mt-2" style={{ color: "#2C2C2C80" }}>
-              A typical 5-night off-season stay at $299/night
+              Same 5-night trip, two seasonal examples.
             </p>
           </div>
 
-          <div
-            className="rounded-2xl overflow-hidden"
-            style={{ border: "1px solid #6B8E2320" }}
-          >
-            {/* Header */}
-            <div
-              className="grid grid-cols-[1.5fr_1fr_1fr] md:grid-cols-[2fr_1fr_1fr] gap-2 sm:gap-4 px-3 sm:px-5 py-3 text-[10px] sm:text-xs font-semibold uppercase tracking-wide"
-              style={{ backgroundColor: "#2D5016", color: "#FAF8F5" }}
-            >
-              <span />
-              <span className="text-center">Direct</span>
-              <span className="text-center">Airbnb/VRBO</span>
-            </div>
-            {comparisonRows.map((row) => (
-              <div
-                key={row.item}
-                className="grid grid-cols-[1.5fr_1fr_1fr] md:grid-cols-[2fr_1fr_1fr] gap-2 sm:gap-4 px-3 sm:px-5 py-3 text-xs sm:text-sm border-t"
-                style={{
-                  borderColor: "#6B8E2315",
-                  backgroundColor: row.highlight ? "#6B8E2308" : "#FAF8F5",
-                }}
-              >
-                <span
-                  className={row.highlight ? "font-semibold" : ""}
-                  style={{ color: "#2C2C2C" }}
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
+            {comparisonExamples.map((example) => (
+              <div key={example.label}>
+                <div className="mb-3">
+                  <p className="text-xs font-semibold tracking-widest uppercase" style={{ color: "#4A7C8C" }}>
+                    {example.label}
+                  </p>
+                  <p className="text-sm mt-1" style={{ color: "#2C2C2C80" }}>
+                    {example.subtitle}
+                  </p>
+                </div>
+                <div
+                  className="rounded-2xl overflow-hidden"
+                  style={{ border: "1px solid #6B8E2320" }}
                 >
-                  {row.item}
-                </span>
-                <span
-                  className="text-center font-semibold"
-                  style={{ color: "#6B8E23" }}
-                >
-                  {row.direct}
-                </span>
-                <span
-                  className="text-center"
-                  style={{ color: "#2C2C2C80" }}
-                >
-                  {row.platform}
-                </span>
+                  <div
+                    className="grid grid-cols-[1.5fr_1fr_1fr] md:grid-cols-[2fr_1fr_1fr] gap-2 sm:gap-4 px-3 sm:px-5 py-3 text-[10px] sm:text-xs font-semibold uppercase tracking-wide"
+                    style={{ backgroundColor: "#2D5016", color: "#FAF8F5" }}
+                  >
+                    <span />
+                    <span className="text-center">Direct</span>
+                    <span className="text-center">Airbnb/VRBO</span>
+                  </div>
+                  {example.rows.map((row) => (
+                    <div
+                      key={row.item}
+                      className="grid grid-cols-[1.5fr_1fr_1fr] md:grid-cols-[2fr_1fr_1fr] gap-2 sm:gap-4 px-3 sm:px-5 py-3 text-xs sm:text-sm border-t"
+                      style={{
+                        borderColor: "#6B8E2315",
+                        backgroundColor: row.highlight ? "#6B8E2308" : "#FAF8F5",
+                      }}
+                    >
+                      <span
+                        className={row.highlight ? "font-semibold" : ""}
+                        style={{ color: "#2C2C2C" }}
+                      >
+                        {row.item}
+                      </span>
+                      <span
+                        className="text-center font-semibold"
+                        style={{ color: "#6B8E23" }}
+                      >
+                        {row.direct}
+                      </span>
+                      <span
+                        className="text-center"
+                        style={{ color: "#2C2C2C80" }}
+                      >
+                        {row.platform}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>

@@ -34,7 +34,7 @@ const faqSections = [
     faqs: [
       {
         q: "How many guests can Lakeside Luxe accommodate?",
-        a: "The property has 5 bedrooms and 4 bathrooms across three floors with beds for 10. The third floor has the master suite (king bed, 3/4 en-suite), two queen bedrooms, and a full shared bath. The second floor has two twin bedrooms with a half bath. The ground-floor guest suite has a king bed and its own 3/4 bath. Maximum 12 people on the property at any time.",
+        a: "The property has 5 bedrooms and 4 bathrooms across three floors with beds for 10. The third floor has the master suite (king bed, 3/4 en-suite), two queen bedrooms, and a full shared bath. The second floor has one twin bedroom with two beds and a half bath. The ground-floor guest suite has a king bed and its own 3/4 bath. Maximum 12 people on the property at any time.",
       },
       {
         q: "Is there WiFi?",
@@ -42,7 +42,7 @@ const faqSections = [
       },
       {
         q: "What\u2019s included?",
-        a: "Full kitchen, washer/dryer, linens, towels (including beach towels), life jackets for kids, three kayaks, two inflatable paddle boards, a paddle boat (seats 5), a fire pit with firewood, board games, and a 70\u201d smart TV with streaming. Everything you need to just show up and enjoy.",
+        a: "Full kitchen, two washer/dryer units, linens, towels (including embroidered Lakeside Luxe beach towels), life jackets for kids, three kayaks, two inflatable paddle boards, a paddle boat (seats 5), a fire pit with firewood, board games, and a 70\u201d smart TV with streaming. Everything you need to just show up and enjoy.",
       },
       {
         q: "Is there air conditioning?",
@@ -59,7 +59,7 @@ const faqSections = [
     faqs: [
       {
         q: "Where is the nearest grocery store?",
-        a: "The Market at Perham is about 10 miles away. Open 7am\u20139pm daily. It\u2019s a full grocery store with produce, bakery, and a meat department.",
+        a: "The Market at Perham is about 15 minutes away. Open 7am\u20139pm daily. It\u2019s a full grocery store with produce, bakery, and a meat department.",
       },
       {
         q: "Where can I buy a fishing license?",
@@ -71,7 +71,7 @@ const faqSections = [
       },
       {
         q: "What\u2019s the nearest hospital?",
-        a: "Perham Health is about 10 miles away. Address: 665 3rd St SW, Perham, MN 56573.",
+        a: "Perham Health is about 15 minutes away. Address: 665 3rd St SW, Perham, MN 56573.",
       },
       {
         q: "Can I rent a boat?",

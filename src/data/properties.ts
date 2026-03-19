@@ -150,9 +150,9 @@ export const properties: Property[] = [
       lng: -95.1012,
     },
     distances: [
-      { place: "Perham, MN", distance: "10 miles", note: "Grocery, restaurants, hardware" },
-      { place: "Detroit Lakes, MN", distance: "~45 minutes", note: "Shopping, dining, entertainment" },
-      { place: "Fergus Falls, MN", distance: "35 miles", note: "Full-service city" },
+      { place: "Perham, MN", distance: "~15 min", note: "Grocery, restaurants, hardware" },
+      { place: "Detroit Lakes, MN", distance: "~45 min", note: "Shopping, dining, entertainment" },
+      { place: "Fergus Falls, MN", distance: "~40 min", note: "Full-service city" },
       { place: "Minneapolis, MN", distance: "~3 hours", note: "Via I-94 to US-10" },
       { place: "Fargo, ND", distance: "~1 hour 10 min", note: "Via I-94" },
       { place: "Brainerd, MN", distance: "~1 hour", note: "Via MN-210" },
@@ -162,13 +162,13 @@ export const properties: Property[] = [
       bathrooms: 4,
       sleeps: 10,
       maxOccupancy: 12,
-      frontage: "150ft",
+      frontage: "50ft",
     },
     description: [
       "Brand new and designed from the ground up with lake life in mind. The open-concept main floor captures lake views from every angle, with floor-to-ceiling windows in the living and dining areas that fill the space with natural light from morning through golden hour.",
       "The kitchen is a cook\u2019s dream \u2014 plenty of counter space, quality appliances, and a wide wraparound deck that runs the full width of the lake-facing side.",
-      "Five bedrooms across three floors with beds for 10: the third floor hosts the master suite with a king bed, two queen bedrooms, and both a full shared bath and a 3/4 tile shower en-suite. The second floor has two twin bedrooms \u2014 perfect for kids \u2014 with a half bath. The ground-floor guest suite rounds it out with a king bed and its own 3/4 bath.",
-      "Step outside to 150 feet of pristine Pickerel Lake frontage \u2014 a private dock, sandy swim area, fire pit, and three kayaks, two inflatable paddle boards, and a paddle boat that are yours to use all week.",
+      "Five bedrooms across three floors with beds for 10: the third floor hosts the master suite with a king bed, two queen bedrooms, and both a full shared bath and a 3/4 tile shower en-suite. The second floor has a twin bedroom with two beds \u2014 perfect for kids \u2014 and a half bath. The ground-floor guest suite rounds it out with a king bed and its own 3/4 bath.",
+      "Step outside to 50 feet of private Pickerel Lake frontage right next to the lake\u2019s only outlet \u2014 your own tranquil escape. A private dock, sandy swim area, fire pit, three kayaks, two inflatable paddle boards, and a paddle boat are all yours to use.",
     ],
     amenities: [
       {
@@ -187,7 +187,7 @@ export const properties: Property[] = [
         category: "Outdoor & Lake",
         icon: Waves,
         items: [
-          "150ft of private lake frontage",
+          "50ft of private lake frontage near the lake\u2019s only outlet",
           "Private dock",
           "Sandy swim area",
           "Three kayaks",
@@ -215,10 +215,10 @@ export const properties: Property[] = [
         icon: Sofa,
         items: [
           "Central A/C & forced-air heat",
-          "Washer & dryer in-unit",
+          "Two washer & dryer units available",
           "Pack-n-play & Bumbo seats (2x) available",
           "Fresh linens & bath towels",
-          "Beach towels for lake days",
+          "Embroidered \u201CLakeside Luxe\u201D beach towels for lake days \u2014 take one home for $40, or have a new one mailed for $50",
           "Keypad entry \u2014 no key needed",
           "Off-street parking for up to 4 cars",
         ],
@@ -232,14 +232,14 @@ export const properties: Property[] = [
       "Quiet hours 10 PM – 8 AM (neighbor-friendly lake)",
       "No parties or events beyond registered guests",
       "Leave firewood stacked neatly — we provide the first bundle",
-      "Return boats/kayaks to the dock after use",
+      "Return the paddle boat to the lift on the dock \u2014 kayaks and paddle boards go back in the garage",
     ],
     pricing: [
       {
         season: "Summer",
         icon: Sun,
         dates: "June \u2013 August",
-        rate: "$599 weekday / $699 weekend",
+        rate: "$599",
         unit: "per night",
         note: "4-night minimum \u2022 10% off 7+ nights \u2022 $395 cleaning fee",
         color: "#C8A951",
@@ -248,7 +248,7 @@ export const properties: Property[] = [
         season: "Off Season",
         icon: Snowflake,
         dates: "September \u2013 May",
-        rate: "$299 weekday / $399 weekend",
+        rate: "$299",
         unit: "per night",
         note: "2-night minimum \u2022 20% off 7+ nights \u2022 $395 cleaning fee",
         color: "#4A7C8C",
@@ -373,7 +373,7 @@ export const properties: Property[] = [
     nearbyAttractions: [
       {
         place: "Perham, MN",
-        distance: "10 miles",
+        distance: "~15 min",
         icon: Map,
         highlights: [
           "1894, Lakes Cafe, Disgruntled Brewing, Brew, Nest",
@@ -397,7 +397,7 @@ export const properties: Property[] = [
       },
       {
         place: "Fergus Falls, MN",
-        distance: "35 miles",
+        distance: "~40 min",
         icon: ShoppingBag,
         highlights: [
           "Otter Tail County Historical Museum",
@@ -448,7 +448,7 @@ export const properties: Property[] = [
       "@type": "VacationRental",
       name: "Peridot Properties — Lakeside Luxe",
       description:
-        "New-build 5-bedroom vacation home on Pickerel Lake with 150ft of private lake frontage. Sleeps 12. Located at 33746 N Pickerel Dr, Richville, MN 56576.",
+        "New-build 5-bedroom vacation home on Pickerel Lake with 50ft of private lake frontage. Sleeps 12. Located at 33746 N Pickerel Dr, Richville, MN 56576.",
       url: "https://peridot.properties/properties/pickerel-lake-retreat",
       address: {
         "@type": "PostalAddress",
@@ -464,7 +464,7 @@ export const properties: Property[] = [
         longitude: "-95.1012",
       },
       amenityFeature: [
-        { "@type": "LocationFeatureSpecification", name: "Lake frontage", value: "150 feet" },
+        { "@type": "LocationFeatureSpecification", name: "Lake frontage", value: "50 feet" },
         { "@type": "LocationFeatureSpecification", name: "Bedrooms", value: "5" },
         { "@type": "LocationFeatureSpecification", name: "Bathrooms", value: "4" },
         { "@type": "LocationFeatureSpecification", name: "Maximum occupancy", value: "12" },

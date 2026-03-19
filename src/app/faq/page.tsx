@@ -34,10 +34,10 @@ const faqJsonLd = {
     { "@type": "Question", name: "Are animals allowed?", acceptedAnswer: { "@type": "Answer", text: "No animals are permitted on the property. We maintain an allergen-free environment to accommodate all guests, including those with sensitivities and allergies." } },
     { "@type": "Question", name: "How many guests can Lakeside Luxe accommodate?", acceptedAnswer: { "@type": "Answer", text: "The property has 5 bedrooms and 4 bathrooms across three floors with beds for 10. Maximum 12 people on the property at any time." } },
     { "@type": "Question", name: "Is there WiFi?", acceptedAnswer: { "@type": "Answer", text: "Yes, high-speed WiFi is available throughout the property." } },
-    { "@type": "Question", name: "What's included?", acceptedAnswer: { "@type": "Answer", text: "Full kitchen, washer/dryer, linens, towels (including beach towels), life jackets for kids, three kayaks, two inflatable paddle boards, a paddle boat, a fire pit with firewood, board games, and a 70-inch smart TV with streaming." } },
-    { "@type": "Question", name: "Where is the nearest grocery store?", acceptedAnswer: { "@type": "Answer", text: "The Market at Perham is about 10 miles away. Open 7am–9pm daily. It's a full grocery store with produce, bakery, and a meat department." } },
+    { "@type": "Question", name: "What's included?", acceptedAnswer: { "@type": "Answer", text: "Full kitchen, two washer/dryer units, linens, towels (including embroidered Lakeside Luxe beach towels), life jackets for kids, three kayaks, two inflatable paddle boards, a paddle boat, a fire pit with firewood, board games, and a 70-inch smart TV with streaming." } },
+    { "@type": "Question", name: "Where is the nearest grocery store?", acceptedAnswer: { "@type": "Answer", text: "The Market at Perham is about 15 minutes away. Open 7am–9pm daily. It's a full grocery store with produce, bakery, and a meat department." } },
     { "@type": "Question", name: "Where can I buy a fishing license?", acceptedAnswer: { "@type": "Answer", text: "Online at the MN DNR website (valid immediately) or in person at Gene's Sport Shop in Perham. Non-resident options start at $14 for 24 hours." } },
-    { "@type": "Question", name: "What's the nearest hospital?", acceptedAnswer: { "@type": "Answer", text: "Perham Health is about 10 miles away. Address: 665 3rd St SW, Perham, MN 56573." } },
+    { "@type": "Question", name: "What's the nearest hospital?", acceptedAnswer: { "@type": "Answer", text: "Perham Health is about 15 minutes away. Address: 665 3rd St SW, Perham, MN 56573." } },
     { "@type": "Question", name: "Can I rent a boat?", acceptedAnswer: { "@type": "Answer", text: "Yes! MN Tru North in Perham offers pontoon, jetski, and kayak rentals." } },
   ],
 };

@@ -173,7 +173,7 @@ export default async function PropertyPage({ params }: Props) {
             </h3>
             <ul className="space-y-3">
               {[
-                { icon: BedDouble, label: `${property.specs.bedrooms} bedrooms (2 king, 2 queen, 2 twin across 3 floors)` },
+                { icon: BedDouble, label: `${property.specs.bedrooms} bedrooms (2 king, 2 queen, 1 twin room with 2 beds across 3 floors)` },
                 { icon: ShowerHead, label: `${property.specs.bathrooms} bathrooms (full + 3/4 en-suite, half, 3/4 suite)` },
                 { icon: Layers, label: `Beds for ${property.specs.sleeps} \u2022 max ${property.specs.maxOccupancy ?? property.specs.sleeps} on property` },
                 { icon: Waves, label: `${property.specs.frontage} private lake frontage` },

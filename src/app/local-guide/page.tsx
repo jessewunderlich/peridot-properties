@@ -26,10 +26,10 @@ const guideSections = [
   {
     title: "Dining",
     icon: Utensils,
-    note: "Charlotte&apos;s personal picks. Ask her what to order when you book — she has strong opinions.",
+    note: "Charlotte’s personal picks. Ask her what to order when you book — she has strong opinions.",
     locations: [
       {
-        area: "Perham (~10 mi)",
+        area: "Perham (~15 min)",
         places: [
           { name: "1894", desc: "Hand-patted burgers, housemade pizza, wings, tater tot hotdish. Happy hour daily 4\u20136 PM. Top-rated in town." },
           { name: "Brew Ales & Eats", desc: "American bar & grill with a big menu. 4.3 stars, 149 reviews. Solid go-to for families." },
@@ -45,14 +45,14 @@ const guideSections = [
         ],
       },
       {
-        area: "Battle Lake (~15 mi)",
+        area: "Battle Lake (~20 min)",
         places: [
           { name: "Zorbaz on Otter Tail Lake", desc: "THE lakeside pizza bar. Boat dock access \u2014 you can literally pick up food by boat. Great margaritas, outdoor patio on the water." },
           { name: "The Rusty Nail", desc: "Family-owned burgers & beer bar. Casual, friendly, good food." },
         ],
       },
       {
-        area: "Detroit Lakes (~25\u201330 mi)",
+        area: "Detroit Lakes (~45 min)",
         places: [
           { name: "The Fireside", desc: "Iconic northern MN dining. House-made food, open-air charcoal grill, lake views. Worth the drive." },
           { name: "Brygge Taps & Taste", desc: "Craft beer selection with American cuisine in a modern taproom." },
@@ -61,7 +61,7 @@ const guideSections = [
         ],
       },
       {
-        area: "Fergus Falls (~35 mi)",
+        area: "Fergus Falls (~40 min)",
         places: [
           { name: "Outstate Brewing Company", desc: "Craft brewery downtown on the Otter Tail River. Great taproom atmosphere." },
         ],
@@ -87,10 +87,10 @@ const guideSections = [
     title: "Outdoor Activities",
     icon: TreePine,
     items: [
-      { name: "Maplewood State Park (~20 mi)", desc: "25 mi of hiking trails, 8 lakes, sandy beach at South Lida Lake, horseback trails, camping. Hallaway Hill overlook is a must. 5-mile scenic auto tour. 150 bird species. Vehicle permit required.", url: "https://www.dnr.state.mn.us/state_parks/park.html?id=spk00225" },
+      { name: "Maplewood State Park (~25 min)", desc: "25 mi of hiking trails, 8 lakes, sandy beach at South Lida Lake, horseback trails, camping. Hallaway Hill overlook is a must. 5-mile scenic auto tour. 150 bird species. Vehicle permit required.", url: "https://www.dnr.state.mn.us/state_parks/park.html?id=spk00225" },
       { name: "Perham Lakeside Golf Club", desc: "27 holes of championship golf (Maple, Oak, Pine courses). Driving range, putting greens. 1 mile north of Perham. Est. 1946.", url: "https://perhamlakesidegolf.com" },
       { name: "Thumper Pond Golf Club (~12 mi, Ottertail)", desc: "18 holes, par 72, 6,606 yards. The longest course in the area." },
-      { name: "Frazee Golf Course (~11 mi)", desc: "9 holes, par 35. Quick and affordable round." },
+      { name: "Frazee Golf Course (~15 min)", desc: "9 holes, par 35. Quick and affordable round." },
       { name: "ITOW Veterans Museum (Perham)", desc: "805 W Main St. Self-guided tours by donation. Tue\u2013Fri 10am\u20131pm (summer). Group tours $3/adults, $2/students. (218) 346-7678." },
       { name: "Pelican Rapids (~45 min)", desc: "World\u2019s Largest Pelican statue (15.5 ft), pelican sculpture scavenger hunt around town, Mercantile on Main art gallery, suspension bridge over Pelican River." },
       { name: "Thea\u2019s Pumpkin Patch (Pelican Rapids)", desc: "8-acre pumpkin patch + 11-acre corn maze. Apple cider donuts. Fall seasonal." },
@@ -100,7 +100,7 @@ const guideSections = [
     title: "Biking & Trails",
     icon: Bike,
     items: [
-      { name: "Central Lakes State Trail", desc: "55-mile paved trail starting in Fergus Falls (~35 mi). Flat, shaded, passes through 10 communities. Rest stops every 7\u201310 miles. Trailhead has parking, restrooms, and a bike repair station.", url: "https://www.dnr.state.mn.us/state_trails/central_lakes/index.html" },
+      { name: "Central Lakes State Trail", desc: "55-mile paved trail starting in Fergus Falls (~40 min). Flat, shaded, passes through 10 communities. Rest stops every 7\u201310 miles. Trailhead has parking, restrooms, and a bike repair station.", url: "https://www.dnr.state.mn.us/state_trails/central_lakes/index.html" },
       { name: "Heartland State Trail (Detroit Lakes)", desc: "7.5-mile paved segment south of Detroit Lakes. The main trail runs 49 mi from Park Rapids to Cass Lake." },
       { name: "Perham Wetlands Trail", desc: "In-town trail system through restored prairie and wetlands. Easy walk or bike." },
     ],
@@ -139,8 +139,8 @@ const guideSections = [
     title: "Day Trips",
     icon: Map,
     items: [
-      { name: "Fergus Falls (~35 mi)", desc: "Downtown shops on Lincoln Ave, Otto the Big Otter statue, Broken Down Dam Park, Otter Tail County Historical Museum, A Center for the Arts (restored 1921 vaudeville theater), Scenic River Walk." },
-      { name: "Detroit Lakes (~25\u201330 mi)", desc: "Beach on Detroit Lake, downtown shopping, WE Fest grounds, Heartland Trail biking, great restaurant scene." },
+      { name: "Fergus Falls (~40 min)", desc: "Downtown shops on Lincoln Ave, Otto the Big Otter statue, Broken Down Dam Park, Otter Tail County Historical Museum, A Center for the Arts (restored 1921 vaudeville theater), Scenic River Walk." },
+      { name: "Detroit Lakes (~45 min)", desc: "Beach on Detroit Lake, downtown shopping, WE Fest grounds, Heartland Trail biking, great restaurant scene." },
       { name: "Pelican Rapids (~45 min)", desc: "World\u2019s Largest Pelican, Maplewood State Park, suspension bridge, art galleries, antique mall (14,000 sq ft)." },
       { name: "Fargo, ND (~1 hr 10 min)", desc: "Full city amenities. Shopping, dining, Fargo\u2013Moorhead attractions. Easy drive via I-94." },
     ],
