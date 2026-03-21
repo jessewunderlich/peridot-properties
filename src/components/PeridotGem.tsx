@@ -14,7 +14,7 @@ export default function PeridotGem({ size = 24, className }: PeridotGemProps) {
       className={className}
       aria-hidden="true"
     >
-      <path d="M16 2L28 12L22 30H10L4 12L16 2Z" fill="#6B8E23" />
+      <path d="M16 2L28 12L22 30H10L4 12L16 2Z" fill="#4F6F16" />
       <path d="M16 2L28 12L16 16L4 12L16 2Z" fill="#8BAD3F" />
       <path d="M16 16L28 12L22 30H10L4 12L16 16Z" fill="#5A7A1D" />
       <path d="M16 2L16 30" stroke="#4A6818" strokeWidth="0.5" opacity="0.3" />

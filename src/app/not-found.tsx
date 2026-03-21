@@ -6,7 +6,7 @@ export default function NotFound() {
     <section className="py-24 px-4 text-center min-h-[60vh] flex flex-col items-center justify-center">
       <Compass
         size={48}
-        style={{ color: "#6B8E23" }}
+        style={{ color: "#4F6F16" }}
         className="mb-6"
         aria-hidden="true"
       />
@@ -19,7 +19,7 @@ export default function NotFound() {
       >
         Page Not Found
       </h1>
-      <p className="text-sm mb-8 max-w-md" style={{ color: "#2C2C2C80" }}>
+      <p className="text-sm mb-8 max-w-md" style={{ color: "#5C5C5C" }}>
         Looks like you wandered off the trail. Let&apos;s get you back to the
         lake.
       </p>
@@ -27,14 +27,14 @@ export default function NotFound() {
         <Link
           href="/"
           className="px-6 py-3 rounded-full text-sm font-semibold transition-all hover:opacity-90"
-          style={{ backgroundColor: "#6B8E23", color: "#FAF8F5" }}
+          style={{ backgroundColor: "#4F6F16", color: "#FAF8F5" }}
         >
           Back to Home
         </Link>
         <Link
           href="/properties"
           className="px-6 py-3 rounded-full text-sm font-semibold border transition-all hover:opacity-80"
-          style={{ borderColor: "#6B8E23", color: "#6B8E23" }}
+          style={{ borderColor: "#4F6F16", color: "#4F6F16" }}
         >
           Browse Properties
         </Link>

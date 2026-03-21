@@ -13,7 +13,7 @@ export default function RatesWidget() {
   }, []);
 
   return (
-    <div className="or-rates-wrapper rounded-2xl overflow-hidden">
+    <div className="or-rates-wrapper rounded-2xl overflow-hidden min-h-[300px]">
       <div
         className="ownerrez-widget"
         data-propertyid="7793e94b1f944ec0844bf19d1afd63aa"

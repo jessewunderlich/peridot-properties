@@ -91,7 +91,7 @@ export default function RootLayout({
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:px-4 focus:py-2 focus:rounded-full focus:text-sm focus:font-semibold"
-          style={{ backgroundColor: "#6B8E23", color: "#FAF8F5" }}
+          style={{ backgroundColor: "#4F6F16", color: "#FAF8F5" }}
         >
           Skip to content
         </a>
@@ -101,7 +101,7 @@ export default function RootLayout({
         <StickyBookButton />
         <Script
           src="https://app.ownerrez.com/widget.js"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
         />
         <Analytics />
       </body>

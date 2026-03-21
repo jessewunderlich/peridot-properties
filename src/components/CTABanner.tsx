@@ -21,7 +21,7 @@ export default function CTABanner({
     <section
       className="py-16 px-4"
       style={{
-        background: "linear-gradient(135deg, #2D5016 0%, #4A7C8C 100%)",
+        background: "linear-gradient(135deg, #2D5016 0%, #2F6271 100%)",
       }}
     >
       <div className="max-w-3xl mx-auto text-center">
@@ -40,7 +40,7 @@ export default function CTABanner({
           <Link
             href={buttonHref}
             className="inline-block px-8 py-3 rounded-full text-sm font-semibold transition-all hover:opacity-90 hover:shadow-lg"
-            style={{ backgroundColor: "#C8A951", color: "#2D5016" }}
+            style={{ backgroundColor: "#FAF8F5", color: "#2D5016" }}
           >
             {buttonLabel}
           </Link>

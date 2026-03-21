@@ -126,7 +126,7 @@ export default function PrivacyPage() {
           <a
             href="mailto:charlotte@peridot.properties"
             className="underline"
-            style={{ color: "#6B8E23" }}
+            style={{ color: "#4F6F16" }}
           >
             charlotte@peridot.properties
           </a>
@@ -148,7 +148,7 @@ export default function PrivacyPage() {
           <a
             href="mailto:charlotte@peridot.properties"
             className="underline"
-            style={{ color: "#6B8E23" }}
+            style={{ color: "#4F6F16" }}
           >
             charlotte@peridot.properties
           </a>

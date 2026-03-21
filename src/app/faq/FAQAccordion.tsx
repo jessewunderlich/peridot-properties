@@ -87,12 +87,12 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
 
   return (
     <div
-      className="border-b last:border-b-0"
-      style={{ borderColor: "#6B8E2318" }}
+      className="border-b last:border-b-0 transition-colors hover:bg-black/[0.02]"
+      style={{ borderColor: "#4F6F1618" }}
     >
       <button
         id={`${id}-btn`}
-        className="w-full flex items-center justify-between text-left py-4 px-1 gap-4"
+        className="w-full flex items-center justify-between text-left py-4 px-3 sm:px-1 gap-4"
         onClick={() => setOpen((prev) => !prev)}
         aria-expanded={open}
         aria-controls={`${id}-panel`}
@@ -108,7 +108,7 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
           aria-hidden="true"
           className="shrink-0 transition-transform duration-200"
           style={{
-            color: "#6B8E23",
+            color: "#4F6F16",
             transform: open ? "rotate(180deg)" : "rotate(0deg)",
           }}
         />
@@ -135,7 +135,7 @@ export default function FAQAccordion() {
         <div key={section.title}>
           <p
             className="text-xs font-semibold tracking-widest uppercase mb-4"
-            style={{ color: "#4A7C8C" }}
+            style={{ color: "#2F6271" }}
           >
             {section.title}
           </p>
@@ -143,7 +143,7 @@ export default function FAQAccordion() {
             className="rounded-2xl px-5 sm:px-8"
             style={{
               backgroundColor: "#FAF8F5",
-              border: "1px solid #6B8E2318",
+              border: "1px solid #4F6F1618",
             }}
           >
             {section.faqs.map((faq) => (

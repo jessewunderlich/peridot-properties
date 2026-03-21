@@ -36,7 +36,7 @@ const benefits = [
     icon: DollarSign,
     title: "Save 10–15%",
     description:
-      "When you book directly with us, you avoid the service fees charged by Airbnb, VRBO, and other platforms. That's real money back in your pocket — $187–312 on a typical 5-night stay.",
+      "When you book directly with us, you avoid the service fees charged by Airbnb, VRBO, and other platforms. That's real money back in your pocket — $166–$513 on a typical 5-night stay.",
   },
   {
     icon: Shield,
@@ -97,7 +97,7 @@ export default function BookDirectPage() {
       {/* Hero */}
       <section
         className="py-16 px-4 text-center"
-        style={{ background: "linear-gradient(160deg, #2D5016 0%, #4A7C8C 100%)" }}
+        style={{ background: "linear-gradient(160deg, #2D5016 0%, #2F6271 100%)" }}
       >
         <p
           className="text-xs font-semibold tracking-widest uppercase mb-3"
@@ -126,9 +126,9 @@ export default function BookDirectPage() {
           <div className="text-center mb-8">
             <div
               className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4"
-              style={{ backgroundColor: "#6B8E2318" }}
+              style={{ backgroundColor: "#4F6F1618" }}
             >
-              <Calculator size={22} style={{ color: "#6B8E23" }} aria-hidden="true" />
+              <Calculator size={22} style={{ color: "#4F6F16" }} aria-hidden="true" />
             </div>
             <h2
               className="text-3xl font-semibold"
@@ -139,7 +139,7 @@ export default function BookDirectPage() {
             >
               See the difference
             </h2>
-            <p className="text-sm mt-2" style={{ color: "#2C2C2C80" }}>
+            <p className="text-sm mt-2" style={{ color: "#5C5C5C" }}>
               Same 5-night trip, two seasonal examples.
             </p>
           </div>
@@ -148,16 +148,16 @@ export default function BookDirectPage() {
             {comparisonExamples.map((example) => (
               <div key={example.label}>
                 <div className="mb-3">
-                  <p className="text-xs font-semibold tracking-widest uppercase" style={{ color: "#4A7C8C" }}>
+                  <p className="text-xs font-semibold tracking-widest uppercase" style={{ color: "#2F6271" }}>
                     {example.label}
                   </p>
-                  <p className="text-sm mt-1" style={{ color: "#2C2C2C80" }}>
+                  <p className="text-sm mt-1" style={{ color: "#5C5C5C" }}>
                     {example.subtitle}
                   </p>
                 </div>
                 <div
                   className="rounded-2xl overflow-hidden"
-                  style={{ border: "1px solid #6B8E2320" }}
+                  style={{ border: "1px solid #4F6F1620" }}
                 >
                   <div
                     className="grid grid-cols-[1.5fr_1fr_1fr] md:grid-cols-[2fr_1fr_1fr] gap-2 sm:gap-4 px-3 sm:px-5 py-3 text-[10px] sm:text-xs font-semibold uppercase tracking-wide"
@@ -172,8 +172,8 @@ export default function BookDirectPage() {
                       key={row.item}
                       className="grid grid-cols-[1.5fr_1fr_1fr] md:grid-cols-[2fr_1fr_1fr] gap-2 sm:gap-4 px-3 sm:px-5 py-3 text-xs sm:text-sm border-t"
                       style={{
-                        borderColor: "#6B8E2315",
-                        backgroundColor: row.highlight ? "#6B8E2308" : "#FAF8F5",
+                        borderColor: "#4F6F1615",
+                        backgroundColor: row.highlight ? "#4F6F1608" : "#FAF8F5",
                       }}
                     >
                       <span
@@ -184,13 +184,13 @@ export default function BookDirectPage() {
                       </span>
                       <span
                         className="text-center font-semibold"
-                        style={{ color: "#6B8E23" }}
+                        style={{ color: "#4F6F16" }}
                       >
                         {row.direct}
                       </span>
                       <span
                         className="text-center"
-                        style={{ color: "#2C2C2C80" }}
+                        style={{ color: "#5C5C5C" }}
                       >
                         {row.platform}
                       </span>
@@ -209,7 +209,7 @@ export default function BookDirectPage() {
           <div className="text-center mb-8">
             <p
               className="text-xs font-semibold tracking-widest uppercase mb-3"
-              style={{ color: "#4A7C8C" }}
+              style={{ color: "#2F6271" }}
             >
               Seasonal Pricing
             </p>
@@ -222,7 +222,7 @@ export default function BookDirectPage() {
             >
               Current rates
             </h2>
-            <p className="text-sm mt-2" style={{ color: "#2C2C2C80" }}>
+            <p className="text-sm mt-2" style={{ color: "#5C5C5C" }}>
               Live pricing pulled directly from our booking system — always accurate
             </p>
           </div>
@@ -240,7 +240,7 @@ export default function BookDirectPage() {
           <div className="text-center mb-10">
             <p
               className="text-xs font-semibold tracking-widest uppercase mb-3"
-              style={{ color: "#4A7C8C" }}
+              style={{ color: "#2F6271" }}
             >
               Why Book Direct
             </p>
@@ -261,16 +261,16 @@ export default function BookDirectPage() {
                 className="p-5 rounded-2xl"
                 style={{
                   backgroundColor: "#FAF8F5",
-                  border: "1px solid #6B8E2318",
+                  border: "1px solid #4F6F1618",
                 }}
               >
                 <div
                   className="w-10 h-10 rounded-full flex items-center justify-center mb-3"
-                  style={{ backgroundColor: "#6B8E2318" }}
+                  style={{ backgroundColor: "#4F6F1618" }}
                 >
                   <b.icon
                     size={18}
-                    style={{ color: "#6B8E23" }}
+                    style={{ color: "#4F6F16" }}
                     aria-hidden="true"
                   />
                 </div>
@@ -285,7 +285,7 @@ export default function BookDirectPage() {
                 </h3>
                 <p
                   className="text-sm leading-relaxed"
-                  style={{ color: "#2C2C2C80" }}
+                  style={{ color: "#5C5C5C" }}
                 >
                   {b.description}
                 </p>
@@ -307,14 +307,14 @@ export default function BookDirectPage() {
           >
             Ready to find your stay?
           </h2>
-          <p className="text-sm mb-8" style={{ color: "#2C2C2C80" }}>
+          <p className="text-sm mb-8" style={{ color: "#5C5C5C" }}>
             Lakeside Luxe is on Pickerel Lake in Richville, MN &mdash; Charlotte&apos;s
             favorite corner of Minnesota lake country.
           </p>
           <Link
             href="/properties"
             className="inline-block px-8 py-4 rounded-full text-sm font-semibold transition-all hover:opacity-90 hover:shadow-xl"
-            style={{ backgroundColor: "#6B8E23", color: "#FAF8F5" }}
+            style={{ backgroundColor: "#4F6F16", color: "#FAF8F5" }}
           >
             Browse Properties
           </Link>

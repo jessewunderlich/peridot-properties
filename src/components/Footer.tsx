@@ -20,15 +20,15 @@ export default function Footer() {
               Peridot Properties
             </span>
           </div>
-          <p className="text-sm leading-relaxed" style={{ color: "#FAF8F580" }}>
+          <p className="text-sm leading-relaxed" style={{ color: "#FAF8F5CC" }}>
             A family vacation rental on Minnesota&apos;s lakes. Hosted by Charlotte.
             Book direct and save.
           </p>
           <div className="flex gap-3 mt-5">
-            <a href="https://facebook.com/peridotpm" target="_blank" rel="noopener noreferrer" aria-label="Peridot Properties on Facebook" className="p-3 rounded-full transition-colors hover:opacity-80" style={{ backgroundColor: "#6B8E2340" }}>
+            <a href="https://facebook.com/peridotpm" target="_blank" rel="noopener noreferrer" aria-label="Peridot Properties on Facebook" className="p-3 rounded-full transition-colors hover:opacity-80" style={{ backgroundColor: "#4F6F1640" }}>
               <Facebook size={18} style={{ color: "#FAF8F5" }} aria-hidden="true" />
             </a>
-            <a href="https://instagram.com/peridotpm" target="_blank" rel="noopener noreferrer" aria-label="Peridot Properties on Instagram" className="p-3 rounded-full transition-colors hover:opacity-80" style={{ backgroundColor: "#6B8E2340" }}>
+            <a href="https://instagram.com/peridotpm" target="_blank" rel="noopener noreferrer" aria-label="Peridot Properties on Instagram" className="p-3 rounded-full transition-colors hover:opacity-80" style={{ backgroundColor: "#4F6F1640" }}>
               <Instagram size={18} style={{ color: "#FAF8F5" }} aria-hidden="true" />
             </a>
           </div>
@@ -55,7 +55,7 @@ export default function Footer() {
                 <Link
                   href={link.href}
                   className="text-sm transition-colors hover:text-gold"
-                  style={{ color: "#FAF8F580" }}
+                  style={{ color: "#FAF8F5CC" }}
                 >
                   {link.label}
                 </Link>
@@ -78,7 +78,7 @@ export default function Footer() {
               <a
                 href="mailto:charlotte@peridot.properties"
                 className="text-sm transition-colors hover:text-gold"
-                style={{ color: "#FAF8F580" }}
+                style={{ color: "#FAF8F5CC" }}
               >
                 charlotte@peridot.properties
               </a>
@@ -89,7 +89,7 @@ export default function Footer() {
 
       <div
         className="border-t px-4 sm:px-6 lg:px-8 py-5 max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-xs"
-        style={{ borderColor: "#6B8E2340", color: "#FAF8F540" }}
+        style={{ borderColor: "#4F6F1640", color: "#FAF8F599" }}
       >
         <p>&copy; {new Date().getFullYear()} Peridot Properties. All rights reserved.</p>
         <p><Link href="/privacy" className="hover:underline">Privacy Policy</Link> &bull; Minnesota&apos;s Lake Country</p>

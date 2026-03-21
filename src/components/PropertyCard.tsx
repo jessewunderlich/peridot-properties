@@ -34,7 +34,7 @@ export default function PropertyCard({
   return (
     <article
       className="rounded-2xl overflow-hidden flex flex-col"
-      style={{ border: "1px solid #6B8E2320", boxShadow: "0 4px 20px rgba(45,80,22,0.08)" }}
+      style={{ border: "1px solid #4F6F1620", boxShadow: "0 4px 20px rgba(45,80,22,0.08)" }}
     >
       <div className="relative h-60 w-full overflow-hidden">
         <Image
@@ -61,7 +61,7 @@ export default function PropertyCard({
           >
             {name}
           </h3>
-          <p className="flex items-center gap-1 text-xs mt-1" style={{ color: "#4A7C8C" }}>
+          <p className="flex items-center gap-1 text-xs mt-1" style={{ color: "#2F6271" }}>
             <MapPin size={12} aria-hidden="true" />
             {location}
           </p>
@@ -69,29 +69,29 @@ export default function PropertyCard({
         <p className="text-sm leading-relaxed flex-1 line-clamp-3 sm:line-clamp-4" style={{ color: "#2C2C2C" }}>
           {description}
         </p>
-        <div className="flex flex-wrap gap-4 pt-2 border-t text-xs" style={{ borderColor: "#6B8E2315" }}>
-          <span className="flex items-center gap-1" style={{ color: "#2C2C2C80" }}>
+        <div className="flex flex-wrap gap-4 pt-2 border-t text-xs" style={{ borderColor: "#4F6F1615" }}>
+          <span className="flex items-center gap-1" style={{ color: "#5C5C5C" }}>
             <Bed size={13} aria-hidden="true" /> {bedrooms} bedrooms
           </span>
-          <span className="flex items-center gap-1" style={{ color: "#2C2C2C80" }}>
+          <span className="flex items-center gap-1" style={{ color: "#5C5C5C" }}>
             <Bath size={13} aria-hidden="true" /> {bathrooms} bathrooms
           </span>
-          <span className="flex items-center gap-1" style={{ color: "#2C2C2C80" }}>
+          <span className="flex items-center gap-1" style={{ color: "#5C5C5C" }}>
             <Users size={13} aria-hidden="true" /> {maxOccupancy ? `Beds for ${sleeps} · max ${maxOccupancy}` : `Sleeps ${sleeps}`}
           </span>
-          <span className="flex items-center gap-1" style={{ color: "#2C2C2C80" }}>
+          <span className="flex items-center gap-1" style={{ color: "#5C5C5C" }}>
             <Waves size={13} aria-hidden="true" /> {lakeFrontage} frontage
           </span>
         </div>
         {priceRange && (
-          <p className="text-xs font-semibold" style={{ color: "#6B8E23" }}>
+          <p className="text-xs font-semibold" style={{ color: "#4F6F16" }}>
             {priceRange}
           </p>
         )}
         <Link
           href={href}
           className="mt-2 text-center py-2.5 rounded-full text-sm font-semibold transition-all hover:opacity-90"
-          style={{ backgroundColor: "#6B8E23", color: "#FAF8F5" }}
+          style={{ backgroundColor: "#4F6F16", color: "#FAF8F5" }}
         >
           {comingSoon ? "Preview Property" : "View Property"}
         </Link>

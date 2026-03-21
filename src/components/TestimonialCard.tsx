@@ -16,7 +16,7 @@ export default function TestimonialCard({
   return (
     <div
       className="p-6 rounded-2xl flex flex-col gap-4"
-      style={{ backgroundColor: "#FAF8F5", border: "1px solid #6B8E2320", boxShadow: "0 2px 12px rgba(45,80,22,0.06)" }}
+      style={{ backgroundColor: "#FAF8F5", border: "1px solid #4F6F1620", boxShadow: "0 2px 12px rgba(45,80,22,0.06)" }}
     >
       {/* Stars */}
       <div className="flex gap-1" aria-label={`${rating} out of 5 stars`}>

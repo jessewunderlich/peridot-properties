@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-peridot: #6B8E23;
+  --color-peridot: #4F6F16;
   --color-forest: #2D5016;
   --color-gold: #C8A951;
-  --color-lake: #4A7C8C;
+  --color-lake: #2F6271;
   --color-warm-white: #FAF8F5;
   --color-charcoal: #2C2C2C;
 

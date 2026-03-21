@@ -22,7 +22,7 @@ export default function Navbar() {
       className="sticky top-0 z-50 border-b"
       style={{
         backgroundColor: "#FAF8F5",
-        borderColor: "#6B8E2330",
+        borderColor: "#4F6F1630",
         boxShadow: "0 1px 8px rgba(45,80,22,0.07)",
       }}
     >
@@ -65,7 +65,7 @@ export default function Navbar() {
               href="/properties/pickerel-lake-retreat#booking"
               className="ml-3 px-5 py-2 rounded-full text-sm font-semibold transition-all hover:opacity-90 hover:shadow-md"
               style={{
-                backgroundColor: "#6B8E23",
+                backgroundColor: "#4F6F16",
                 color: "#FAF8F5",
                 fontFamily: "var(--font-inter), sans-serif",
               }}
@@ -100,7 +100,7 @@ export default function Navbar() {
           />
           <div
             className="md:hidden border-t px-4 pb-4 pt-2 relative z-50"
-            style={{ backgroundColor: "#FAF8F5", borderColor: "#6B8E2330" }}
+            style={{ backgroundColor: "#FAF8F5", borderColor: "#4F6F1630" }}
           >
             <ul className="flex flex-col gap-1" role="list">
               {navLinks.map((link) => (

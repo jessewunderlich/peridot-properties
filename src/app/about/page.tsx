@@ -69,7 +69,7 @@ export default function AboutPage() {
       {/* ── Page Header ── */}
       <section
         className="py-16 px-4 text-center"
-        style={{ background: "linear-gradient(160deg, #2D5016 0%, #4A7C8C 100%)" }}
+        style={{ background: "linear-gradient(160deg, #2D5016 0%, #2F6271 100%)" }}
       >
         <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#C8A951" }}>
           The People Behind the Property
@@ -89,7 +89,7 @@ export default function AboutPage() {
       <section className="py-16 px-4 max-w-5xl mx-auto" aria-label="About Charlotte">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#4A7C8C" }}>
+            <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#2F6271" }}>
               Meet Your Host
             </p>
             <h2
@@ -121,7 +121,7 @@ export default function AboutPage() {
           </div>
           <div
             className="relative h-80 md:h-[420px] rounded-2xl overflow-hidden"
-            style={{ border: "1px solid #6B8E2315" }}
+            style={{ border: "1px solid #4F6F1615" }}
           >
             <Image
               src="/charlotte-family.jpg"
@@ -153,7 +153,7 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div
             className="p-8 rounded-2xl flex flex-col items-center text-center"
-            style={{ background: "linear-gradient(135deg, #6B8E2315, #C8A95115)", border: "1px solid #6B8E2320" }}
+            style={{ background: "linear-gradient(135deg, #4F6F1615, #C8A95115)", border: "1px solid #4F6F1620" }}
           >
             <PeridotGem size={56} className="mb-4" />
             <p
@@ -171,13 +171,13 @@ export default function AboutPage() {
             </p>
             <div
               className="mt-5 w-16 h-16 rounded-full"
-              style={{ background: "radial-gradient(circle at 35% 35%, #a8c45a, #6B8E23, #4a6318)" }}
+              style={{ background: "radial-gradient(circle at 35% 35%, #a8c45a, #4F6F16, #4a6318)" }}
               aria-label="Peridot gemstone color swatch"
             />
           </div>
 
           <div>
-            <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#4A7C8C" }}>
+            <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#2F6271" }}>
               The Name
             </p>
             <h2
@@ -211,7 +211,7 @@ export default function AboutPage() {
       {/* ── Why Minnesota's Lake Country ── */}
       <section className="py-16 px-4 max-w-5xl mx-auto" aria-label="Why Minnesota lake country">
         <div className="text-center mb-10">
-          <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#4A7C8C" }}>
+          <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#2F6271" }}>
             Our Region
           </p>
           <h2
@@ -250,7 +250,7 @@ export default function AboutPage() {
           </div>
           <div
             className="relative rounded-2xl overflow-hidden aspect-[4/3] md:aspect-auto md:min-h-[360px]"
-            style={{ border: "1px solid #6B8E2315" }}
+            style={{ border: "1px solid #4F6F1615" }}
           >
             <Image
               src="/images/pickerel-lake/golden-sunset.jpg"
@@ -267,7 +267,7 @@ export default function AboutPage() {
       <section className="py-16 px-4" style={{ backgroundColor: "#2D501608" }} aria-label="Our values">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-10">
-            <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#4A7C8C" }}>
+            <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#2F6271" }}>
               How We Operate
             </p>
             <h2
@@ -282,13 +282,13 @@ export default function AboutPage() {
               <div
                 key={value.title}
                 className="p-5 rounded-2xl"
-                style={{ backgroundColor: "#FAF8F5", border: "1px solid #6B8E2318" }}
+                style={{ backgroundColor: "#FAF8F5", border: "1px solid #4F6F1618" }}
               >
                 <div
                   className="w-10 h-10 rounded-full flex items-center justify-center mb-3"
-                  style={{ backgroundColor: "#6B8E2318" }}
+                  style={{ backgroundColor: "#4F6F1618" }}
                 >
-                  <value.icon size={18} style={{ color: "#6B8E23" }} aria-hidden="true" />
+                  <value.icon size={18} style={{ color: "#4F6F16" }} aria-hidden="true" />
                 </div>
                 <h3
                   className="text-base font-semibold mb-2"
@@ -298,7 +298,7 @@ export default function AboutPage() {
                 </h3>
                 <p
                   className="text-sm leading-relaxed"
-                  style={{ color: "#2C2C2C80" }}
+                  style={{ color: "#5C5C5C" }}
                 >
                   {value.description}
                 </p>

@@ -56,7 +56,7 @@ export default function FAQPage() {
       {/* ── Page Header ── */}
       <section
         className="py-16 px-4 text-center"
-        style={{ background: "linear-gradient(160deg, #2D5016 0%, #4A7C8C 100%)" }}
+        style={{ background: "linear-gradient(160deg, #2D5016 0%, #2F6271 100%)" }}
       >
         <p
           className="text-xs font-semibold tracking-widest uppercase mb-3"

@@ -251,7 +251,7 @@ export const properties: Property[] = [
         rate: "$299",
         unit: "per night",
         note: "2-night minimum \u2022 20% off 7+ nights \u2022 $395 cleaning fee",
-        color: "#4A7C8C",
+        color: "#2F6271",
       },
     ],
     priceRange: "From $299/night",
@@ -339,7 +339,7 @@ export const properties: Property[] = [
         season: "Winter",
         icon: Snowflake,
         tagline: "December through February",
-        accentColor: "#4A7C8C",
+        accentColor: "#2F6271",
         bgColor: "#FAF8F5",
         activities: [
           { label: "Ice fishing for walleye & pike" },
@@ -356,7 +356,7 @@ export const properties: Property[] = [
         season: "Spring",
         icon: Bird,
         tagline: "March through May",
-        accentColor: "#6B8E23",
+        accentColor: "#4F6F16",
         bgColor: "#FAF8F5",
         activities: [
           { label: "Bird migration & birding" },

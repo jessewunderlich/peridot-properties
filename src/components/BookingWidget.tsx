@@ -16,15 +16,15 @@ export default function BookingWidget() {
 
   return (
     <div
-      className="or-booking-wrapper rounded-2xl overflow-hidden"
-      style={{ border: "1px solid #6B8E2325", boxShadow: "0 4px 24px rgba(45,80,22,0.10)", backgroundColor: "#FAF8F5" }}
+      className="or-booking-wrapper rounded-2xl overflow-hidden min-h-[500px]"
+      style={{ border: "1px solid #4F6F1625", boxShadow: "0 4px 24px rgba(45,80,22,0.10)", backgroundColor: "#FAF8F5" }}
       data-ownerrez-widget="peridot-properties"
     >
       <div className="p-6 sm:p-8 space-y-8">
         
         {/* Availability Calendar */}
         <div>
-          <p className="text-xs font-semibold tracking-wide uppercase mb-4" style={{ color: "#4A7C8C" }}>
+          <p className="text-xs font-semibold tracking-wide uppercase mb-4" style={{ color: "#2F6271" }}>
             Availability
           </p>
           <div 
@@ -35,11 +35,11 @@ export default function BookingWidget() {
           ></div>
         </div>
 
-        <hr style={{ borderColor: "#6B8E2315" }} />
+        <hr style={{ borderColor: "#4F6F1615" }} />
 
         {/* Booking Form */}
         <div>
-          <p className="text-xs font-semibold tracking-wide uppercase mb-4" style={{ color: "#4A7C8C" }}>
+          <p className="text-xs font-semibold tracking-wide uppercase mb-4" style={{ color: "#2F6271" }}>
             Reserve Your Stay
           </p>
           <div 

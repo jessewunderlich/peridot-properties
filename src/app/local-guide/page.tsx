@@ -164,7 +164,7 @@ export default function LocalGuidePage() {
       {/* \u2500\u2500 Page Header \u2500\u2500 */}
       <section
         className="py-16 px-4 text-center"
-        style={{ background: "linear-gradient(160deg, #2D5016 0%, #4A7C8C 100%)" }}
+        style={{ background: "linear-gradient(160deg, #2D5016 0%, #2F6271 100%)" }}
       >
         <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#C8A951" }}>
           Live like a local
@@ -184,7 +184,7 @@ export default function LocalGuidePage() {
       <section className="py-14 px-4 max-w-5xl mx-auto" aria-label="About the region">
         <div
           className="rounded-2xl overflow-hidden"
-          style={{ border: "1px solid #6B8E2320" }}
+          style={{ border: "1px solid #4F6F1620" }}
         >
           <div className="relative h-56 sm:h-72">
             <Image
@@ -234,7 +234,7 @@ export default function LocalGuidePage() {
                 <span
                   key={h}
                   className="flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full"
-                  style={{ backgroundColor: "#6B8E2315", color: "#2D5016" }}
+                  style={{ backgroundColor: "#4F6F1615", color: "#2D5016" }}
                 >
                   <Fish size={12} aria-hidden="true" />
                   {h}
@@ -247,8 +247,8 @@ export default function LocalGuidePage() {
 
       {/* \u2500\u2500 Guide Content \u2500\u2500 */}
       <section className="py-16 px-4 max-w-4xl mx-auto" aria-label="Local recommendations">
-        <div className="bg-[#FAF8F5] rounded-2xl p-5 sm:p-6 border border-[#6B8E2320] mb-8">
-          <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: "#4A7C8C" }}>
+        <div className="bg-[#FAF8F5] rounded-2xl p-5 sm:p-6 border border-[#4F6F1620] mb-8">
+          <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: "#2F6271" }}>
             Jump to
           </p>
           <div className="flex flex-wrap gap-2">
@@ -257,7 +257,7 @@ export default function LocalGuidePage() {
                 key={section.title}
                 href={`#${sectionId(section.title)}`}
                 className="px-3 py-2 rounded-full text-xs font-semibold transition-colors hover:opacity-80"
-                style={{ backgroundColor: "#6B8E2315", color: "#2D5016" }}
+                style={{ backgroundColor: "#4F6F1615", color: "#2D5016" }}
               >
                 {section.title}
               </Link>
@@ -266,10 +266,10 @@ export default function LocalGuidePage() {
         </div>
         <div className="flex flex-col gap-12">
           {guideSections.map((section) => (
-            <div id={sectionId(section.title)} key={section.title} className="bg-[#FAF8F5] rounded-2xl p-6 sm:p-10 border border-[#6B8E2320] scroll-mt-24">
+            <div id={sectionId(section.title)} key={section.title} className="bg-[#FAF8F5] rounded-2xl p-6 sm:p-10 border border-[#4F6F1620] scroll-mt-24">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-full flex items-center justify-center bg-[#6B8E2315]">
-                  <section.icon size={24} className="text-[#6B8E23]" aria-hidden="true" />
+                <div className="w-12 h-12 rounded-full flex items-center justify-center bg-[#4F6F1615]">
+                  <section.icon size={24} className="text-[#4F6F16]" aria-hidden="true" />
                 </div>
                 <h2
                   className="text-3xl font-semibold"
@@ -280,7 +280,7 @@ export default function LocalGuidePage() {
               </div>
               
               {section.note && (
-                <p className="text-sm italic mb-6 text-[#2C2C2C80]">
+                <p className="text-sm italic mb-6 text-[#5C5C5C]">
                   {section.note}
                 </p>
               )}
@@ -289,7 +289,7 @@ export default function LocalGuidePage() {
                 <div className="space-y-8">
                   {section.locations.map((loc) => (
                     <div key={loc.area}>
-                      <h3 className="text-lg font-semibold text-[#4A7C8C] mb-3">
+                      <h3 className="text-lg font-semibold text-[#2F6271] mb-3">
                         {loc.area}
                       </h3>
                       <ul className="space-y-4">
@@ -298,7 +298,7 @@ export default function LocalGuidePage() {
                             <span className="font-semibold text-[#2C2C2C] block mb-1">
                               {place.name}
                             </span>
-                            <span className="text-[#2C2C2C90]">
+                            <span className="text-[#4A4A4A]">
                               {place.desc}
                             </span>
                           </li>
@@ -314,7 +314,7 @@ export default function LocalGuidePage() {
                       <span className="font-semibold text-[#2C2C2C] block mb-1">
                         {item.name}
                       </span>
-                      <span className="text-[#2C2C2C90]">
+                      <span className="text-[#4A4A4A]">
                         {item.desc}
                       </span>
                       {"url" in item && item.url && (
@@ -325,7 +325,7 @@ export default function LocalGuidePage() {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-xs underline underline-offset-2 hover:opacity-70"
-                            style={{ color: "#6B8E23" }}
+                            style={{ color: "#4F6F16" }}
                           >
                             Visit website &rarr;
                           </a>

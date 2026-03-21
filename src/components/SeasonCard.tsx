@@ -43,7 +43,7 @@ export default function SeasonCard({
           >
             {season}
           </h3>
-          <p className="text-xs" style={{ color: "#2C2C2C80" }}>{tagline}</p>
+          <p className="text-xs" style={{ color: "#5C5C5C" }}>{tagline}</p>
         </div>
       </div>
       <ul className="px-6 py-4 space-y-2" role="list">

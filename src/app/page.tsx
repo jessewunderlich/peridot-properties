@@ -109,7 +109,7 @@ export default function HomePage() {
       <section
         className="relative min-h-[85vh] flex items-center justify-center overflow-hidden"
         style={{
-          background: "linear-gradient(160deg, #1a3a0a 0%, #2D5016 30%, #4A7C8C 70%, #2a5a70 100%)",
+          background: "linear-gradient(160deg, #1a3a0a 0%, #2D5016 30%, #2F6271 70%, #2a5a70 100%)",
         }}
         aria-label="Hero section"
       >
@@ -121,7 +121,7 @@ export default function HomePage() {
         />
         <div
           className="hidden sm:block absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full opacity-10 pointer-events-none"
-          style={{ background: "radial-gradient(circle, #6B8E23 0%, transparent 70%)", transform: "translate(-30%, 30%)" }}
+          style={{ background: "radial-gradient(circle, #4F6F16 0%, transparent 70%)", transform: "translate(-30%, 30%)" }}
           aria-hidden="true"
         />
 
@@ -149,7 +149,7 @@ export default function HomePage() {
             <Link
               href="/properties"
               className="px-8 py-4 rounded-full text-sm font-semibold transition-all hover:opacity-90 hover:shadow-xl hover:scale-105"
-              style={{ backgroundColor: "#C8A951", color: "#2D5016" }}
+              style={{ backgroundColor: "#FAF8F5", color: "#2D5016" }}
             >
               Browse Properties
             </Link>
@@ -177,7 +177,7 @@ export default function HomePage() {
       <section className="py-20 px-4" aria-label="Featured properties">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#4A7C8C" }}>
+            <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#2F6271" }}>
               Our Property
             </p>
             <h2
@@ -212,7 +212,7 @@ export default function HomePage() {
             <Link
               href="/properties/pickerel-lake-retreat"
               className="inline-block text-sm font-medium underline underline-offset-4 transition-colors hover:opacity-70"
-              style={{ color: "#6B8E23" }}
+              style={{ color: "#4F6F16" }}
             >
               View Lakeside Luxe &rarr;
             </Link>
@@ -224,7 +224,7 @@ export default function HomePage() {
       <section className="py-20 px-4" style={{ backgroundColor: "#2D501608" }} aria-label="Why book direct">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#4A7C8C" }}>
+            <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#2F6271" }}>
               Skip the Middleman
             </p>
             <h2
@@ -233,7 +233,7 @@ export default function HomePage() {
             >
               3 reasons to book direct
             </h2>
-            <p className="text-sm" style={{ color: "#2C2C2C80" }}>
+            <p className="text-sm" style={{ color: "#5C5C5C" }}>
               Booking platforms take 12–20% in fees. That money can stay with you.
             </p>
           </div>
@@ -242,13 +242,13 @@ export default function HomePage() {
               <div
                 key={item.title}
                 className="p-6 rounded-2xl"
-                style={{ backgroundColor: "#FAF8F5", border: "1px solid #6B8E2318" }}
+                style={{ backgroundColor: "#FAF8F5", border: "1px solid #4F6F1618" }}
               >
                 <div
                   className="w-10 h-10 rounded-full flex items-center justify-center mb-4"
-                  style={{ backgroundColor: "#6B8E2318" }}
+                  style={{ backgroundColor: "#4F6F1618" }}
                 >
-                  <item.icon size={18} style={{ color: "#6B8E23" }} aria-hidden="true" />
+                  <item.icon size={18} style={{ color: "#4F6F16" }} aria-hidden="true" />
                 </div>
                 <h3
                   className="text-base font-semibold mb-2"
@@ -256,7 +256,7 @@ export default function HomePage() {
                 >
                   {item.title}
                 </h3>
-                <p className="text-sm leading-relaxed" style={{ color: "#2C2C2C80" }}>
+                <p className="text-sm leading-relaxed" style={{ color: "#5C5C5C" }}>
                   {item.description}
                 </p>
               </div>
@@ -266,7 +266,7 @@ export default function HomePage() {
             <Link
               href="/book-direct"
               className="inline-block text-sm font-medium underline underline-offset-4 transition-colors hover:opacity-70"
-              style={{ color: "#6B8E23" }}
+              style={{ color: "#4F6F16" }}
             >
               See how much you save &rarr;
             </Link>
@@ -303,7 +303,7 @@ export default function HomePage() {
       {/* ── About Peridot Properties ── */}
       <section className="py-20 px-4" style={{ backgroundColor: "#2D501608" }} aria-label="About Peridot Properties">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#4A7C8C" }}>
+          <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#2F6271" }}>
             About Us
           </p>
           <h2
@@ -325,7 +325,7 @@ export default function HomePage() {
           <Link
             href="/about"
             className="inline-block px-7 py-3 rounded-full text-sm font-semibold border transition-all hover:opacity-80"
-            style={{ borderColor: "#6B8E23", color: "#6B8E23" }}
+            style={{ borderColor: "#4F6F16", color: "#4F6F16" }}
           >
             Our Story
           </Link>

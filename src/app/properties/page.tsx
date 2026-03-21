@@ -31,7 +31,7 @@ export default function PropertiesPage() {
       {/* ── Page Header ── */}
       <section
         className="py-16 px-4 text-center"
-        style={{ background: "linear-gradient(160deg, #2D5016 0%, #4A7C8C 100%)" }}
+        style={{ background: "linear-gradient(160deg, #2D5016 0%, #2F6271 100%)" }}
       >
         <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#C8A951" }}>
           Minnesota&apos;s Lake Country
@@ -54,7 +54,7 @@ export default function PropertiesPage() {
           <article
             key={property.slug}
             className="rounded-2xl overflow-hidden"
-            style={{ border: "1px solid #6B8E2320", boxShadow: "0 4px 24px rgba(45,80,22,0.10)" }}
+            style={{ border: "1px solid #4F6F1620", boxShadow: "0 4px 24px rgba(45,80,22,0.10)" }}
           >
             <div className="grid grid-cols-1 md:grid-cols-2">
               {/* Image */}
@@ -71,7 +71,7 @@ export default function PropertiesPage() {
               {/* Details */}
               <div className="p-8 sm:p-10 flex flex-col justify-center gap-4" style={{ backgroundColor: "#FAF8F5" }}>
                 <div>
-                  <p className="text-xs font-semibold tracking-widest uppercase mb-2" style={{ color: "#4A7C8C" }}>
+                  <p className="text-xs font-semibold tracking-widest uppercase mb-2" style={{ color: "#2F6271" }}>
                     Featured Property
                   </p>
                   <h2
@@ -80,7 +80,7 @@ export default function PropertiesPage() {
                   >
                     {property.name}
                   </h2>
-                  <p className="flex items-center gap-1 text-sm" style={{ color: "#4A7C8C" }}>
+                  <p className="flex items-center gap-1 text-sm" style={{ color: "#2F6271" }}>
                     <MapPin size={14} aria-hidden="true" />
                     {property.location.city}, {property.location.state} &middot; {property.location.county}
                   </p>
@@ -88,21 +88,21 @@ export default function PropertiesPage() {
                 <p className="text-sm leading-relaxed" style={{ color: "#2C2C2C" }}>
                   {property.description[0]}
                 </p>
-                <div className="flex flex-wrap gap-4 py-3 border-t border-b text-xs" style={{ borderColor: "#6B8E2315" }}>
-                  <span className="flex items-center gap-1" style={{ color: "#2C2C2C80" }}>
+                <div className="flex flex-wrap gap-4 py-3 border-t border-b text-xs" style={{ borderColor: "#4F6F1615" }}>
+                  <span className="flex items-center gap-1" style={{ color: "#5C5C5C" }}>
                     <Bed size={13} aria-hidden="true" /> {property.specs.bedrooms} bedrooms
                   </span>
-                  <span className="flex items-center gap-1" style={{ color: "#2C2C2C80" }}>
+                  <span className="flex items-center gap-1" style={{ color: "#5C5C5C" }}>
                     <Bath size={13} aria-hidden="true" /> {property.specs.bathrooms} bathrooms
                   </span>
-                  <span className="flex items-center gap-1" style={{ color: "#2C2C2C80" }}>
+                  <span className="flex items-center gap-1" style={{ color: "#5C5C5C" }}>
                     <Users size={13} aria-hidden="true" /> Beds for {property.specs.sleeps} · max {property.specs.maxOccupancy ?? property.specs.sleeps}
                   </span>
-                  <span className="flex items-center gap-1" style={{ color: "#2C2C2C80" }}>
+                  <span className="flex items-center gap-1" style={{ color: "#5C5C5C" }}>
                     <Waves size={13} aria-hidden="true" /> {property.specs.frontage} frontage
                   </span>
                 </div>
-                <p className="text-sm font-semibold" style={{ color: "#6B8E23" }}>
+                <p className="text-sm font-semibold" style={{ color: "#4F6F16" }}>
                   {property.priceRange}
                 </p>
                 {property.comingSoon && (
@@ -116,7 +116,7 @@ export default function PropertiesPage() {
                 <Link
                   href={`/properties/${property.slug}`}
                   className="text-center py-3 rounded-full text-sm font-semibold transition-all hover:opacity-90 hover:shadow-lg"
-                  style={{ backgroundColor: "#6B8E23", color: "#FAF8F5" }}
+                  style={{ backgroundColor: "#4F6F16", color: "#FAF8F5" }}
                 >
                   {property.comingSoon ? "Preview Property" : "View Lakeside Luxe"}
                 </Link>
