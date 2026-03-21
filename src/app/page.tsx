@@ -10,6 +10,7 @@ import {
 import TestimonialCard from "@/components/TestimonialCard";
 import CTABanner from "@/components/CTABanner";
 import PropertyCard from "@/components/PropertyCard";
+import ScrollReveal from "@/components/ScrollReveal";
 import { properties } from "@/data/properties";
 
 const organizationJsonLd = {
@@ -127,25 +128,25 @@ export default function HomePage() {
 
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <p
-            className="text-sm font-semibold tracking-widest uppercase mb-4"
+            className="hero-entrance hero-entrance-1 text-sm font-semibold tracking-widest uppercase mb-4"
             style={{ color: "#C8A951" }}
           >
             Minnesota&apos;s Lake Country
           </p>
           <h1
-            className="text-5xl sm:text-6xl lg:text-7xl font-semibold leading-tight mb-6"
+            className="hero-entrance hero-entrance-2 text-5xl sm:text-6xl lg:text-7xl font-semibold leading-tight mb-6"
             style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#FAF8F5" }}
           >
             Handpicked lakeside stays<br />
             <span style={{ color: "#C8A951" }}>in Minnesota</span>
           </h1>
           <p
-            className="text-base sm:text-lg leading-relaxed mb-10 max-w-2xl mx-auto"
+            className="hero-entrance hero-entrance-3 text-base sm:text-lg leading-relaxed mb-10 max-w-2xl mx-auto"
             style={{ color: "#FAF8F5CC" }}
           >
             Vacation rentals run by our family, for yours. No call centers, no surprises &mdash; just unforgettable lake escapes and someone who genuinely cares about your stay.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="hero-entrance hero-entrance-4 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/properties"
               className="px-8 py-4 rounded-full text-sm font-semibold transition-all hover:opacity-90 hover:shadow-xl hover:scale-105"
@@ -165,7 +166,7 @@ export default function HomePage() {
 
         {/* scroll hint */}
         <div
-          className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 opacity-50"
+          className="absolute bottom-4 sm:bottom-8 left-1/2 scroll-hint-pulse flex flex-col items-center gap-1"
           aria-hidden="true"
         >
           <span className="text-xs tracking-widest uppercase" style={{ color: "#FAF8F5" }}>Scroll</span>
@@ -176,6 +177,7 @@ export default function HomePage() {
       {/* ── Featured Properties ── */}
       <section className="py-20 px-4" aria-label="Featured properties">
         <div className="max-w-5xl mx-auto">
+          <ScrollReveal>
           <div className="text-center mb-12">
             <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#2F6271" }}>
               Our Property
@@ -187,11 +189,12 @@ export default function HomePage() {
               Your next lake escape
             </h2>
           </div>
+          </ScrollReveal>
           <div className="flex justify-center">
             <div className="w-full max-w-xl">
-            {properties.map((property) => (
+            {properties.map((property, i) => (
+              <ScrollReveal key={property.slug} delay={i * 120}>
               <PropertyCard
-                key={property.slug}
                 name={property.name}
                 location={`${property.location.city}, ${property.location.state} · ${property.location.county}`}
                 description={property.description[0]}
@@ -205,6 +208,7 @@ export default function HomePage() {
                 href={`/properties/${property.slug}`}
                 priceRange={property.priceRange}
               />
+              </ScrollReveal>
             ))}
             </div>
           </div>
@@ -223,6 +227,7 @@ export default function HomePage() {
       {/* ── Why Book Direct ── */}
       <section className="py-20 px-4" style={{ backgroundColor: "#2D501608" }} aria-label="Why book direct">
         <div className="max-w-5xl mx-auto">
+          <ScrollReveal>
           <div className="text-center mb-12">
             <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#2F6271" }}>
               Skip the Middleman
@@ -237,11 +242,12 @@ export default function HomePage() {
               Booking platforms take 12–20% in fees. That money can stay with you.
             </p>
           </div>
+          </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
-            {whyBookDirectHighlights.map((item) => (
+            {whyBookDirectHighlights.map((item, i) => (
+              <ScrollReveal key={item.title} delay={i * 120} className="h-full">
               <div
-                key={item.title}
-                className="p-6 rounded-2xl"
+                className="h-full p-6 rounded-2xl"
                 style={{ backgroundColor: "#FAF8F5", border: "1px solid #4F6F1618" }}
               >
                 <div
@@ -260,6 +266,7 @@ export default function HomePage() {
                   {item.description}
                 </p>
               </div>
+              </ScrollReveal>
             ))}
           </div>
           <div className="text-center">
@@ -278,6 +285,7 @@ export default function HomePage() {
       {properties[0].testimonials.length > 0 && (
         <section className="py-20 px-4" aria-label="Guest reviews">
           <div className="max-w-5xl mx-auto">
+            <ScrollReveal>
             <div className="text-center mb-12">
               <div className="flex justify-center gap-1 mb-3">
                 {[...Array(5)].map((_, i) => (
@@ -291,9 +299,12 @@ export default function HomePage() {
                 Guests love it here
               </h2>
             </div>
+            </ScrollReveal>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {properties[0].testimonials.map((t) => (
-                <TestimonialCard key={t.author} {...t} />
+              {properties[0].testimonials.map((t, i) => (
+                <ScrollReveal key={t.author} delay={i * 120} className="h-full">
+                  <TestimonialCard {...t} className="h-full" />
+                </ScrollReveal>
               ))}
             </div>
           </div>
@@ -302,6 +313,7 @@ export default function HomePage() {
 
       {/* ── About Peridot Properties ── */}
       <section className="py-20 px-4" style={{ backgroundColor: "#2D501608" }} aria-label="About Peridot Properties">
+        <ScrollReveal>
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#2F6271" }}>
             About Us
@@ -330,9 +342,11 @@ export default function HomePage() {
             Our Story
           </Link>
         </div>
+        </ScrollReveal>
       </section>
 
       {/* ── CTA ── */}
+      <ScrollReveal>
       <CTABanner
         heading="Ready to plan your lake trip?"
         subheading="Summer weekends fill fast. Lock in your dates now and save by booking direct with Charlotte."
@@ -341,6 +355,7 @@ export default function HomePage() {
         secondaryLabel="Book Now"
         secondaryHref="/properties/pickerel-lake-retreat#booking"
       />
+      </ScrollReveal>
     </>
   );
 }

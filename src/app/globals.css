@@ -31,6 +31,81 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-cormorant), Georgia, serif;
 }
 
+/* ── Scroll Reveal Animations ── */
+/* Base: hidden state */
+.sr-hidden {
+  opacity: 0;
+  will-change: opacity, transform;
+}
+
+/* Revealed state */
+.sr-visible {
+  animation-duration: 0.7s;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  animation-fill-mode: both;
+  animation-delay: var(--sr-delay, 0ms);
+}
+
+/* Variants */
+.sr-fade-up.sr-hidden { transform: translateY(28px); }
+.sr-fade-up.sr-visible { animation-name: sr-fade-up; }
+
+.sr-fade-in.sr-hidden { transform: none; }
+.sr-fade-in.sr-visible { animation-name: sr-fade-in; }
+
+.sr-fade-left.sr-hidden { transform: translateX(-28px); }
+.sr-fade-left.sr-visible { animation-name: sr-fade-left; }
+
+.sr-fade-right.sr-hidden { transform: translateX(28px); }
+.sr-fade-right.sr-visible { animation-name: sr-fade-right; }
+
+@keyframes sr-fade-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes sr-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes sr-fade-left {
+  from { opacity: 0; transform: translateX(-28px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes sr-fade-right {
+  from { opacity: 0; transform: translateX(28px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* ── Hero Entrance ── */
+.hero-entrance { animation: hero-fade-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.hero-entrance-1 { animation-delay: 0ms; }
+.hero-entrance-2 { animation-delay: 120ms; }
+.hero-entrance-3 { animation-delay: 240ms; }
+.hero-entrance-4 { animation-delay: 400ms; }
+
+@keyframes hero-fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Scroll Hint Pulse ── */
+.scroll-hint-pulse {
+  animation: scroll-pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes scroll-pulse {
+  0%, 100% { opacity: 0.4; transform: translateX(-50%) translateY(0); }
+  50% { opacity: 0.7; transform: translateX(-50%) translateY(6px); }
+}
+
+/* Respect reduced motion globally */
+@media (prefers-reduced-motion: reduce) {
+  .sr-hidden { opacity: 1; transform: none; }
+  .sr-visible { animation: none; opacity: 1; }
+  .hero-entrance { animation: none; opacity: 1; }
+  .scroll-hint-pulse { animation: none; }
+}
+
 /* OwnerRez widgets render in cross-origin iframes.
    Styling is managed via Custom CSS in the OwnerRez dashboard
    (Settings → Widgets → each widget's CSS field).

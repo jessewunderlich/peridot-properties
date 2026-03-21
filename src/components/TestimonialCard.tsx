@@ -5,6 +5,7 @@ interface TestimonialCardProps {
   author: string;
   location: string;
   rating?: number;
+  className?: string;
 }
 
 export default function TestimonialCard({
@@ -12,10 +13,11 @@ export default function TestimonialCard({
   author,
   location,
   rating = 5,
+  className = "",
 }: TestimonialCardProps) {
   return (
     <div
-      className="p-6 rounded-2xl flex flex-col gap-4"
+      className={`p-6 rounded-2xl flex flex-col gap-4 ${className}`}
       style={{ backgroundColor: "#FAF8F5", border: "1px solid #4F6F1620", boxShadow: "0 2px 12px rgba(45,80,22,0.06)" }}
     >
       {/* Stars */}
