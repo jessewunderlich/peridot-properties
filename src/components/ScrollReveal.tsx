@@ -1,19 +1,22 @@
 "use client";
 
-import { useEffect, useRef, type ReactNode } from "react";
+import {
+  useEffect,
+  useRef,
+  type CSSProperties,
+  type ElementType,
+  type HTMLAttributes,
+  type ReactNode,
+} from "react";
 
-interface ScrollRevealProps {
+interface ScrollRevealProps extends HTMLAttributes<HTMLElement> {
   children: ReactNode;
-  /** Delay in ms before the animation starts (for staggering) */
   delay?: number;
-  /** Animation variant */
   variant?: "fade-up" | "fade-in" | "fade-left" | "fade-right";
-  /** IntersectionObserver threshold (0–1) */
   threshold?: number;
-  /** Extra class names */
   className?: string;
-  /** HTML tag to render */
-  as?: keyof HTMLElementTagNameMap;
+  style?: CSSProperties;
+  as?: ElementType;
 }
 
 export default function ScrollReveal({
@@ -22,15 +25,16 @@ export default function ScrollReveal({
   variant = "fade-up",
   threshold = 0.15,
   className = "",
+  style,
   as: Tag = "div",
+  ...rest
 }: ScrollRevealProps) {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
 
-    // Respect prefers-reduced-motion
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       el.classList.add("sr-visible");
       return;
@@ -39,7 +43,6 @@ export default function ScrollReveal({
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          // Apply delay via CSS custom property
           el.style.setProperty("--sr-delay", `${delay}ms`);
           el.classList.add("sr-visible");
           observer.unobserve(el);
@@ -53,8 +56,12 @@ export default function ScrollReveal({
   }, [delay, threshold]);
 
   return (
-    // @ts-expect-error — dynamic tag is safe here
-    <Tag ref={ref} className={`sr-hidden sr-${variant} ${className}`}>
+    <Tag
+      ref={ref}
+      className={`sr-hidden sr-${variant} ${className}`.trim()}
+      style={style}
+      {...rest}
+    >
       {children}
     </Tag>
   );

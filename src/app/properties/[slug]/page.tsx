@@ -21,6 +21,7 @@ import SeasonCard from "@/components/SeasonCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import BookingWidget from "@/components/BookingWidget";
 import RatesWidget from "@/components/RatesWidget";
+import ScrollReveal from "@/components/ScrollReveal";
 
 import { properties, getProperty } from "@/data/properties";
 
@@ -123,12 +124,14 @@ export default async function PropertyPage({ params }: Props) {
 
       {/* ── Photo Gallery ── */}
       <section className="py-14 px-4 max-w-6xl mx-auto" aria-label="Photo gallery">
+        <ScrollReveal>
         <h2
           className="text-3xl font-semibold mb-8 text-center"
           style={{ fontFamily: "var(--font-cormorant), Georgia, serif", color: "#2D5016" }}
         >
           Take a look around
         </h2>
+        </ScrollReveal>
         {/* Mobile: horizontal scroll carousel */}
         <div className="flex gap-3 overflow-x-auto snap-x snap-mandatory pb-4 sm:hidden -mx-4 px-4">
           {property.gallery.map((img, idx) => (
@@ -151,11 +154,7 @@ export default async function PropertyPage({ params }: Props) {
         {/* Tablet+: grid layout */}
         <div className="hidden sm:grid grid-cols-2 md:grid-cols-4 gap-3">
           {property.gallery.map((img, idx) => (
-            <div
-              key={img.id}
-              className={`rounded-xl overflow-hidden ${idx === 0 ? "col-span-2 row-span-2" : ""} relative`}
-              style={{ aspectRatio: idx === 0 ? "4/3" : "4/3", minHeight: idx === 0 ? "320px" : "160px" }}
-            >
+            <ScrollReveal key={img.id} delay={idx * 80} className={`rounded-xl overflow-hidden ${idx === 0 ? "col-span-2 row-span-2" : ""} relative`} style={{ aspectRatio: idx === 0 ? "4/3" : "4/3", minHeight: idx === 0 ? "320px" : "160px" }}>
               <Image
                 src={img.url}
                 alt={img.alt}
@@ -164,7 +163,7 @@ export default async function PropertyPage({ params }: Props) {
                 sizes={idx === 0 ? "(max-width: 768px) 100vw, 50vw" : "(max-width: 768px) 50vw, 25vw"}
                 priority={idx === 0}
               />
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </section>
@@ -172,7 +171,7 @@ export default async function PropertyPage({ params }: Props) {
       {/* ── Description + Specs Sidebar ── */}
       <section className="py-14 px-4" style={{ backgroundColor: "#2D501608" }}>
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
-          <div className="md:col-span-2">
+          <ScrollReveal className="md:col-span-2">
             <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#2F6271" }}>
               About the Home
             </p>
@@ -187,11 +186,12 @@ export default async function PropertyPage({ params }: Props) {
                 <p key={i}>{para}</p>
               ))}
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Specs sidebar */}
+          <ScrollReveal delay={150} variant="fade-left" className="h-fit">
           <div
-            className="rounded-2xl p-6 h-fit"
+            className="rounded-2xl p-6 h-full"
             style={{ backgroundColor: "#FAF8F5", border: "1px solid #4F6F1620", boxShadow: "0 2px 14px rgba(45,80,22,0.07)" }}
           >
             <h3
@@ -227,11 +227,13 @@ export default async function PropertyPage({ params }: Props) {
               {property.comingSoon ? "Coming Soon" : "Check Availability"}
             </Link>
           </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* ── Full Amenities ── */}
       <section className="py-14 px-4 max-w-5xl mx-auto" aria-label="Full amenities list">
+        <ScrollReveal>
         <div className="text-center mb-10">
           <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#2F6271" }}>
             Everything Included
@@ -243,11 +245,12 @@ export default async function PropertyPage({ params }: Props) {
             Full Amenities
           </h2>
         </div>
+        </ScrollReveal>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {property.amenities.map((cat) => (
+          {property.amenities.map((cat, i) => (
+            <ScrollReveal key={cat.category} delay={i * 80}>
             <div
-              key={cat.category}
-              className="rounded-xl p-5"
+              className="rounded-xl p-5 h-full"
               style={{ backgroundColor: "#FAF8F5", border: "1px solid #4F6F1618" }}
             >
               <div className="flex items-center gap-2 mb-4">
@@ -268,6 +271,7 @@ export default async function PropertyPage({ params }: Props) {
                 ))}
               </ul>
             </div>
+            </ScrollReveal>
           ))}
         </div>
       </section>
@@ -275,6 +279,7 @@ export default async function PropertyPage({ params }: Props) {
       {/* ── House Rules ── */}
       <section className="py-14 px-4" style={{ backgroundColor: "#2D501608" }}>
         <div className="max-w-3xl mx-auto">
+          <ScrollReveal>
           <div className="text-center mb-8">
             <h2
               className="text-3xl font-semibold"
@@ -287,22 +292,20 @@ export default async function PropertyPage({ params }: Props) {
             </p>
           </div>
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {property.houseRules.map((rule) => (
-              <li
-                key={rule}
-                className="flex items-start gap-3 px-4 py-3 rounded-xl text-sm"
-                style={{ backgroundColor: "#FAF8F5", border: "1px solid #4F6F1615", color: "#2C2C2C" }}
-              >
+            {property.houseRules.map((rule, i) => (
+              <ScrollReveal key={rule} delay={i * 60} as="li" className="flex items-start gap-3 px-4 py-3 rounded-xl text-sm" style={{ backgroundColor: "#FAF8F5", border: "1px solid #4F6F1615", color: "#2C2C2C" }}>
                 <span className="w-1.5 h-1.5 rounded-full mt-1.5 shrink-0" style={{ backgroundColor: "#C8A951" }} aria-hidden="true" />
                 {rule}
-              </li>
+              </ScrollReveal>
             ))}
           </ul>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* ── Seasonal Activities ── */}
       <section className="py-16 px-4 max-w-6xl mx-auto" aria-label="Seasonal activities">
+        <ScrollReveal>
         <div className="text-center mb-10">
           <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#2F6271" }}>
             Every Season Has Its Magic
@@ -314,9 +317,12 @@ export default async function PropertyPage({ params }: Props) {
             A lake for all seasons
           </h2>
         </div>
+        </ScrollReveal>
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
-          {property.seasons.map((season) => (
-            <SeasonCard key={season.season} {...season} />
+          {property.seasons.map((season, i) => (
+            <ScrollReveal key={season.season} delay={i * 100}>
+            <SeasonCard {...season} />
+            </ScrollReveal>
           ))}
         </div>
       </section>
@@ -324,6 +330,7 @@ export default async function PropertyPage({ params }: Props) {
       {/* ── Lake Info ── */}
       <section className="py-16 px-4" style={{ backgroundColor: "#2D501608" }} aria-label={`About ${property.lake.name}`}>
         <div className="max-w-5xl mx-auto">
+          <ScrollReveal>
           <div className="text-center mb-10">
             <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#2F6271" }}>
               The Lake
@@ -338,11 +345,12 @@ export default async function PropertyPage({ params }: Props) {
               {property.lake.acres.toLocaleString()} acres &bull; Maximum depth {property.lake.maxDepth} feet &bull; Crystal-clear water &bull; {property.location.county}, MN
             </p>
           </div>
+          </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {property.lake.info.map((info) => (
+            {property.lake.info.map((info, i) => (
+              <ScrollReveal key={info.title} delay={i * 80}>
               <div
-                key={info.title}
-                className="flex gap-4 p-5 rounded-2xl"
+                className="flex gap-4 p-5 rounded-2xl h-full"
                 style={{ backgroundColor: "#FAF8F5", border: "1px solid #4F6F1618" }}
               >
                 <div
@@ -363,10 +371,12 @@ export default async function PropertyPage({ params }: Props) {
                   </p>
                 </div>
               </div>
+              </ScrollReveal>
             ))}
           </div>
 
           {/* Fishing tips callout */}
+          <ScrollReveal delay={200} variant="fade-up">
           <div
             className="mt-8 p-6 rounded-2xl"
             style={{ background: "linear-gradient(135deg, #2D5016 0%, #2F6271 100%)" }}
@@ -386,11 +396,13 @@ export default async function PropertyPage({ params }: Props) {
               </div>
             </div>
           </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* ── Nearby Attractions ── */}
       <section className="py-16 px-4 max-w-6xl mx-auto" aria-label="Nearby towns and attractions">
+        <ScrollReveal>
         <div className="text-center mb-10">
           <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#2F6271" }}>
             Beyond the Lake
@@ -405,11 +417,12 @@ export default async function PropertyPage({ params }: Props) {
             When you want to venture off the dock, the surrounding towns have plenty to offer.
           </p>
         </div>
+        </ScrollReveal>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {property.nearbyAttractions.map((attraction) => (
+          {property.nearbyAttractions.map((attraction, i) => (
+            <ScrollReveal key={attraction.place} delay={i * 120}>
             <div
-              key={attraction.place}
-              className="rounded-2xl overflow-hidden"
+              className="rounded-2xl overflow-hidden h-full"
               style={{ backgroundColor: "#FAF8F5", border: "1px solid #4F6F1618" }}
             >
               <div
@@ -440,6 +453,7 @@ export default async function PropertyPage({ params }: Props) {
                 ))}
               </ul>
             </div>
+            </ScrollReveal>
           ))}
         </div>
       </section>
@@ -447,10 +461,10 @@ export default async function PropertyPage({ params }: Props) {
       {/* ── Outdoor Highlights ── */}
       <section className="py-16 px-4" style={{ backgroundColor: "#2D501608" }}>
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {property.outdoorHighlights.map((item) => (
+          {property.outdoorHighlights.map((item, i) => (
+            <ScrollReveal key={item.title} delay={i * 80}>
             <div
-              key={item.title}
-              className="p-6 rounded-2xl flex flex-col gap-3"
+              className="p-6 rounded-2xl flex flex-col gap-3 h-full"
               style={{ backgroundColor: "#FAF8F5", border: "1px solid #4F6F1618" }}
             >
               <item.icon size={22} style={{ color: "#4F6F16" }} aria-hidden="true" />
@@ -464,12 +478,14 @@ export default async function PropertyPage({ params }: Props) {
                 {item.desc}
               </p>
             </div>
+            </ScrollReveal>
           ))}
         </div>
       </section>
 
       {/* ── Location / Map ── */}
       <section className="py-14 px-4 max-w-5xl mx-auto" aria-label="Property location">
+        <ScrollReveal>
         <div className="text-center mb-8">
           <h2
             className="text-3xl font-semibold"
@@ -478,8 +494,10 @@ export default async function PropertyPage({ params }: Props) {
             Location
           </h2>
         </div>
+        </ScrollReveal>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Google Maps Embed */}
+          <ScrollReveal variant="fade-right">
           <div
             className="rounded-2xl overflow-hidden"
             style={{ border: "1px solid #4F6F1620", minHeight: "280px" }}
@@ -495,7 +513,9 @@ export default async function PropertyPage({ params }: Props) {
               title={`Map showing ${property.name} location`}
             />
           </div>
+          </ScrollReveal>
 
+          <ScrollReveal delay={150} variant="fade-left">
           <div className="space-y-4">
             <h3
               className="text-xl font-semibold"
@@ -516,12 +536,14 @@ export default async function PropertyPage({ params }: Props) {
               ))}
             </div>
           </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* ── Pricing ── */}
       {!property.comingSoon && (
         <section className="py-14 px-4" style={{ backgroundColor: "#2D501608" }} aria-label="Pricing">
+          <ScrollReveal>
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-8">
               <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#2F6271" }}>
@@ -540,12 +562,14 @@ export default async function PropertyPage({ params }: Props) {
               Exact pricing confirmed at booking. Holiday weekends may carry a premium.
             </p>
           </div>
+          </ScrollReveal>
         </section>
       )}
 
       {/* ── Cancellation Policy ── */}
       <section className="py-14 px-4" aria-label="Cancellation policy">
         <div className="max-w-3xl mx-auto">
+          <ScrollReveal>
           <div className="text-center mb-8">
             <h2
               className="text-3xl font-semibold"
@@ -557,9 +581,11 @@ export default async function PropertyPage({ params }: Props) {
               Book with confidence — flexible terms for direct guests
             </p>
           </div>
+          </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <ScrollReveal delay={0}>
             <div
-              className="flex flex-col gap-3 p-5 rounded-xl"
+              className="flex flex-col gap-3 p-5 rounded-xl h-full"
               style={{ backgroundColor: "#FAF8F5", border: "1px solid #4F6F1618" }}
             >
               <div className="flex items-center gap-2">
@@ -570,8 +596,10 @@ export default async function PropertyPage({ params }: Props) {
                 Cancel for any reason at least 48 hours before check-in for a full refund.
               </p>
             </div>
+            </ScrollReveal>
+            <ScrollReveal delay={100}>
             <div
-              className="flex flex-col gap-3 p-5 rounded-xl"
+              className="flex flex-col gap-3 p-5 rounded-xl h-full"
               style={{ backgroundColor: "#FAF8F5", border: "1px solid #4F6F1618" }}
             >
               <div className="flex items-center gap-2">
@@ -582,8 +610,10 @@ export default async function PropertyPage({ params }: Props) {
                 Cancel between 24 and 48 hours before check-in for a 50% refund of the total booking amount.
               </p>
             </div>
+            </ScrollReveal>
+            <ScrollReveal delay={200}>
             <div
-              className="flex flex-col gap-3 p-5 rounded-xl"
+              className="flex flex-col gap-3 p-5 rounded-xl h-full"
               style={{ backgroundColor: "#FAF8F5", border: "1px solid #4F6F1618" }}
             >
               <div className="flex items-center gap-2">
@@ -594,6 +624,7 @@ export default async function PropertyPage({ params }: Props) {
                 After check-in time, the reservation is non-refundable.
               </p>
             </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>

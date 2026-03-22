@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Heart, Gem, MapPin, Users, Star, Leaf } from "lucide-react";
 import PeridotGem from "@/components/PeridotGem";
 import CTABanner from "@/components/CTABanner";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "About — Charlotte Wunderlich",
@@ -88,7 +89,7 @@ export default function AboutPage() {
       {/* ── Charlotte's Story ── */}
       <section className="py-16 px-4 max-w-5xl mx-auto" aria-label="About Charlotte">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div>
+          <ScrollReveal>
             <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#2F6271" }}>
               Meet Your Host
             </p>
@@ -118,7 +119,8 @@ export default function AboutPage() {
                 <strong>Why Lakeside Luxe?</strong> By day, I guide goodbyes. Here, I craft beginnings &mdash; clean, cozy escapes where your family makes memories. Can&apos;t wait to host you!
               </p>
             </div>
-          </div>
+          </ScrollReveal>
+          <ScrollReveal delay={200} variant="fade-left">
           <div
             className="relative h-80 md:h-[420px] rounded-2xl overflow-hidden"
             style={{ border: "1px solid #4F6F1615" }}
@@ -145,12 +147,14 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* ── The Peridot Name ── */}
       <section className="py-16 px-4" style={{ backgroundColor: "#2D501608" }}>
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <ScrollReveal variant="fade-right">
           <div
             className="p-8 rounded-2xl flex flex-col items-center text-center"
             style={{ background: "linear-gradient(135deg, #4F6F1615, #C8A95115)", border: "1px solid #4F6F1620" }}
@@ -175,8 +179,9 @@ export default function AboutPage() {
               aria-label="Peridot gemstone color swatch"
             />
           </div>
+          </ScrollReveal>
 
-          <div>
+          <ScrollReveal delay={150}>
             <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#2F6271" }}>
               The Name
             </p>
@@ -204,12 +209,13 @@ export default function AboutPage() {
                 a little earthy, and quietly beautiful. Peridot felt exactly right.
               </p>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* ── Why Minnesota's Lake Country ── */}
       <section className="py-16 px-4 max-w-5xl mx-auto" aria-label="Why Minnesota lake country">
+        <ScrollReveal>
         <div className="text-center mb-10">
           <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#2F6271" }}>
             Our Region
@@ -261,11 +267,13 @@ export default function AboutPage() {
             />
           </div>
         </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Values ── */}
       <section className="py-16 px-4" style={{ backgroundColor: "#2D501608" }} aria-label="Our values">
         <div className="max-w-5xl mx-auto">
+          <ScrollReveal>
           <div className="text-center mb-10">
             <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "#2F6271" }}>
               How We Operate
@@ -277,10 +285,11 @@ export default function AboutPage() {
               Our Values
             </h2>
           </div>
+          </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {values.map((value) => (
+            {values.map((value, i) => (
+              <ScrollReveal key={value.title} delay={i * 120}>
               <div
-                key={value.title}
                 className="p-5 rounded-2xl"
                 style={{ backgroundColor: "#FAF8F5", border: "1px solid #4F6F1618" }}
               >
@@ -303,6 +312,7 @@ export default function AboutPage() {
                   {value.description}
                 </p>
               </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
