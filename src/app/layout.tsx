@@ -64,6 +64,17 @@ export const metadata: Metadata = {
       "Lakeside vacation rentals run by Charlotte Wunderlich and her family. Book direct and save.",
     images: ["https://www.peridot.properties/images/pickerel-lake/hero-sunset.jpg"],
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   alternates: {
     canonical: "/",
   },
