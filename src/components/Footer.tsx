@@ -92,7 +92,7 @@ export default function Footer() {
         style={{ borderColor: "#4F6F1640", color: "#FAF8F599" }}
       >
         <p>&copy; {new Date().getFullYear()} Peridot Properties. All rights reserved.</p>
-        <p><Link href="/privacy" className="hover:underline">Privacy Policy</Link> &bull; Minnesota&apos;s Lake Country</p>
+        <p><Link href="/privacy" className="hover:underline">Privacy Policy</Link> &bull; Minnesota&apos;s Lake Country &bull; Built by{' '}<a href="https://sardonyx.software" target="_blank" rel="noopener noreferrer" className="hover:underline">Sardonyx Software</a></p>
       </div>
     </footer>
   );
