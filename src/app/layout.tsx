@@ -21,7 +21,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.peridot.properties"),
+  metadataBase: new URL("https://peridot.properties"),
   title: {
     default: "Peridot Properties | Handpicked Lakeside Stays in Minnesota",
     template: "%s | Peridot Properties",
@@ -43,14 +43,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.peridot.properties",
+    url: "https://peridot.properties",
     siteName: "Peridot Properties",
     title: "Peridot Properties | Handpicked Lakeside Stays in Minnesota",
     description:
       "Lakeside vacation rentals run by Charlotte Wunderlich and her family. Book direct and save.",
     images: [
       {
-        url: "https://www.peridot.properties/images/pickerel-lake/hero-sunset.jpg",
+        url: "https://peridot.properties/images/pickerel-lake/hero-sunset.jpg",
         width: 1600,
         height: 900,
         alt: "Sunset over Pickerel Lake in Otter Tail County, Minnesota",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: "Peridot Properties | Handpicked Lakeside Stays in Minnesota",
     description:
       "Lakeside vacation rentals run by Charlotte Wunderlich and her family. Book direct and save.",
-    images: ["https://www.peridot.properties/images/pickerel-lake/hero-sunset.jpg"],
+    images: ["https://peridot.properties/images/pickerel-lake/hero-sunset.jpg"],
   },
   robots: {
     index: true,

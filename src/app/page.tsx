@@ -17,8 +17,8 @@ const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Peridot Properties",
-  url: "https://www.peridot.properties",
-  logo: "https://www.peridot.properties/icon.svg",
+  url: "https://peridot.properties",
+  logo: "https://peridot.properties/icon.svg",
   email: "charlotte@peridot.properties",
   sameAs: [
     "https://facebook.com/peridotpm",
@@ -31,7 +31,7 @@ const localBusinessJsonLd = {
   "@type": "LodgingBusiness",
   name: "Peridot Properties",
   description: "Family-run lakeside vacation rentals in Minnesota's Otter Tail County. Book direct and save.",
-  url: "https://www.peridot.properties",
+  url: "https://peridot.properties",
   email: "charlotte@peridot.properties",
   address: {
     "@type": "PostalAddress",

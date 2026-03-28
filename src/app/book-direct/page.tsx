@@ -20,14 +20,14 @@ export const metadata: Metadata = {
     title: "Book Direct & Save | Peridot Properties",
     description:
       "Skip the Airbnb fees. Book direct with Charlotte and save on your Minnesota lake vacation.",
-    url: "https://www.peridot.properties/book-direct",
-    images: [{ url: "https://www.peridot.properties/images/pickerel-lake/hero-sunset.jpg", width: 1600, height: 900, alt: "Sunset over Pickerel Lake" }],
+    url: "https://peridot.properties/book-direct",
+    images: [{ url: "https://peridot.properties/images/pickerel-lake/hero-sunset.jpg", width: 1600, height: 900, alt: "Sunset over Pickerel Lake" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Book Direct & Save | Peridot Properties",
     description: "Skip the Airbnb fees. Book direct with Charlotte and save.",
-    images: ["https://www.peridot.properties/images/pickerel-lake/hero-sunset.jpg"],
+    images: ["https://peridot.properties/images/pickerel-lake/hero-sunset.jpg"],
   },
 };
 

@@ -45,14 +45,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `${property.name} | Peridot Properties`,
       description: property.tagline,
-      url: `https://www.peridot.properties/properties/${slug}`,
-      images: [{ url: `https://www.peridot.properties${property.heroImage}`, width: 1600, height: 900, alt: property.gallery[0]?.alt ?? property.name }],
+      url: `https://peridot.properties/properties/${slug}`,
+      images: [{ url: `https://peridot.properties${property.heroImage}`, width: 1600, height: 900, alt: property.gallery[0]?.alt ?? property.name }],
     },
     twitter: {
       card: "summary_large_image",
       title: `${property.name} | Peridot Properties`,
       description: property.tagline,
-      images: [`https://www.peridot.properties${property.heroImage}`],
+      images: [`https://peridot.properties${property.heroImage}`],
     },
   };
 }
@@ -73,19 +73,19 @@ export default async function PropertyPage({ params }: Props) {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://www.peridot.properties/",
+        item: "https://peridot.properties/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Properties",
-        item: "https://www.peridot.properties/properties",
+        item: "https://peridot.properties/properties",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: property.name,
-        item: `https://www.peridot.properties/properties/${slug}`,
+        item: `https://peridot.properties/properties/${slug}`,
       },
     ],
   };

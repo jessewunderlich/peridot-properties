@@ -14,14 +14,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Local Guide | Peridot Properties",
     description: "Dining, fishing, boat rentals, events, and activities near Pickerel Lake in Otter Tail County, MN.",
-    url: "https://www.peridot.properties/local-guide",
-    images: [{ url: "https://www.peridot.properties/images/pickerel-lake/aerial-lake-view.jpg", width: 1200, height: 800, alt: "Aerial view of Otter Tail County lake country" }],
+    url: "https://peridot.properties/local-guide",
+    images: [{ url: "https://peridot.properties/images/pickerel-lake/aerial-lake-view.jpg", width: 1200, height: 800, alt: "Aerial view of Otter Tail County lake country" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Local Guide | Peridot Properties",
     description: "Dining, fishing, boat rentals, events, and activities near Pickerel Lake.",
-    images: ["https://www.peridot.properties/images/pickerel-lake/aerial-lake-view.jpg"],
+    images: ["https://peridot.properties/images/pickerel-lake/aerial-lake-view.jpg"],
   },
 };
 

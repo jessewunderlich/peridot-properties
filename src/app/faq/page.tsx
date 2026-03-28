@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     title: "FAQ | Peridot Properties",
     description:
       "Everything you need to know before your stay at Lakeside Luxe in Minnesota lake country.",
-    url: "https://www.peridot.properties/faq",
-    images: [{ url: "https://www.peridot.properties/images/pickerel-lake/hero-sunset.jpg", width: 1600, height: 900, alt: "Sunset over Pickerel Lake" }],
+    url: "https://peridot.properties/faq",
+    images: [{ url: "https://peridot.properties/images/pickerel-lake/hero-sunset.jpg", width: 1600, height: 900, alt: "Sunset over Pickerel Lake" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "FAQ | Peridot Properties",
     description: "Everything you need to know before your stay at Lakeside Luxe.",
-    images: ["https://www.peridot.properties/images/pickerel-lake/hero-sunset.jpg"],
+    images: ["https://peridot.properties/images/pickerel-lake/hero-sunset.jpg"],
   },
 };
 
